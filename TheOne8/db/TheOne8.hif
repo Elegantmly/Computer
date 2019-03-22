@@ -1,0 +1,66 @@
+Version 8.1 Build 163 10/28/2008 SJ Web Edition
+11
+945
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+TheOne8
+# storage
+db|TheOne8.(0).cnf
+db|TheOne8.(0).cnf
+# case_insensitive
+# source_file
+TheOne8.bdf
+11e7e1080323eebc4abd0da7dfebc72
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+TheOne
+# storage
+db|TheOne8.(1).cnf
+db|TheOne8.(1).cnf
+# case_insensitive
+# source_file
+..|TheOne|TheOne.bdf
+7afb32ebf36db769b6955e51dc69162
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+TheOne:inst
+TheOne:inst6
+}
+# macro_sequence
+
+# end
+# complete
+

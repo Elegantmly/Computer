@@ -43,3 +43,35 @@ set_global_assignment -name USE_CONFIGURATION_DEVICE ON
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
 set_global_assignment -name MISC_FILE "D:/quartualsProject/ALU/ALU.dpf"
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_77 -to A0
+set_location_assignment PIN_80 -to A1
+set_location_assignment PIN_81 -to A2
+set_location_assignment PIN_82 -to A3
+set_location_assignment PIN_84 -to A4
+set_location_assignment PIN_86 -to A5
+set_location_assignment PIN_87 -to A6
+set_location_assignment PIN_88 -to A7
+set_location_assignment PIN_67 -to B0
+set_location_assignment PIN_68 -to B1
+set_location_assignment PIN_69 -to B2
+set_location_assignment PIN_70 -to B3
+set_location_assignment PIN_72 -to B4
+set_location_assignment PIN_74 -to B5
+set_location_assignment PIN_75 -to B6
+set_location_assignment PIN_76 -to B7
+set_location_assignment PIN_23 -to CN
+set_location_assignment PIN_24 -to S0
+set_location_assignment PIN_27 -to S1
+set_location_assignment PIN_28 -to S2
+set_location_assignment PIN_208 -to S3
+set_location_assignment PIN_34 -to F0
+set_location_assignment PIN_35 -to F1
+set_location_assignment PIN_37 -to F2
+set_location_assignment PIN_39 -to F3
+set_location_assignment PIN_40 -to F4
+set_location_assignment PIN_41 -to F5
+set_location_assignment PIN_43 -to F6
+set_location_assignment PIN_44 -to F7
+set_global_assignment -name MISC_FILE "D:/mulingyu/ALU/ALU.dpf"
+set_location_assignment PIN_129 -to M

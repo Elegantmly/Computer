@@ -28,7 +28,7 @@ db|ALU.(1).cnf
 db|ALU.(1).cnf
 # case_insensitive
 # source_file
-..|..|quartuals|quartus|libraries|others|maxplus2|74181.bdf
+c:|altera|81|quartus|libraries|others|maxplus2|74181.bdf
 5a7a42864d75db2f39a1f2da31e3e53
 26
 # internal_option {
@@ -49,7 +49,7 @@ db|ALU.(2).cnf
 db|ALU.(2).cnf
 # case_insensitive
 # source_file
-..|..|quartuals|quartus|libraries|others|maxplus2|74182.bdf
+c:|altera|81|quartus|libraries|others|maxplus2|74182.bdf
 7e848f93ad7899d68043667228e561f6
 26
 # internal_option {
@@ -70,7 +70,7 @@ db|ALU.(0).cnf
 # case_insensitive
 # source_file
 ALU.bdf
-bf3b7c1f038c3e23f4bc9d065757f0
+7076f8a97454f2b11f843effee6ed4
 26
 # internal_option {
 BLOCK_DESIGN_NAMING

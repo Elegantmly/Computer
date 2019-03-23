@@ -1,5 +1,5 @@
 Assembler report for ALU
-Fri Mar 22 21:16:56 2019
+Sat Mar 23 09:03:27 2019
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: D:/quartualsProject/ALU/ALU.sof
-  6. Assembler Device Options: D:/quartualsProject/ALU/ALU.pof
+  5. Assembler Device Options: D:/mulingyu/ALU/ALU.sof
+  6. Assembler Device Options: D:/mulingyu/ALU/ALU.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Mar 22 21:16:56 2019 ;
+; Assembler Status      ; Successful - Sat Mar 23 09:03:27 2019 ;
 ; Revision Name         ; ALU                                   ;
 ; Top-level Entity Name ; ALU                                   ;
 ; Family                ; Cyclone II                            ;
@@ -76,37 +76,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+---------------------------------+
-; Assembler Generated Files       ;
-+---------------------------------+
-; File Name                       ;
-+---------------------------------+
-; D:/quartualsProject/ALU/ALU.sof ;
-; D:/quartualsProject/ALU/ALU.pof ;
-+---------------------------------+
++---------------------------+
+; Assembler Generated Files ;
++---------------------------+
+; File Name                 ;
++---------------------------+
+; D:/mulingyu/ALU/ALU.sof   ;
+; D:/mulingyu/ALU/ALU.pof   ;
++---------------------------+
 
 
-+-----------------------------------------------------------+
-; Assembler Device Options: D:/quartualsProject/ALU/ALU.sof ;
-+----------------+------------------------------------------+
-; Option         ; Setting                                  ;
-+----------------+------------------------------------------+
-; Device         ; EP2C8Q208C8                              ;
-; JTAG usercode  ; 0xFFFFFFFF                               ;
-; Checksum       ; 0x000C4B01                               ;
-+----------------+------------------------------------------+
++---------------------------------------------------+
+; Assembler Device Options: D:/mulingyu/ALU/ALU.sof ;
++----------------+----------------------------------+
+; Option         ; Setting                          ;
++----------------+----------------------------------+
+; Device         ; EP2C8Q208C8                      ;
+; JTAG usercode  ; 0xFFFFFFFF                       ;
+; Checksum       ; 0x000C66F1                       ;
++----------------+----------------------------------+
 
 
-+-----------------------------------------------------------+
-; Assembler Device Options: D:/quartualsProject/ALU/ALU.pof ;
-+--------------------+--------------------------------------+
-; Option             ; Setting                              ;
-+--------------------+--------------------------------------+
-; Device             ; EPCS4                                ;
-; JTAG usercode      ; 0x00000000                           ;
-; Checksum           ; 0x06EFA480                           ;
-; Compression Ratio  ; 3                                    ;
-+--------------------+--------------------------------------+
++---------------------------------------------------+
+; Assembler Device Options: D:/mulingyu/ALU/ALU.pof ;
++--------------------+------------------------------+
+; Option             ; Setting                      ;
++--------------------+------------------------------+
+; Device             ; EPCS4                        ;
+; JTAG usercode      ; 0x00000000                   ;
+; Checksum           ; 0x06EF7B0B                   ;
+; Compression Ratio  ; 3                            ;
++--------------------+------------------------------+
 
 
 +--------------------+
@@ -115,13 +115,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Fri Mar 22 21:16:55 2019
+    Info: Processing started: Sat Mar 23 09:03:27 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off ALU -c ALU
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 228 megabytes
-    Info: Processing ended: Fri Mar 22 21:16:56 2019
+    Info: Peak virtual memory: 185 megabytes
+    Info: Processing ended: Sat Mar 23 09:03:28 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

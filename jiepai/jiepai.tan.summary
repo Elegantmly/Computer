@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.076 ns
+From           : yibumo8jia1:inst|inst2
+To             : pin_name10
+From Clock     : pin_name
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'pin_name'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 360.10 MHz ( period = 2.777 ns )
+From           : yibumo8jia1:inst|inst1
+To             : yibumo8jia1:inst|inst1
+From Clock     : pin_name
+To Clock       : pin_name
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

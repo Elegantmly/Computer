@@ -1,14 +1,14 @@
 |jiepai
-pin_name3 <= 74138:inst1.Y0N
-pin_name => yibumo8jia1:inst.CLK
-pin_name2 => yibumo8jia1:inst.CLR
-pin_name4 <= 74138:inst1.Y1N
-pin_name5 <= 74138:inst1.Y2N
-pin_name6 <= 74138:inst1.Y3N
-pin_name7 <= 74138:inst1.Y4N
-pin_name8 <= 74138:inst1.Y5N
-pin_name9 <= 74138:inst1.Y6N
-pin_name10 <= 74138:inst1.Y7N
+q0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => yibumo8jia1:inst.CLK
+CLR => yibumo8jia1:inst.CLR
+q1 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+q2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+q3 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+q4 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+q5 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+q6 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+q7 <= <GND>
 
 
 |jiepai|74138:inst1

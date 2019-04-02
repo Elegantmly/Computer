@@ -5,7 +5,7 @@ Timing Analyzer Summary
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 11.530 ns
+Actual Time    : 12.781 ns
 From           : inst2
 To             : q2
 From Clock     : CLK
@@ -15,7 +15,7 @@ Failed Paths   : 0
 Type           : Clock Setup: 'CLK'
 Slack          : N/A
 Required Time  : None
-Actual Time    : Restricted to 360.10 MHz ( period = 2.777 ns )
+Actual Time    : Restricted to 340.02 MHz ( period = 2.941 ns )
 From           : inst
 To             : inst
 From Clock     : CLK

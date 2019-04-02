@@ -144,7 +144,7 @@ GND                          : 73        : gnd    :                   :         
 RESERVED_INPUT               : 74        :        :                   :         : 4         :                
 RESERVED_INPUT               : 75        :        :                   :         : 4         :                
 RESERVED_INPUT               : 76        :        :                   :         : 4         :                
-CLK                          : 77        : input  : 3.3-V LVTTL       :         : 4         : Y              
+RESERVED_INPUT               : 77        :        :                   :         : 4         :                
 GND                          : 78        : gnd    :                   :         :           :                
 VCCINT                       : 79        : power  :                   : 1.2V    :           :                
 CLR                          : 80        : input  : 3.3-V LVTTL       :         : 4         : Y              
@@ -199,7 +199,7 @@ RESERVED_INPUT               : 128       :        :                   :         
 GND+                         : 129       :        :                   :         : 3         :                
 GND+                         : 130       :        :                   :         : 3         :                
 GND+                         : 131       :        :                   :         : 3         :                
-GND+                         : 132       :        :                   :         : 3         :                
+CLK                          : 132       : input  : 3.3-V LVTTL       :         : 3         : Y              
 RESERVED_INPUT               : 133       :        :                   :         : 3         :                
 RESERVED_INPUT               : 134       :        :                   :         : 3         :                
 RESERVED_INPUT               : 135       :        :                   :         : 3         :                

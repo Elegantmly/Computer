@@ -1,0 +1,44 @@
+|Scounter2
+Q1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+CLR => inst1.ACLR
+CLR => inst1.PRESET
+CLR => inst.PRESET
+CK => inst.CLK
+CK => inst1.CLK
+D1 => Selector1:inst5.A
+LD => inst4.IN0
+LD => Selector1:inst7.BY
+LD => Selector1:inst5.BY
+EN => inst8.IN0
+EN => inst11.IN0
+EN => Selector1:inst6.BY
+D0 => Selector1:inst7.A
+Q0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CN <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Scounter2|Selector1:inst5
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Scounter2|Selector1:inst6
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Scounter2|Selector1:inst7
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+

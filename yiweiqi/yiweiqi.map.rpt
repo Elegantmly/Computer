@@ -1,5 +1,5 @@
 Analysis & Synthesis report for yiweiqi
-Mon Mar 25 19:02:29 2019
+Sat Mar 30 08:13:59 2019
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -39,7 +39,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 25 19:02:29 2019   ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 30 08:13:59 2019   ;
 ; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name                      ; yiweiqi                                 ;
 ; Top-level Entity Name              ; yiweiqi                                 ;
@@ -132,14 +132,14 @@ applicable agreement for further details.
 +----------------------------------------------------------------+--------------------+--------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                  ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                  ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------+
-; ../Selector_3/Selector_3.bdf     ; yes             ; User Block Diagram/Schematic File  ; D:/quartualsProject/Selector_3/Selector_3.bdf ;
-; yiweiqi.bdf                      ; yes             ; User Block Diagram/Schematic File  ; D:/quartualsProject/yiweiqi/yiweiqi.bdf       ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                          ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path          ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------+
+; ../Selector_3/Selector_3.bdf     ; yes             ; User Block Diagram/Schematic File  ; D:/mulingyu/Selector_3/Selector_3.bdf ;
+; yiweiqi.bdf                      ; yes             ; User Block Diagram/Schematic File  ; D:/mulingyu/yiweiqi/yiweiqi.bdf       ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -210,7 +210,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Mon Mar 25 19:02:28 2019
+    Info: Processing started: Sat Mar 30 08:13:58 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off yiweiqi -c yiweiqi
 Info: Found 1 design units, including 1 entities, in source file ../Selector_3/Selector_3.bdf
     Info: Found entity 1: Selector_3
@@ -223,8 +223,8 @@ Info: Implemented 36 device resources after synthesis - the final resource count
     Info: Implemented 8 output pins
     Info: Implemented 16 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 232 megabytes
-    Info: Processing ended: Mon Mar 25 19:02:29 2019
+    Info: Peak virtual memory: 189 megabytes
+    Info: Processing ended: Sat Mar 30 08:13:59 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

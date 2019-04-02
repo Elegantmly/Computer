@@ -29,7 +29,7 @@ db|TheOne8.(0).cnf
 # case_insensitive
 # source_file
 TheOne8.bdf
-11e7e1080323eebc4abd0da7dfebc72
+4c666fff4febf040f8fa125c6f161c43
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -37,27 +37,6 @@ AUTO
 }
 # hierarchies {
 |
-}
-# macro_sequence
-
-# end
-# entity
-TheOne
-# storage
-db|TheOne8.(1).cnf
-db|TheOne8.(1).cnf
-# case_insensitive
-# source_file
-..|TheOne|TheOne.bdf
-7afb32ebf36db769b6955e51dc69162
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-TheOne:inst
-TheOne:inst6
 }
 # macro_sequence
 

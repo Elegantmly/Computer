@@ -1,0 +1,99 @@
+Version 8.1 Build 163 10/28/2008 SJ Web Edition
+11
+945
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+Scounter2
+# storage
+db|Scounter8.(1).cnf
+db|Scounter8.(1).cnf
+# case_insensitive
+# source_file
+..|Scounter2|Scounter2.bdf
+c61a271849b56a1055ff25bbda6630
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Scounter2:inst7
+Scounter2:inst6
+Scounter2:inst5
+Scounter2:inst4
+}
+# macro_sequence
+
+# end
+# entity
+Selector1
+# storage
+db|Scounter8.(2).cnf
+db|Scounter8.(2).cnf
+# case_insensitive
+# source_file
+..|Selector1|Selector1.bdf
+891235eaf1a6c66f249231b70ff78d7
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Scounter2:inst7|Selector1:inst5
+Scounter2:inst7|Selector1:inst6
+Scounter2:inst7|Selector1:inst7
+Scounter2:inst6|Selector1:inst5
+Scounter2:inst6|Selector1:inst6
+Scounter2:inst6|Selector1:inst7
+Scounter2:inst5|Selector1:inst5
+Scounter2:inst5|Selector1:inst6
+Scounter2:inst5|Selector1:inst7
+Scounter2:inst4|Selector1:inst5
+Scounter2:inst4|Selector1:inst6
+Scounter2:inst4|Selector1:inst7
+}
+# macro_sequence
+
+# end
+# entity
+Scounter8
+# storage
+db|Scounter8.(0).cnf
+db|Scounter8.(0).cnf
+# case_insensitive
+# source_file
+Scounter8.bdf
+b83cae4debcc53593d5bb9b09fa9ab91
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

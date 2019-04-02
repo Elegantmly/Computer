@@ -28,7 +28,7 @@ set_global_assignment -name DEVICE EP2C8Q208C8
 set_global_assignment -name TOP_LEVEL_ENTITY yibumo8jia1
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 8.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:45:18  MARCH 25, 2019"
-set_global_assignment -name LAST_QUARTUS_VERSION 8.0
+set_global_assignment -name LAST_QUARTUS_VERSION 8.1
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
 set_global_assignment -name SOURCE_FILE yibumo8jia1
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
@@ -42,10 +42,11 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_location_assignment PIN_77 -to CLK
+set_location_assignment PIN_132 -to CLK
 set_location_assignment PIN_80 -to CLR
 set_location_assignment PIN_34 -to q0
 set_location_assignment PIN_35 -to q1
 set_location_assignment PIN_37 -to q2
 set_global_assignment -name MISC_FILE "D:/quartualsProject/yibumo8jia1/yibumo8jia1.dpf"
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name MISC_FILE "D:/mulingyu/yibumo8jia1/yibumo8jia1.dpf"

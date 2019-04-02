@@ -50,3 +50,4 @@ set_location_assignment PIN_84 -to C
 set_location_assignment PIN_86 -to CY
 set_location_assignment PIN_34 -to Y
 set_global_assignment -name MISC_FILE "D:/quartualsProject/Selector_3/Selector_3.dpf"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"

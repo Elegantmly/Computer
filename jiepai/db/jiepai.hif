@@ -1,4 +1,4 @@
-Version 8.0 Build 215 05/29/2008 SJ Full Version
+Version 8.1 Build 163 10/28/2008 SJ Web Edition
 11
 945
 OFF
@@ -22,26 +22,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-74138
-# storage
-db|jiepai.(1).cnf
-db|jiepai.(1).cnf
-# case_insensitive
-# source_file
-..|..|..|libraries|others|maxplus2|74138.bdf
-6cadbea2e3f85766eb8e4e262292077
-25
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-74138:inst1
-}
-# macro_sequence
-
-# end
-# entity
 yibumo8jia1
 # storage
 db|jiepai.(2).cnf
@@ -50,13 +30,33 @@ db|jiepai.(2).cnf
 # source_file
 ..|yibumo8jia1|yibumo8jia1.bdf
 411d9142ebfec4a5a1f37470d6be5c
-25
+26
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
 yibumo8jia1:inst
+}
+# macro_sequence
+
+# end
+# entity
+74138
+# storage
+db|jiepai.(1).cnf
+db|jiepai.(1).cnf
+# case_insensitive
+# source_file
+c:|altera|81|quartus|libraries|others|maxplus2|74138.bdf
+6cadbea2e3f85766eb8e4e262292077
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74138:inst1
 }
 # macro_sequence
 
@@ -69,8 +69,8 @@ db|jiepai.(0).cnf
 # case_insensitive
 # source_file
 ..|yibumo8jia1|jiepai.bdf
-915a3aff1d7b0857d7bd1fbea17ea89
-25
+baa495ad3c54d26ba8cda174b14be74
+26
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO

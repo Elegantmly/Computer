@@ -1,6 +1,6 @@
 Flow report for jiepai
-Fri Mar 29 12:41:09 2019
-Quartus II 64-Bit Version 8.0 Build 215 05/29/2008 SJ Full Version
+Sat Mar 30 08:28:00 2019
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
 ---------------------
@@ -11,7 +11,8 @@ Quartus II 64-Bit Version 8.0 Build 215 05/29/2008 SJ Full Version
   3. Flow Settings
   4. Flow Non-Default Global Settings
   5. Flow Elapsed Time
-  6. Flow Log
+  6. Flow OS Summary
+  7. Flow Log
 
 
 
@@ -34,27 +35,27 @@ applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Flow Summary                                                                  ;
-+------------------------------------+------------------------------------------+
-; Flow Status                        ; Successful - Fri Mar 29 12:41:09 2019    ;
-; Quartus II 64-Bit Version          ; 8.0 Build 215 05/29/2008 SJ Full Version ;
-; Revision Name                      ; jiepai                                   ;
-; Top-level Entity Name              ; jiepai                                   ;
-; Family                             ; Cyclone II                               ;
-; Device                             ; EP2C8Q208C8                              ;
-; Timing Models                      ; Final                                    ;
-; Met timing requirements            ; Yes                                      ;
-; Total logic elements               ; 11 / 8,256 ( < 1 % )                     ;
-;     Total combinational functions  ; 11 / 8,256 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 3 / 8,256 ( < 1 % )                      ;
-; Total registers                    ; 3                                        ;
-; Total pins                         ; 10 / 138 ( 7 % )                         ;
-; Total virtual pins                 ; 0                                        ;
-; Total memory bits                  ; 0 / 165,888 ( 0 % )                      ;
-; Embedded Multiplier 9-bit elements ; 0 / 36 ( 0 % )                           ;
-; Total PLLs                         ; 0 / 2 ( 0 % )                            ;
-+------------------------------------+------------------------------------------+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++------------------------------------+-----------------------------------------+
+; Flow Status                        ; Successful - Sat Mar 30 08:28:00 2019   ;
+; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
+; Revision Name                      ; jiepai                                  ;
+; Top-level Entity Name              ; jiepai                                  ;
+; Family                             ; Cyclone II                              ;
+; Device                             ; EP2C8Q208C8                             ;
+; Timing Models                      ; Final                                   ;
+; Met timing requirements            ; Yes                                     ;
+; Total logic elements               ; 10 / 8,256 ( < 1 % )                    ;
+;     Total combinational functions  ; 10 / 8,256 ( < 1 % )                    ;
+;     Dedicated logic registers      ; 3 / 8,256 ( < 1 % )                     ;
+; Total registers                    ; 3                                       ;
+; Total pins                         ; 10 / 138 ( 7 % )                        ;
+; Total virtual pins                 ; 0                                       ;
+; Total memory bits                  ; 0 / 165,888 ( 0 % )                     ;
+; Embedded Multiplier 9-bit elements ; 0 / 36 ( 0 % )                          ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                           ;
++------------------------------------+-----------------------------------------+
 
 
 +-----------------------------------------+
@@ -62,24 +63,26 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/29/2019 12:40:23 ;
+; Start date & time ; 03/30/2019 08:27:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; jiepai              ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                ;
-+------------------------------------+---------------------------------+---------------+-------------+------------+
-; Assignment Name                    ; Value                           ; Default Value ; Entity Name ; Section Id ;
-+------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID              ; 141812761589439.155383442217260 ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --            ; --          ; --         ;
-; PARTITION_COLOR                    ; 14622752                        ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; --          ; Top        ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --          ; eda_palace ;
-+------------------------------------+---------------------------------+---------------+-------------+------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                      ;
++------------------------------------+---------------------------------------+---------------+-------------+------------+
+; Assignment Name                    ; Value                                 ; Default Value ; Entity Name ; Section Id ;
++------------------------------------+---------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID              ; 109952948872086.155390567301296       ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                                    ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                                     ; --            ; --          ; --         ;
+; MISC_FILE                          ; D:/quartualsProject/jiepai/jiepai.dpf ; --            ; --          ; --         ;
+; MISC_FILE                          ; D:/mulingyu/jiepai/jiepai.dpf         ; --            ; --          ; --         ;
+; PARTITION_COLOR                    ; 14622752                              ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                                ; --            ; --          ; Top        ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                   ; --            ; --          ; eda_palace ;
++------------------------------------+---------------------------------------+---------------+-------------+------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -87,12 +90,24 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:08     ; 1.0                     ; 4432 MB             ; 00:00:01                           ;
-; Fitter                  ; 00:00:08     ; 1.0                     ; 4460 MB             ; 00:00:01                           ;
-; Assembler               ; 00:00:07     ; 1.0                     ; 4371 MB             ; 00:00:00                           ;
-; Classic Timing Analyzer ; 00:00:07     ; 1.0                     ; 4364 MB             ; 00:00:00                           ;
-; Total                   ; 00:00:30     ; --                      ; --                  ; 00:00:02                           ;
+; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 186 MB              ; 00:00:01                           ;
+; Fitter                  ; 00:00:01     ; 1.0                     ; 206 MB              ; 00:00:01                           ;
+; Assembler               ; 00:00:01     ; 1.0                     ; 185 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 142 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:04     ; --                      ; --                  ; 00:00:03                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                          ;
++-------------------------+------------------+---------------+------------+----------------+
+; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++-------------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis    ; stu403-27        ; Windows Vista ; 6.1        ; i686           ;
+; Fitter                  ; stu403-27        ; Windows Vista ; 6.1        ; i686           ;
+; Assembler               ; stu403-27        ; Windows Vista ; 6.1        ; i686           ;
+; Classic Timing Analyzer ; stu403-27        ; Windows Vista ; 6.1        ; i686           ;
++-------------------------+------------------+---------------+------------+----------------+
 
 
 ------------

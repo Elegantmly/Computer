@@ -1,0 +1,15 @@
+|TheOne
+q3 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+cp => inst.CLK
+cp => inst1.CLK
+cp => inst2.CLK
+cp => inst3.CLK
+d3 => inst.DATAIN
+q2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+d2 => inst1.DATAIN
+q1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+d1 => inst2.DATAIN
+q0 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+d0 => inst3.DATAIN
+
+

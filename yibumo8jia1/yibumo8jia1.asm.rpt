@@ -1,5 +1,5 @@
 Assembler report for yibumo8jia1
-Mon Mar 25 15:55:43 2019
+Sat Mar 30 08:11:41 2019
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: D:/quartualsProject/yibumo8jia1/yibumo8jia1.sof
-  6. Assembler Device Options: D:/quartualsProject/yibumo8jia1/yibumo8jia1.pof
+  5. Assembler Device Options: D:/mulingyu/yibumo8jia1/yibumo8jia1.sof
+  6. Assembler Device Options: D:/mulingyu/yibumo8jia1/yibumo8jia1.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Mar 25 15:55:43 2019 ;
+; Assembler Status      ; Successful - Sat Mar 30 08:11:41 2019 ;
 ; Revision Name         ; yibumo8jia1                           ;
 ; Top-level Entity Name ; yibumo8jia1                           ;
 ; Family                ; Cyclone II                            ;
@@ -76,37 +76,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+-------------------------------------------------+
-; Assembler Generated Files                       ;
-+-------------------------------------------------+
-; File Name                                       ;
-+-------------------------------------------------+
-; D:/quartualsProject/yibumo8jia1/yibumo8jia1.sof ;
-; D:/quartualsProject/yibumo8jia1/yibumo8jia1.pof ;
-+-------------------------------------------------+
++-----------------------------------------+
+; Assembler Generated Files               ;
++-----------------------------------------+
+; File Name                               ;
++-----------------------------------------+
+; D:/mulingyu/yibumo8jia1/yibumo8jia1.sof ;
+; D:/mulingyu/yibumo8jia1/yibumo8jia1.pof ;
++-----------------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; Assembler Device Options: D:/quartualsProject/yibumo8jia1/yibumo8jia1.sof ;
-+----------------+----------------------------------------------------------+
-; Option         ; Setting                                                  ;
-+----------------+----------------------------------------------------------+
-; Device         ; EP2C8Q208C8                                              ;
-; JTAG usercode  ; 0xFFFFFFFF                                               ;
-; Checksum       ; 0x000BF34D                                               ;
-+----------------+----------------------------------------------------------+
++-------------------------------------------------------------------+
+; Assembler Device Options: D:/mulingyu/yibumo8jia1/yibumo8jia1.sof ;
++----------------+--------------------------------------------------+
+; Option         ; Setting                                          ;
++----------------+--------------------------------------------------+
+; Device         ; EP2C8Q208C8                                      ;
+; JTAG usercode  ; 0xFFFFFFFF                                       ;
+; Checksum       ; 0x000BF5C5                                       ;
++----------------+--------------------------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; Assembler Device Options: D:/quartualsProject/yibumo8jia1/yibumo8jia1.pof ;
-+--------------------+------------------------------------------------------+
-; Option             ; Setting                                              ;
-+--------------------+------------------------------------------------------+
-; Device             ; EPCS4                                                ;
-; JTAG usercode      ; 0x00000000                                           ;
-; Checksum           ; 0x06F06138                                           ;
-; Compression Ratio  ; 3                                                    ;
-+--------------------+------------------------------------------------------+
++-------------------------------------------------------------------+
+; Assembler Device Options: D:/mulingyu/yibumo8jia1/yibumo8jia1.pof ;
++--------------------+----------------------------------------------+
+; Option             ; Setting                                      ;
++--------------------+----------------------------------------------+
+; Device             ; EPCS4                                        ;
+; JTAG usercode      ; 0x00000000                                   ;
+; Checksum           ; 0x06F066BA                                   ;
+; Compression Ratio  ; 3                                            ;
++--------------------+----------------------------------------------+
 
 
 +--------------------+
@@ -115,14 +115,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Mon Mar 25 15:55:43 2019
+    Info: Processing started: Sat Mar 30 08:11:40 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off yibumo8jia1 -c yibumo8jia1
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 228 megabytes
-    Info: Processing ended: Mon Mar 25 15:55:43 2019
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 185 megabytes
+    Info: Processing ended: Sat Mar 30 08:11:41 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -1,5 +1,5 @@
 Flow report for yibumo8jia1
-Mon Mar 25 15:55:44 2019
+Sat Mar 30 08:11:42 2019
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +------------------------------------+-----------------------------------------+
-; Flow Status                        ; Successful - Mon Mar 25 15:55:44 2019   ;
+; Flow Status                        ; Successful - Sat Mar 30 08:11:42 2019   ;
 ; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name                      ; yibumo8jia1                             ;
 ; Top-level Entity Name              ; yibumo8jia1                             ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/25/2019 15:55:39 ;
+; Start date & time ; 03/30/2019 08:11:36 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; yibumo8jia1         ;
 +-------------------+---------------------+
@@ -74,10 +74,11 @@ applicable agreement for further details.
 +------------------------------------+-------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                           ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+-------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 88623642224052.155350053905056                  ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 109952948872086.155390469601060                 ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                                              ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                                               ; --            ; --          ; --             ;
 ; MISC_FILE                          ; D:/quartualsProject/yibumo8jia1/yibumo8jia1.dpf ; --            ; --          ; --             ;
+; MISC_FILE                          ; D:/mulingyu/yibumo8jia1/yibumo8jia1.dpf         ; --            ; --          ; --             ;
 ; PARTITION_COLOR                    ; 16764057                                        ; --            ; --          ; Top            ;
 ; PARTITION_NETLIST_TYPE             ; SOURCE                                          ; --            ; --          ; Top            ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                             ; --            ; --          ; eda_blast_fpga ;
@@ -89,11 +90,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:00     ; 1.0                     ; 229 MB              ; 00:00:01                           ;
-; Fitter                  ; 00:00:02     ; 1.0                     ; 263 MB              ; 00:00:01                           ;
-; Assembler               ; 00:00:00     ; 1.0                     ; 228 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 184 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:02     ; --                      ; --                  ; 00:00:03                           ;
+; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 186 MB              ; 00:00:01                           ;
+; Fitter                  ; 00:00:02     ; 1.0                     ; 205 MB              ; 00:00:01                           ;
+; Assembler               ; 00:00:01     ; 1.0                     ; 185 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 142 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:04     ; --                      ; --                  ; 00:00:03                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -102,10 +103,10 @@ applicable agreement for further details.
 +-------------------------+------------------+---------------+------------+----------------+
 ; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
 +-------------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis    ; DESKTOP-981MJPT  ; Windows Vista ; 6.2        ; x86_64         ;
-; Fitter                  ; DESKTOP-981MJPT  ; Windows Vista ; 6.2        ; x86_64         ;
-; Assembler               ; DESKTOP-981MJPT  ; Windows Vista ; 6.2        ; x86_64         ;
-; Classic Timing Analyzer ; DESKTOP-981MJPT  ; Windows Vista ; 6.2        ; x86_64         ;
+; Analysis & Synthesis    ; stu403-27        ; Windows Vista ; 6.1        ; i686           ;
+; Fitter                  ; stu403-27        ; Windows Vista ; 6.1        ; i686           ;
+; Assembler               ; stu403-27        ; Windows Vista ; 6.1        ; i686           ;
+; Classic Timing Analyzer ; stu403-27        ; Windows Vista ; 6.1        ; i686           ;
 +-------------------------+------------------+---------------+------------+----------------+
 
 

@@ -1,5 +1,5 @@
 Flow report for Fangcun
-Tue Apr 09 14:31:14 2019
+Wed Apr 10 20:10:00 2019
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +------------------------------------+-----------------------------------------+
-; Flow Status                        ; Successful - Tue Apr 09 14:31:14 2019   ;
+; Flow Status                        ; Successful - Wed Apr 10 20:10:00 2019   ;
 ; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name                      ; Fangcun                                 ;
 ; Top-level Entity Name              ; Fangcun                                 ;
@@ -46,11 +46,11 @@ applicable agreement for further details.
 ; Device                             ; EP2C8Q208C8                             ;
 ; Timing Models                      ; Final                                   ;
 ; Met timing requirements            ; Yes                                     ;
-; Total logic elements               ; 50 / 8,256 ( < 1 % )                    ;
-;     Total combinational functions  ; 43 / 8,256 ( < 1 % )                    ;
+; Total logic elements               ; 52 / 8,256 ( < 1 % )                    ;
+;     Total combinational functions  ; 45 / 8,256 ( < 1 % )                    ;
 ;     Dedicated logic registers      ; 32 / 8,256 ( < 1 % )                    ;
 ; Total registers                    ; 32                                      ;
-; Total pins                         ; 34 / 138 ( 25 % )                       ;
+; Total pins                         ; 40 / 138 ( 29 % )                       ;
 ; Total virtual pins                 ; 0                                       ;
 ; Total memory bits                  ; 0 / 165,888 ( 0 % )                     ;
 ; Embedded Multiplier 9-bit elements ; 0 / 36 ( 0 % )                          ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/09/2019 14:31:08 ;
+; Start date & time ; 04/10/2019 20:09:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Fangcun             ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +------------------------------------+-----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                   ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+-----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 88623642224052.155479146826144          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 88623642224052.155489819302388          ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                                      ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                                       ; --            ; --          ; --             ;
 ; MISC_FILE                          ; D:/quartualsProject/Fangcun/Fangcun.dpf ; --            ; --          ; --             ;
@@ -89,11 +89,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 236 MB              ; 00:00:01                           ;
-; Fitter                  ; 00:00:01     ; 1.0                     ; 263 MB              ; 00:00:02                           ;
-; Assembler               ; 00:00:01     ; 1.0                     ; 228 MB              ; 00:00:01                           ;
+; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 235 MB              ; 00:00:01                           ;
+; Fitter                  ; 00:00:02     ; 1.0                     ; 263 MB              ; 00:00:02                           ;
+; Assembler               ; 00:00:01     ; 1.0                     ; 236 MB              ; 00:00:01                           ;
 ; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 185 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:03     ; --                      ; --                  ; 00:00:04                           ;
+; Total                   ; 00:00:04     ; --                      ; --                  ; 00:00:04                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

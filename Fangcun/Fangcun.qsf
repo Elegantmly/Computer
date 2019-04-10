@@ -84,3 +84,10 @@ set_location_assignment PIN_94 -to AY
 set_location_assignment PIN_95 -to BY
 set_location_assignment PIN_96 -to EN_read
 set_location_assignment PIN_97 -to EN_write
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_location_assignment PIN_61 -to CPIR
+set_location_assignment PIN_99 -to RAM_read
+set_location_assignment PIN_101 -to RAM_write
+set_location_assignment PIN_63 -to rd
+set_location_assignment PIN_60 -to uRD
+set_location_assignment PIN_64 -to wr

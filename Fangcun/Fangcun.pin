@@ -127,11 +127,11 @@ RESERVED_INPUT               : 56        :        :                   :         
 RESERVED_INPUT               : 57        :        :                   :         : 4         :                
 RESERVED_INPUT               : 58        :        :                   :         : 4         :                
 RESERVED_INPUT               : 59        :        :                   :         : 4         :                
-RESERVED_INPUT               : 60        :        :                   :         : 4         :                
-RESERVED_INPUT               : 61        :        :                   :         : 4         :                
+rd                           : 60        : output : 3.3-V LVTTL       :         : 4         : Y              
+CPIR                         : 61        : output : 3.3-V LVTTL       :         : 4         : Y              
 VCCIO4                       : 62        : power  :                   : 3.3V    : 4         :                
 RESERVED_INPUT               : 63        :        :                   :         : 4         :                
-RESERVED_INPUT               : 64        :        :                   :         : 4         :                
+uRD                          : 64        : output : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : 65        : gnd    :                   :         :           :                
 VCCINT                       : 66        : power  :                   : 1.2V    :           :                
 RESERVED_INPUT               : 67        :        :                   :         : 4         :                
@@ -166,9 +166,9 @@ BY                           : 95        : input  : 3.3-V LVTTL       :         
 EN_read                      : 96        : input  : 3.3-V LVTTL       :         : 4         : Y              
 EN_write                     : 97        : input  : 3.3-V LVTTL       :         : 4         : Y              
 VCCIO4                       : 98        : power  :                   : 3.3V    : 4         :                
-RESERVED_INPUT               : 99        :        :                   :         : 4         :                
+RAM_read                     : 99        : input  : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : 100       : gnd    :                   :         :           :                
-RESERVED_INPUT               : 101       :        :                   :         : 4         :                
+RAM_write                    : 101       : input  : 3.3-V LVTTL       :         : 4         : Y              
 RESERVED_INPUT               : 102       :        :                   :         : 4         :                
 RESERVED_INPUT               : 103       :        :                   :         : 4         :                
 RESERVED_INPUT               : 104       :        :                   :         : 4         :                
@@ -232,7 +232,7 @@ RESERVED_INPUT               : 161       :        :                   :         
 RESERVED_INPUT               : 162       :        :                   :         : 2         :                
 RESERVED_INPUT               : 163       :        :                   :         : 2         :                
 RESERVED_INPUT               : 164       :        :                   :         : 2         :                
-RESERVED_INPUT               : 165       :        :                   :         : 2         :                
+wr                           : 165       : output : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 166       : power  :                   : 3.3V    : 2         :                
 GND                          : 167       : gnd    :                   :         :           :                
 A0                           : 168       : output : 3.3-V LVTTL       :         : 2         : Y              

@@ -2,6 +2,8 @@
 Q0 <= Scounter8:inst5.Q0
 CK => Scounter8:inst5.CK
 CK => inst10.IN0
+CK => CPIR.DATAIN
+CK => uRD.DATAIN
 CLR => Scounter8:inst5.CLR
 CLR => Scounter8:inst1.CLR
 CLR => TheOne8:inst2.CLR
@@ -40,6 +42,12 @@ A4 <= Exper1:inst.Y4
 A5 <= Exper1:inst.Y5
 A6 <= Exper1:inst.Y6
 A7 <= Exper1:inst.Y7
+CPIR <= CK.DB_MAX_OUTPUT_PORT_TYPE
+rd <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+RAM_read => inst14.IN1
+wr <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+RAM_write => inst15.IN1
+uRD <= CK.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Fangcun|Scounter8:inst5

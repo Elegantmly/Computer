@@ -1,0 +1,43 @@
+|santaixuantong
+D0 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D_0 <= inst6
+EN_read => inst5.OE
+EN_read => inst7.OE
+EN_read => inst9.OE
+EN_read => inst11.OE
+EN_read => inst13.OE
+EN_read => inst15.OE
+EN_read => inst17.OE
+EN_read => inst19.OE
+D2 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+D_1 <= inst8
+D4 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+D_2 <= inst10
+D6 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+D_3 <= inst12
+D8 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+D_4 <= inst14
+D10 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+D_5 <= inst16
+D12 <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+D_6 <= inst18
+D14 <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+D_7 <= inst20
+D1 => inst6.DATAIN
+EN_write => inst6.OE
+EN_write => inst8.OE
+EN_write => inst10.OE
+EN_write => inst12.OE
+EN_write => inst14.OE
+EN_write => inst16.OE
+EN_write => inst18.OE
+EN_write => inst20.OE
+D3 => inst8.DATAIN
+D5 => inst10.DATAIN
+D7 => inst12.DATAIN
+D9 => inst14.DATAIN
+D11 => inst16.DATAIN
+D13 => inst18.DATAIN
+D15 => inst20.DATAIN
+
+

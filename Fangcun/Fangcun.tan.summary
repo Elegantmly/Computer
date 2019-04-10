@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.112 ns
+From           : LD
+To             : Scounter8:inst5|Scounter2:inst5|inst
+From Clock     : --
+To Clock       : CK
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 15.700 ns
+From           : Scounter8:inst1|Scounter2:inst6|inst
+To             : A3
+From Clock     : CPR0
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.304 ns
+From           : AY
+To             : A0
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.355 ns
+From           : R7
+To             : TheOne8:inst3|inst
+From Clock     : --
+To Clock       : CPR2
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CPR0'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 326.05 MHz ( period = 3.067 ns )
+From           : Scounter8:inst1|Scounter2:inst7|inst1
+To             : Scounter8:inst1|Scounter2:inst6|inst
+From Clock     : CPR0
+To Clock       : CPR0
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 326.05 MHz ( period = 3.067 ns )
+From           : Scounter8:inst1|Scounter2:inst7|inst1
+To             : Scounter8:inst1|Scounter2:inst6|inst
+From Clock     : CK
+To Clock       : CK
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

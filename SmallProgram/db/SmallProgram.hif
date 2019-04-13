@@ -118,26 +118,6 @@ TheOne8:inst6
 
 # end
 # entity
-ALU
-# storage
-db|SmallProgram.(5).cnf
-db|SmallProgram.(5).cnf
-# case_insensitive
-# source_file
-..|ALU|ALU.bdf
-7076f8a97454f2b11f843effee6ed4
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-ALU:inst
-}
-# macro_sequence
-
-# end
-# entity
 SmallProgram
 # storage
 db|SmallProgram.(0).cnf
@@ -194,6 +174,26 @@ AUTO
 }
 # hierarchies {
 ALU:inst|74182:inst2
+}
+# macro_sequence
+
+# end
+# entity
+ALU
+# storage
+db|SmallProgram.(5).cnf
+db|SmallProgram.(5).cnf
+# case_insensitive
+# source_file
+..|ALU|ALU.bdf
+8c1f42604698a3692e78cf12deb2fc0
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ALU:inst
 }
 # macro_sequence
 

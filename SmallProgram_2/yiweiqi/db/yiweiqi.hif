@@ -1,0 +1,72 @@
+Version 8.1 Build 163 10/28/2008 SJ Web Edition
+11
+945
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+yiweiqi
+# storage
+db|yiweiqi.(0).cnf
+db|yiweiqi.(0).cnf
+# case_insensitive
+# source_file
+yiweiqi.bdf
+9087c7db538c10fe67ea9e65d6acb9
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+Selector_3
+# storage
+db|yiweiqi.(1).cnf
+db|yiweiqi.(1).cnf
+# case_insensitive
+# source_file
+..|Selector_3|Selector_3.bdf
+8032c0231417e5f1b63190efb1db1957
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Selector_3:inst
+Selector_3:inst1
+Selector_3:inst2
+Selector_3:inst3
+Selector_3:inst6
+Selector_3:inst7
+Selector_3:inst8
+Selector_3:inst9
+}
+# macro_sequence
+
+# end
+# complete
+

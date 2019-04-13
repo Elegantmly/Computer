@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MY_CONTROLEDADD
-Wed Apr 10 20:11:54 2019
+Sat Apr 13 10:51:21 2019
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -39,16 +39,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 10 20:11:54 2019   ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr 13 10:51:21 2019   ;
 ; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name                      ; MY_CONTROLEDADD                         ;
 ; Top-level Entity Name              ; MY_CONTROLEDADD                         ;
 ; Family                             ; Cyclone II                              ;
-; Total logic elements               ; 48                                      ;
-;     Total combinational functions  ; 48                                      ;
+; Total logic elements               ; 72                                      ;
+;     Total combinational functions  ; 72                                      ;
 ;     Dedicated logic registers      ; 32                                      ;
 ; Total registers                    ; 32                                      ;
-; Total pins                         ; 38                                      ;
+; Total pins                         ; 44                                      ;
 ; Total virtual pins                 ; 0                                       ;
 ; Total memory bits                  ; 0                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                       ;
@@ -132,20 +132,23 @@ applicable agreement for further details.
 +----------------------------------------------------------------+--------------------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                               ;
-+----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------------------+
-; MY_CONTROLEDADD.bdf              ; yes             ; User Block Diagram/Schematic File        ; C:/Users/dell/Desktop/计组课设/微程序控制的运算器设计/MY_CONTROLEDADD.bdf  ;
-; MY_SCOUNTER8.bdf                 ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/dell/Desktop/计组课设/微程序控制的运算器设计/MY_SCOUNTER8.bdf     ;
-; SOUNTER2.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/dell/Desktop/计组课设/微程序控制的运算器设计/SOUNTER2.bdf         ;
-; MY_DATASELECTOR1.bdf             ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/dell/Desktop/计组课设/微程序控制的运算器设计/MY_DATASELECTOR1.bdf ;
-; MY_REGISTER.bdf                  ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/dell/Desktop/计组课设/微程序控制的运算器设计/MY_REGISTER.bdf      ;
-; MY_BINGXINGADD.bdf               ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/dell/Desktop/计组课设/微程序控制的运算器设计/MY_BINGXINGADD.bdf   ;
-; 74181.bdf                        ; yes             ; Megafunction                             ; d:/quartuals/quartus/libraries/others/maxplus2/74181.bdf                   ;
-; 74182.bdf                        ; yes             ; Megafunction                             ; d:/quartuals/quartus/libraries/others/maxplus2/74182.bdf                   ;
-+----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                   ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                             ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------+
+; MY_CONTROLEDADD.bdf              ; yes             ; User Block Diagram/Schematic File        ; D:/mulingyu/SmallProgram_2/MY_CONTROLEDADD.bdf           ;
+; MY_SCOUNTER8.bdf                 ; yes             ; Auto-Found Block Diagram/Schematic File  ; D:/mulingyu/SmallProgram_2/MY_SCOUNTER8.bdf              ;
+; SOUNTER2.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; D:/mulingyu/SmallProgram_2/SOUNTER2.bdf                  ;
+; MY_DATASELECTOR1.bdf             ; yes             ; Auto-Found Block Diagram/Schematic File  ; D:/mulingyu/SmallProgram_2/MY_DATASELECTOR1.bdf          ;
+; MY_DATASELECTOR8.bdf             ; yes             ; Auto-Found Block Diagram/Schematic File  ; D:/mulingyu/SmallProgram_2/MY_DATASELECTOR8.bdf          ;
+; MY_REGISTER.bdf                  ; yes             ; Auto-Found Block Diagram/Schematic File  ; D:/mulingyu/SmallProgram_2/MY_REGISTER.bdf               ;
+; MY_BINGXINGADD.bdf               ; yes             ; Auto-Found Block Diagram/Schematic File  ; D:/mulingyu/SmallProgram_2/MY_BINGXINGADD.bdf            ;
+; 74181.bdf                        ; yes             ; Megafunction                             ; c:/altera/81/quartus/libraries/others/maxplus2/74181.bdf ;
+; 74182.bdf                        ; yes             ; Megafunction                             ; c:/altera/81/quartus/libraries/others/maxplus2/74182.bdf ;
+; yiweiqi.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; D:/mulingyu/SmallProgram_2/yiweiqi.bdf                   ;
+; Selector_3.bdf                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; D:/mulingyu/SmallProgram_2/Selector_3.bdf                ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -153,27 +156,27 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 48    ;
+; Estimated Total logic elements              ; 72    ;
 ;                                             ;       ;
-; Total combinational functions               ; 48    ;
+; Total combinational functions               ; 72    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 32    ;
-;     -- 3 input functions                    ; 9     ;
+;     -- 4 input functions                    ; 48    ;
+;     -- 3 input functions                    ; 17    ;
 ;     -- <=2 input functions                  ; 7     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 48    ;
+;     -- normal mode                          ; 72    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 32    ;
 ;     -- Dedicated logic registers            ; 32    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 38    ;
+; I/O pins                                    ; 44    ;
 ; Maximum fan-out node                        ; CLR   ;
 ; Maximum fan-out                             ; 32    ;
-; Total fan-out                               ; 283   ;
-; Average fan-out                             ; 2.40  ;
+; Total fan-out                               ; 371   ;
+; Average fan-out                             ; 2.51  ;
 +---------------------------------------------+-------+
 
 
@@ -182,11 +185,20 @@ applicable agreement for further details.
 +-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                       ; Library Name ;
 +-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+--------------+
-; |MY_CONTROLEDADD                  ; 48 (3)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 38   ; 0            ; |MY_CONTROLEDADD                                                          ; work         ;
+; |MY_CONTROLEDADD                  ; 72 (3)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 44   ; 0            ; |MY_CONTROLEDADD                                                          ; work         ;
 ;    |MY_BINGXINGADD:inst3|         ; 34 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MY_CONTROLEDADD|MY_BINGXINGADD:inst3                                     ; work         ;
 ;       |74181:inst1|               ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MY_CONTROLEDADD|MY_BINGXINGADD:inst3|74181:inst1                         ; work         ;
 ;       |74181:inst|                ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MY_CONTROLEDADD|MY_BINGXINGADD:inst3|74181:inst                          ; work         ;
 ;       |74182:inst2|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MY_CONTROLEDADD|MY_BINGXINGADD:inst3|74182:inst2                         ; work         ;
+;    |MY_DATASELECTOR8:inst9|       ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MY_CONTROLEDADD|MY_DATASELECTOR8:inst9                                   ; work         ;
+;       |MY_DATASELECTOR1:inst1|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MY_CONTROLEDADD|MY_DATASELECTOR8:inst9|MY_DATASELECTOR1:inst1            ; work         ;
+;       |MY_DATASELECTOR1:inst2|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MY_CONTROLEDADD|MY_DATASELECTOR8:inst9|MY_DATASELECTOR1:inst2            ; work         ;
+;       |MY_DATASELECTOR1:inst3|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MY_CONTROLEDADD|MY_DATASELECTOR8:inst9|MY_DATASELECTOR1:inst3            ; work         ;
+;       |MY_DATASELECTOR1:inst4|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MY_CONTROLEDADD|MY_DATASELECTOR8:inst9|MY_DATASELECTOR1:inst4            ; work         ;
+;       |MY_DATASELECTOR1:inst5|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MY_CONTROLEDADD|MY_DATASELECTOR8:inst9|MY_DATASELECTOR1:inst5            ; work         ;
+;       |MY_DATASELECTOR1:inst6|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MY_CONTROLEDADD|MY_DATASELECTOR8:inst9|MY_DATASELECTOR1:inst6            ; work         ;
+;       |MY_DATASELECTOR1:inst7|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MY_CONTROLEDADD|MY_DATASELECTOR8:inst9|MY_DATASELECTOR1:inst7            ; work         ;
+;       |MY_DATASELECTOR1:inst|     ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MY_CONTROLEDADD|MY_DATASELECTOR8:inst9|MY_DATASELECTOR1:inst             ; work         ;
 ;    |MY_REGISTER:inst1|            ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MY_CONTROLEDADD|MY_REGISTER:inst1                                        ; work         ;
 ;    |MY_REGISTER:inst2|            ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MY_CONTROLEDADD|MY_REGISTER:inst2                                        ; work         ;
 ;    |MY_REGISTER:inst|             ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MY_CONTROLEDADD|MY_REGISTER:inst                                         ; work         ;
@@ -228,7 +240,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Wed Apr 10 20:11:52 2019
+    Info: Processing started: Sat Apr 13 10:51:19 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MY_CONTROLEDADD -c MY_CONTROLEDADD
 Info: Found 1 design units, including 1 entities, in source file MY_CONTROLEDADD.bdf
     Info: Found entity 1: MY_CONTROLEDADD
@@ -242,6 +254,9 @@ Info: Elaborating entity "SOUNTER2" for hierarchy "MY_SCOUNTER8:inst4|SOUNTER2:i
 Warning: Using design file MY_DATASELECTOR1.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info: Found entity 1: MY_DATASELECTOR1
 Info: Elaborating entity "MY_DATASELECTOR1" for hierarchy "MY_SCOUNTER8:inst4|SOUNTER2:inst3|MY_DATASELECTOR1:inst2"
+Warning: Using design file MY_DATASELECTOR8.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: MY_DATASELECTOR8
+Info: Elaborating entity "MY_DATASELECTOR8" for hierarchy "MY_DATASELECTOR8:inst9"
 Warning: Using design file MY_REGISTER.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info: Found entity 1: MY_REGISTER
 Info: Elaborating entity "MY_REGISTER" for hierarchy "MY_REGISTER:inst2"
@@ -252,16 +267,22 @@ Info: Elaborating entity "74181" for hierarchy "MY_BINGXINGADD:inst3|74181:inst"
 Info: Elaborated megafunction instantiation "MY_BINGXINGADD:inst3|74181:inst"
 Info: Elaborating entity "74182" for hierarchy "MY_BINGXINGADD:inst3|74182:inst2"
 Info: Elaborated megafunction instantiation "MY_BINGXINGADD:inst3|74182:inst2"
+Warning: Using design file yiweiqi.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: yiweiqi
+Info: Elaborating entity "yiweiqi" for hierarchy "yiweiqi:inst7"
+Warning: Using design file Selector_3.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: Selector_3
+Info: Elaborating entity "Selector_3" for hierarchy "yiweiqi:inst7|Selector_3:inst"
 Info: Ignored 30 buffer(s)
     Info: Ignored 30 SOFT buffer(s)
-Info: Implemented 102 device resources after synthesis - the final resource count might be different
-    Info: Implemented 20 input pins
+Info: Implemented 132 device resources after synthesis - the final resource count might be different
+    Info: Implemented 26 input pins
     Info: Implemented 18 output pins
-    Info: Implemented 64 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 236 megabytes
-    Info: Processing ended: Wed Apr 10 20:11:54 2019
+    Info: Implemented 88 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 193 megabytes
+    Info: Processing ended: Sat Apr 13 10:51:21 2019
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

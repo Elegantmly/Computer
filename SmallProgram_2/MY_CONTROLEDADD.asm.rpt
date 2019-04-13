@@ -1,5 +1,5 @@
 Assembler report for MY_CONTROLEDADD
-Wed Apr 10 20:11:58 2019
+Sat Apr 13 10:51:26 2019
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/dell/Desktop/计组课设/微程序控制的运算器设计/MY_CONTROLEDADD.sof
-  6. Assembler Device Options: C:/Users/dell/Desktop/计组课设/微程序控制的运算器设计/MY_CONTROLEDADD.pof
+  5. Assembler Device Options: D:/mulingyu/SmallProgram_2/MY_CONTROLEDADD.sof
+  6. Assembler Device Options: D:/mulingyu/SmallProgram_2/MY_CONTROLEDADD.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Apr 10 20:11:58 2019 ;
+; Assembler Status      ; Successful - Sat Apr 13 10:51:26 2019 ;
 ; Revision Name         ; MY_CONTROLEDADD                       ;
 ; Top-level Entity Name ; MY_CONTROLEDADD                       ;
 ; Family                ; Cyclone II                            ;
@@ -76,37 +76,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+---------------------------------------------------------------------------+
-; Assembler Generated Files                                                 ;
-+---------------------------------------------------------------------------+
-; File Name                                                                 ;
-+---------------------------------------------------------------------------+
-; C:/Users/dell/Desktop/计组课设/微程序控制的运算器设计/MY_CONTROLEDADD.sof ;
-; C:/Users/dell/Desktop/计组课设/微程序控制的运算器设计/MY_CONTROLEDADD.pof ;
-+---------------------------------------------------------------------------+
++------------------------------------------------+
+; Assembler Generated Files                      ;
++------------------------------------------------+
+; File Name                                      ;
++------------------------------------------------+
+; D:/mulingyu/SmallProgram_2/MY_CONTROLEDADD.sof ;
+; D:/mulingyu/SmallProgram_2/MY_CONTROLEDADD.pof ;
++------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/dell/Desktop/计组课设/微程序控制的运算器设计/MY_CONTROLEDADD.sof ;
-+----------------+------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                            ;
-+----------------+------------------------------------------------------------------------------------+
-; Device         ; EP2C8Q208C8                                                                        ;
-; JTAG usercode  ; 0xFFFFFFFF                                                                         ;
-; Checksum       ; 0x000CBD6D                                                                         ;
-+----------------+------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+; Assembler Device Options: D:/mulingyu/SmallProgram_2/MY_CONTROLEDADD.sof ;
++----------------+---------------------------------------------------------+
+; Option         ; Setting                                                 ;
++----------------+---------------------------------------------------------+
+; Device         ; EP2C8Q208C8                                             ;
+; JTAG usercode  ; 0xFFFFFFFF                                              ;
+; Checksum       ; 0x000CFE31                                              ;
++----------------+---------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/dell/Desktop/计组课设/微程序控制的运算器设计/MY_CONTROLEDADD.pof ;
-+--------------------+--------------------------------------------------------------------------------+
-; Option             ; Setting                                                                        ;
-+--------------------+--------------------------------------------------------------------------------+
-; Device             ; EPCS4                                                                          ;
-; JTAG usercode      ; 0x00000000                                                                     ;
-; Checksum           ; 0x06EF547B                                                                     ;
-; Compression Ratio  ; 3                                                                              ;
-+--------------------+--------------------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+; Assembler Device Options: D:/mulingyu/SmallProgram_2/MY_CONTROLEDADD.pof ;
++--------------------+-----------------------------------------------------+
+; Option             ; Setting                                             ;
++--------------------+-----------------------------------------------------+
+; Device             ; EPCS4                                               ;
+; JTAG usercode      ; 0x00000000                                          ;
+; Checksum           ; 0x06EE73D8                                          ;
+; Compression Ratio  ; 3                                                   ;
++--------------------+-----------------------------------------------------+
 
 
 +--------------------+
@@ -115,13 +115,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Wed Apr 10 20:11:57 2019
+    Info: Processing started: Sat Apr 13 10:51:25 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off MY_CONTROLEDADD -c MY_CONTROLEDADD
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 228 megabytes
-    Info: Processing ended: Wed Apr 10 20:11:58 2019
+    Info: Peak virtual memory: 185 megabytes
+    Info: Processing ended: Sat Apr 13 10:51:26 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

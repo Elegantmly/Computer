@@ -1,0 +1,202 @@
+Version 8.1 Build 163 10/28/2008 SJ Web Edition
+11
+945
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+MY_SCOUNTER8
+# storage
+db|MY_CONTROLEDADD.(1).cnf
+db|MY_CONTROLEDADD.(1).cnf
+# case_insensitive
+# source_file
+MY_SCOUNTER8.bdf
+4f1c6b3fc5e6ca3c74233de8ccc9447
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+MY_SCOUNTER8:inst4
+}
+# macro_sequence
+
+# end
+# entity
+SOUNTER2
+# storage
+db|MY_CONTROLEDADD.(2).cnf
+db|MY_CONTROLEDADD.(2).cnf
+# case_insensitive
+# source_file
+SOUNTER2.bdf
+77b3f19ad8db73693cd1783a39fb5e0
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+MY_SCOUNTER8:inst4|SOUNTER2:inst3
+MY_SCOUNTER8:inst4|SOUNTER2:inst2
+MY_SCOUNTER8:inst4|SOUNTER2:inst1
+MY_SCOUNTER8:inst4|SOUNTER2:inst
+}
+# macro_sequence
+
+# end
+# entity
+MY_DATASELECTOR1
+# storage
+db|MY_CONTROLEDADD.(3).cnf
+db|MY_CONTROLEDADD.(3).cnf
+# case_insensitive
+# source_file
+MY_DATASELECTOR1.bdf
+1a45c012adcd8014776dfd9e212282
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+MY_SCOUNTER8:inst4|SOUNTER2:inst3|MY_DATASELECTOR1:inst2
+MY_SCOUNTER8:inst4|SOUNTER2:inst3|MY_DATASELECTOR1:inst6
+MY_SCOUNTER8:inst4|SOUNTER2:inst3|MY_DATASELECTOR1:inst3
+MY_SCOUNTER8:inst4|SOUNTER2:inst2|MY_DATASELECTOR1:inst2
+MY_SCOUNTER8:inst4|SOUNTER2:inst2|MY_DATASELECTOR1:inst6
+MY_SCOUNTER8:inst4|SOUNTER2:inst2|MY_DATASELECTOR1:inst3
+MY_SCOUNTER8:inst4|SOUNTER2:inst1|MY_DATASELECTOR1:inst2
+MY_SCOUNTER8:inst4|SOUNTER2:inst1|MY_DATASELECTOR1:inst6
+MY_SCOUNTER8:inst4|SOUNTER2:inst1|MY_DATASELECTOR1:inst3
+MY_SCOUNTER8:inst4|SOUNTER2:inst|MY_DATASELECTOR1:inst2
+MY_SCOUNTER8:inst4|SOUNTER2:inst|MY_DATASELECTOR1:inst6
+MY_SCOUNTER8:inst4|SOUNTER2:inst|MY_DATASELECTOR1:inst3
+}
+# macro_sequence
+
+# end
+# entity
+MY_REGISTER
+# storage
+db|MY_CONTROLEDADD.(4).cnf
+db|MY_CONTROLEDADD.(4).cnf
+# case_insensitive
+# source_file
+MY_REGISTER.bdf
+5d268dad46e11d7012599c38db0b7
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+MY_REGISTER:inst2
+MY_REGISTER:inst
+MY_REGISTER:inst1
+}
+# macro_sequence
+
+# end
+# entity
+MY_BINGXINGADD
+# storage
+db|MY_CONTROLEDADD.(5).cnf
+db|MY_CONTROLEDADD.(5).cnf
+# case_insensitive
+# source_file
+MY_BINGXINGADD.bdf
+89c1a376e83bd27483839f871d5c6d3
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+MY_BINGXINGADD:inst3
+}
+# macro_sequence
+
+# end
+# entity
+MY_CONTROLEDADD
+# storage
+db|MY_CONTROLEDADD.(0).cnf
+db|MY_CONTROLEDADD.(0).cnf
+# case_insensitive
+# source_file
+MY_CONTROLEDADD.bdf
+6e77f08db9d8b74234cb2d74df77b1e
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+74181
+# storage
+db|MY_CONTROLEDADD.(6).cnf
+db|MY_CONTROLEDADD.(6).cnf
+# case_insensitive
+# source_file
+d:|quartuals|quartus|libraries|others|maxplus2|74181.bdf
+5a7a42864d75db2f39a1f2da31e3e53
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+MY_BINGXINGADD:inst3|74181:inst
+MY_BINGXINGADD:inst3|74181:inst1
+}
+# macro_sequence
+
+# end
+# entity
+74182
+# storage
+db|MY_CONTROLEDADD.(7).cnf
+db|MY_CONTROLEDADD.(7).cnf
+# case_insensitive
+# source_file
+d:|quartuals|quartus|libraries|others|maxplus2|74182.bdf
+7e848f93ad7899d68043667228e561f6
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+MY_BINGXINGADD:inst3|74182:inst2
+}
+# macro_sequence
+
+# end
+# complete
+

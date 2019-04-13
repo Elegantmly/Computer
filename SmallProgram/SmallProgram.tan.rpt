@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for SmallProgram
-Tue Apr 02 19:26:15 2019
+Sat Apr 13 08:32:42 2019
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -44,9 +44,9 @@ applicable agreement for further details.
 ; Type                         ; Slack ; Required Time ; Actual Time                      ; From                ; To                  ; From Clock ; To Clock ; Failed Paths ;
 +------------------------------+-------+---------------+----------------------------------+---------------------+---------------------+------------+----------+--------------+
 ; Worst-case tsu               ; N/A   ; None          ; 7.183 ns                         ; S1                  ; TheOne8:inst8|inst2 ; --         ; CK       ; 0            ;
-; Worst-case tco               ; N/A   ; None          ; 14.631 ns                        ; TheOne8:inst8|inst6 ; B1                  ; CPR2       ; --       ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 14.621 ns                        ; TheOne8:inst8|inst6 ; B1                  ; CPR2       ; --       ; 0            ;
 ; Worst-case tpd               ; N/A   ; None          ; 6.946 ns                         ; CK                  ; RD                  ; --         ; --       ; 0            ;
-; Worst-case th                ; N/A   ; None          ; 0.248 ns                         ; S3                  ; TheOne8:inst8|inst1 ; --         ; CPR2     ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 0.238 ns                         ; S3                  ; TheOne8:inst8|inst1 ; --         ; CPR2     ; 0            ;
 ; Clock Setup: 'CK'            ; N/A   ; None          ; 135.50 MHz ( period = 7.380 ns ) ; TheOne8:inst7|inst6 ; TheOne8:inst8|inst2 ; CK         ; CK       ; 0            ;
 ; Total number of failed paths ;       ;               ;                                  ;                     ;                     ;            ;          ; 0            ;
 +------------------------------+-------+---------------+----------------------------------+---------------------+---------------------+------------+----------+--------------+
@@ -229,21 +229,21 @@ applicable agreement for further details.
 ; N/A   ; None         ; 6.532 ns   ; M    ; TheOne8:inst8|inst                    ; CK       ;
 ; N/A   ; None         ; 6.452 ns   ; S2   ; TheOne8:inst8|inst1                   ; CK       ;
 ; N/A   ; None         ; 6.259 ns   ; M    ; TheOne8:inst8|inst1                   ; CK       ;
-; N/A   ; None         ; 6.174 ns   ; S1   ; TheOne8:inst8|inst2                   ; CPR2     ;
-; N/A   ; None         ; 6.157 ns   ; S0   ; TheOne8:inst8|inst2                   ; CPR2     ;
-; N/A   ; None         ; 5.991 ns   ; S2   ; TheOne8:inst8|inst2                   ; CPR2     ;
+; N/A   ; None         ; 6.184 ns   ; S1   ; TheOne8:inst8|inst2                   ; CPR2     ;
+; N/A   ; None         ; 6.167 ns   ; S0   ; TheOne8:inst8|inst2                   ; CPR2     ;
+; N/A   ; None         ; 6.001 ns   ; S2   ; TheOne8:inst8|inst2                   ; CPR2     ;
 ; N/A   ; None         ; 5.951 ns   ; S1   ; TheOne8:inst8|inst3                   ; CK       ;
 ; N/A   ; None         ; 5.934 ns   ; S0   ; TheOne8:inst8|inst3                   ; CK       ;
-; N/A   ; None         ; 5.899 ns   ; S1   ; TheOne8:inst8|inst                    ; CPR2     ;
-; N/A   ; None         ; 5.882 ns   ; S0   ; TheOne8:inst8|inst                    ; CPR2     ;
-; N/A   ; None         ; 5.798 ns   ; M    ; TheOne8:inst8|inst2                   ; CPR2     ;
+; N/A   ; None         ; 5.909 ns   ; S1   ; TheOne8:inst8|inst                    ; CPR2     ;
+; N/A   ; None         ; 5.892 ns   ; S0   ; TheOne8:inst8|inst                    ; CPR2     ;
+; N/A   ; None         ; 5.808 ns   ; M    ; TheOne8:inst8|inst2                   ; CPR2     ;
 ; N/A   ; None         ; 5.768 ns   ; S2   ; TheOne8:inst8|inst3                   ; CK       ;
-; N/A   ; None         ; 5.716 ns   ; S2   ; TheOne8:inst8|inst                    ; CPR2     ;
-; N/A   ; None         ; 5.626 ns   ; S1   ; TheOne8:inst8|inst1                   ; CPR2     ;
-; N/A   ; None         ; 5.609 ns   ; S0   ; TheOne8:inst8|inst1                   ; CPR2     ;
+; N/A   ; None         ; 5.726 ns   ; S2   ; TheOne8:inst8|inst                    ; CPR2     ;
+; N/A   ; None         ; 5.636 ns   ; S1   ; TheOne8:inst8|inst1                   ; CPR2     ;
+; N/A   ; None         ; 5.619 ns   ; S0   ; TheOne8:inst8|inst1                   ; CPR2     ;
 ; N/A   ; None         ; 5.575 ns   ; M    ; TheOne8:inst8|inst3                   ; CK       ;
-; N/A   ; None         ; 5.523 ns   ; M    ; TheOne8:inst8|inst                    ; CPR2     ;
-; N/A   ; None         ; 5.443 ns   ; S2   ; TheOne8:inst8|inst1                   ; CPR2     ;
+; N/A   ; None         ; 5.533 ns   ; M    ; TheOne8:inst8|inst                    ; CPR2     ;
+; N/A   ; None         ; 5.453 ns   ; S2   ; TheOne8:inst8|inst1                   ; CPR2     ;
 ; N/A   ; None         ; 5.426 ns   ; S1   ; TheOne8:inst8|inst4                   ; CK       ;
 ; N/A   ; None         ; 5.409 ns   ; S0   ; TheOne8:inst8|inst4                   ; CK       ;
 ; N/A   ; None         ; 5.378 ns   ; CN   ; TheOne8:inst8|inst2                   ; CK       ;
@@ -253,58 +253,58 @@ applicable agreement for further details.
 ; N/A   ; None         ; 5.333 ns   ; LD   ; Scounter8:inst5|Scounter2:inst6|inst  ; CK       ;
 ; N/A   ; None         ; 5.332 ns   ; LD   ; Scounter8:inst5|Scounter2:inst4|inst  ; CK       ;
 ; N/A   ; None         ; 5.282 ns   ; S2   ; TheOne8:inst8|inst6                   ; CK       ;
-; N/A   ; None         ; 5.250 ns   ; M    ; TheOne8:inst8|inst1                   ; CPR2     ;
+; N/A   ; None         ; 5.260 ns   ; M    ; TheOne8:inst8|inst1                   ; CPR2     ;
 ; N/A   ; None         ; 5.243 ns   ; S2   ; TheOne8:inst8|inst4                   ; CK       ;
 ; N/A   ; None         ; 5.191 ns   ; S1   ; TheOne8:inst8|inst6                   ; CK       ;
 ; N/A   ; None         ; 5.103 ns   ; CN   ; TheOne8:inst8|inst                    ; CK       ;
 ; N/A   ; None         ; 5.050 ns   ; M    ; TheOne8:inst8|inst4                   ; CK       ;
-; N/A   ; None         ; 4.942 ns   ; S1   ; TheOne8:inst8|inst3                   ; CPR2     ;
-; N/A   ; None         ; 4.925 ns   ; S0   ; TheOne8:inst8|inst3                   ; CPR2     ;
+; N/A   ; None         ; 4.952 ns   ; S1   ; TheOne8:inst8|inst3                   ; CPR2     ;
+; N/A   ; None         ; 4.935 ns   ; S0   ; TheOne8:inst8|inst3                   ; CPR2     ;
 ; N/A   ; None         ; 4.910 ns   ; LD   ; Scounter8:inst5|Scounter2:inst7|inst1 ; CK       ;
 ; N/A   ; None         ; 4.909 ns   ; LD   ; Scounter8:inst5|Scounter2:inst7|inst  ; CK       ;
 ; N/A   ; None         ; 4.909 ns   ; LD   ; Scounter8:inst5|Scounter2:inst6|inst1 ; CK       ;
 ; N/A   ; None         ; 4.847 ns   ; S1   ; TheOne8:inst8|inst5                   ; CK       ;
 ; N/A   ; None         ; 4.830 ns   ; S0   ; TheOne8:inst8|inst5                   ; CK       ;
 ; N/A   ; None         ; 4.830 ns   ; CN   ; TheOne8:inst8|inst1                   ; CK       ;
-; N/A   ; None         ; 4.759 ns   ; S2   ; TheOne8:inst8|inst3                   ; CPR2     ;
+; N/A   ; None         ; 4.769 ns   ; S2   ; TheOne8:inst8|inst3                   ; CPR2     ;
 ; N/A   ; None         ; 4.664 ns   ; S2   ; TheOne8:inst8|inst5                   ; CK       ;
-; N/A   ; None         ; 4.566 ns   ; M    ; TheOne8:inst8|inst3                   ; CPR2     ;
+; N/A   ; None         ; 4.576 ns   ; M    ; TheOne8:inst8|inst3                   ; CPR2     ;
 ; N/A   ; None         ; 4.471 ns   ; M    ; TheOne8:inst8|inst5                   ; CK       ;
-; N/A   ; None         ; 4.417 ns   ; S1   ; TheOne8:inst8|inst4                   ; CPR2     ;
-; N/A   ; None         ; 4.400 ns   ; S0   ; TheOne8:inst8|inst4                   ; CPR2     ;
-; N/A   ; None         ; 4.369 ns   ; CN   ; TheOne8:inst8|inst2                   ; CPR2     ;
-; N/A   ; None         ; 4.273 ns   ; S2   ; TheOne8:inst8|inst6                   ; CPR2     ;
-; N/A   ; None         ; 4.234 ns   ; S2   ; TheOne8:inst8|inst4                   ; CPR2     ;
-; N/A   ; None         ; 4.182 ns   ; S1   ; TheOne8:inst8|inst6                   ; CPR2     ;
+; N/A   ; None         ; 4.427 ns   ; S1   ; TheOne8:inst8|inst4                   ; CPR2     ;
+; N/A   ; None         ; 4.410 ns   ; S0   ; TheOne8:inst8|inst4                   ; CPR2     ;
+; N/A   ; None         ; 4.379 ns   ; CN   ; TheOne8:inst8|inst2                   ; CPR2     ;
+; N/A   ; None         ; 4.283 ns   ; S2   ; TheOne8:inst8|inst6                   ; CPR2     ;
+; N/A   ; None         ; 4.244 ns   ; S2   ; TheOne8:inst8|inst4                   ; CPR2     ;
+; N/A   ; None         ; 4.192 ns   ; S1   ; TheOne8:inst8|inst6                   ; CPR2     ;
 ; N/A   ; None         ; 4.146 ns   ; CN   ; TheOne8:inst8|inst3                   ; CK       ;
-; N/A   ; None         ; 4.094 ns   ; CN   ; TheOne8:inst8|inst                    ; CPR2     ;
-; N/A   ; None         ; 4.041 ns   ; M    ; TheOne8:inst8|inst4                   ; CPR2     ;
+; N/A   ; None         ; 4.104 ns   ; CN   ; TheOne8:inst8|inst                    ; CPR2     ;
+; N/A   ; None         ; 4.051 ns   ; M    ; TheOne8:inst8|inst4                   ; CPR2     ;
+; N/A   ; None         ; 3.848 ns   ; S1   ; TheOne8:inst8|inst5                   ; CPR2     ;
 ; N/A   ; None         ; 3.842 ns   ; S2   ; TheOne8:inst8|inst7                   ; CK       ;
-; N/A   ; None         ; 3.838 ns   ; S1   ; TheOne8:inst8|inst5                   ; CPR2     ;
-; N/A   ; None         ; 3.821 ns   ; S0   ; TheOne8:inst8|inst5                   ; CPR2     ;
-; N/A   ; None         ; 3.821 ns   ; CN   ; TheOne8:inst8|inst1                   ; CPR2     ;
+; N/A   ; None         ; 3.831 ns   ; S0   ; TheOne8:inst8|inst5                   ; CPR2     ;
+; N/A   ; None         ; 3.831 ns   ; CN   ; TheOne8:inst8|inst1                   ; CPR2     ;
 ; N/A   ; None         ; 3.767 ns   ; S0   ; TheOne8:inst8|inst6                   ; CK       ;
 ; N/A   ; None         ; 3.751 ns   ; S1   ; TheOne8:inst8|inst7                   ; CK       ;
+; N/A   ; None         ; 3.665 ns   ; S2   ; TheOne8:inst8|inst5                   ; CPR2     ;
 ; N/A   ; None         ; 3.660 ns   ; CN   ; TheOne8:inst8|inst6                   ; CK       ;
-; N/A   ; None         ; 3.655 ns   ; S2   ; TheOne8:inst8|inst5                   ; CPR2     ;
 ; N/A   ; None         ; 3.621 ns   ; CN   ; TheOne8:inst8|inst4                   ; CK       ;
 ; N/A   ; None         ; 3.507 ns   ; S0   ; TheOne8:inst8|inst7                   ; CK       ;
-; N/A   ; None         ; 3.462 ns   ; M    ; TheOne8:inst8|inst5                   ; CPR2     ;
+; N/A   ; None         ; 3.472 ns   ; M    ; TheOne8:inst8|inst5                   ; CPR2     ;
 ; N/A   ; None         ; 3.408 ns   ; M    ; TheOne8:inst8|inst6                   ; CK       ;
+; N/A   ; None         ; 3.147 ns   ; CN   ; TheOne8:inst8|inst3                   ; CPR2     ;
 ; N/A   ; None         ; 3.144 ns   ; M    ; TheOne8:inst8|inst7                   ; CK       ;
 ; N/A   ; None         ; 3.139 ns   ; S3   ; TheOne8:inst8|inst2                   ; CK       ;
-; N/A   ; None         ; 3.137 ns   ; CN   ; TheOne8:inst8|inst3                   ; CPR2     ;
 ; N/A   ; None         ; 3.042 ns   ; CN   ; TheOne8:inst8|inst5                   ; CK       ;
-; N/A   ; None         ; 2.833 ns   ; S2   ; TheOne8:inst8|inst7                   ; CPR2     ;
-; N/A   ; None         ; 2.758 ns   ; S0   ; TheOne8:inst8|inst6                   ; CPR2     ;
-; N/A   ; None         ; 2.742 ns   ; S1   ; TheOne8:inst8|inst7                   ; CPR2     ;
-; N/A   ; None         ; 2.651 ns   ; CN   ; TheOne8:inst8|inst6                   ; CPR2     ;
-; N/A   ; None         ; 2.612 ns   ; CN   ; TheOne8:inst8|inst4                   ; CPR2     ;
-; N/A   ; None         ; 2.498 ns   ; S0   ; TheOne8:inst8|inst7                   ; CPR2     ;
-; N/A   ; None         ; 2.399 ns   ; M    ; TheOne8:inst8|inst6                   ; CPR2     ;
-; N/A   ; None         ; 2.135 ns   ; M    ; TheOne8:inst8|inst7                   ; CPR2     ;
-; N/A   ; None         ; 2.130 ns   ; S3   ; TheOne8:inst8|inst2                   ; CPR2     ;
-; N/A   ; None         ; 2.033 ns   ; CN   ; TheOne8:inst8|inst5                   ; CPR2     ;
+; N/A   ; None         ; 2.843 ns   ; S2   ; TheOne8:inst8|inst7                   ; CPR2     ;
+; N/A   ; None         ; 2.768 ns   ; S0   ; TheOne8:inst8|inst6                   ; CPR2     ;
+; N/A   ; None         ; 2.752 ns   ; S1   ; TheOne8:inst8|inst7                   ; CPR2     ;
+; N/A   ; None         ; 2.661 ns   ; CN   ; TheOne8:inst8|inst6                   ; CPR2     ;
+; N/A   ; None         ; 2.622 ns   ; CN   ; TheOne8:inst8|inst4                   ; CPR2     ;
+; N/A   ; None         ; 2.508 ns   ; S0   ; TheOne8:inst8|inst7                   ; CPR2     ;
+; N/A   ; None         ; 2.409 ns   ; M    ; TheOne8:inst8|inst6                   ; CPR2     ;
+; N/A   ; None         ; 2.145 ns   ; M    ; TheOne8:inst8|inst7                   ; CPR2     ;
+; N/A   ; None         ; 2.140 ns   ; S3   ; TheOne8:inst8|inst2                   ; CPR2     ;
+; N/A   ; None         ; 2.043 ns   ; CN   ; TheOne8:inst8|inst5                   ; CPR2     ;
 ; N/A   ; None         ; 1.945 ns   ; S3   ; TheOne8:inst8|inst4                   ; CK       ;
 ; N/A   ; None         ; 1.759 ns   ; A6   ; TheOne8:inst7|inst1                   ; CK       ;
 ; N/A   ; None         ; 1.563 ns   ; S3   ; TheOne8:inst8|inst7                   ; CK       ;
@@ -329,30 +329,30 @@ applicable agreement for further details.
 ; N/A   ; None         ; 1.032 ns   ; A0   ; TheOne8:inst6|inst7                   ; CK       ;
 ; N/A   ; None         ; 1.032 ns   ; S3   ; TheOne8:inst8|inst3                   ; CK       ;
 ; N/A   ; None         ; 1.027 ns   ; S3   ; TheOne8:inst8|inst1                   ; CK       ;
-; N/A   ; None         ; 0.936 ns   ; S3   ; TheOne8:inst8|inst4                   ; CPR2     ;
-; N/A   ; None         ; 0.798 ns   ; A6   ; TheOne8:inst7|inst1                   ; CPR0     ;
-; N/A   ; None         ; 0.554 ns   ; S3   ; TheOne8:inst8|inst7                   ; CPR2     ;
-; N/A   ; None         ; 0.531 ns   ; A7   ; TheOne8:inst7|inst                    ; CPR0     ;
-; N/A   ; None         ; 0.484 ns   ; A7   ; TheOne8:inst6|inst                    ; CPR1     ;
-; N/A   ; None         ; 0.446 ns   ; S3   ; TheOne8:inst8|inst5                   ; CPR2     ;
-; N/A   ; None         ; 0.441 ns   ; A6   ; TheOne8:inst6|inst1                   ; CPR1     ;
-; N/A   ; None         ; 0.409 ns   ; A2   ; TheOne8:inst7|inst5                   ; CPR0     ;
-; N/A   ; None         ; 0.250 ns   ; S3   ; TheOne8:inst8|inst                    ; CPR2     ;
-; N/A   ; None         ; 0.233 ns   ; A2   ; TheOne8:inst6|inst5                   ; CPR1     ;
-; N/A   ; None         ; 0.170 ns   ; CN   ; TheOne8:inst8|inst7                   ; CPR2     ;
-; N/A   ; None         ; 0.168 ns   ; A3   ; TheOne8:inst6|inst4                   ; CPR1     ;
-; N/A   ; None         ; 0.147 ns   ; A5   ; TheOne8:inst7|inst2                   ; CPR0     ;
-; N/A   ; None         ; 0.138 ns   ; A3   ; TheOne8:inst7|inst4                   ; CPR0     ;
-; N/A   ; None         ; 0.133 ns   ; A1   ; TheOne8:inst7|inst6                   ; CPR0     ;
-; N/A   ; None         ; 0.119 ns   ; A4   ; TheOne8:inst7|inst3                   ; CPR0     ;
-; N/A   ; None         ; 0.109 ns   ; A5   ; TheOne8:inst6|inst2                   ; CPR1     ;
-; N/A   ; None         ; 0.080 ns   ; A1   ; TheOne8:inst6|inst6                   ; CPR1     ;
-; N/A   ; None         ; 0.075 ns   ; A4   ; TheOne8:inst6|inst3                   ; CPR1     ;
-; N/A   ; None         ; 0.074 ns   ; A0   ; TheOne8:inst7|inst7                   ; CPR0     ;
-; N/A   ; None         ; 0.045 ns   ; A0   ; TheOne8:inst6|inst7                   ; CPR1     ;
-; N/A   ; None         ; 0.024 ns   ; S3   ; TheOne8:inst8|inst6                   ; CPR2     ;
-; N/A   ; None         ; 0.023 ns   ; S3   ; TheOne8:inst8|inst3                   ; CPR2     ;
-; N/A   ; None         ; 0.018 ns   ; S3   ; TheOne8:inst8|inst1                   ; CPR2     ;
+; N/A   ; None         ; 0.946 ns   ; S3   ; TheOne8:inst8|inst4                   ; CPR2     ;
+; N/A   ; None         ; 0.771 ns   ; A6   ; TheOne8:inst7|inst1                   ; CPR0     ;
+; N/A   ; None         ; 0.564 ns   ; S3   ; TheOne8:inst8|inst7                   ; CPR2     ;
+; N/A   ; None         ; 0.504 ns   ; A7   ; TheOne8:inst7|inst                    ; CPR0     ;
+; N/A   ; None         ; 0.469 ns   ; A7   ; TheOne8:inst6|inst                    ; CPR1     ;
+; N/A   ; None         ; 0.456 ns   ; S3   ; TheOne8:inst8|inst5                   ; CPR2     ;
+; N/A   ; None         ; 0.426 ns   ; A6   ; TheOne8:inst6|inst1                   ; CPR1     ;
+; N/A   ; None         ; 0.382 ns   ; A2   ; TheOne8:inst7|inst5                   ; CPR0     ;
+; N/A   ; None         ; 0.260 ns   ; S3   ; TheOne8:inst8|inst                    ; CPR2     ;
+; N/A   ; None         ; 0.218 ns   ; A2   ; TheOne8:inst6|inst5                   ; CPR1     ;
+; N/A   ; None         ; 0.180 ns   ; CN   ; TheOne8:inst8|inst7                   ; CPR2     ;
+; N/A   ; None         ; 0.153 ns   ; A3   ; TheOne8:inst6|inst4                   ; CPR1     ;
+; N/A   ; None         ; 0.120 ns   ; A5   ; TheOne8:inst7|inst2                   ; CPR0     ;
+; N/A   ; None         ; 0.111 ns   ; A3   ; TheOne8:inst7|inst4                   ; CPR0     ;
+; N/A   ; None         ; 0.106 ns   ; A1   ; TheOne8:inst7|inst6                   ; CPR0     ;
+; N/A   ; None         ; 0.094 ns   ; A5   ; TheOne8:inst6|inst2                   ; CPR1     ;
+; N/A   ; None         ; 0.092 ns   ; A4   ; TheOne8:inst7|inst3                   ; CPR0     ;
+; N/A   ; None         ; 0.065 ns   ; A1   ; TheOne8:inst6|inst6                   ; CPR1     ;
+; N/A   ; None         ; 0.060 ns   ; A4   ; TheOne8:inst6|inst3                   ; CPR1     ;
+; N/A   ; None         ; 0.047 ns   ; A0   ; TheOne8:inst7|inst7                   ; CPR0     ;
+; N/A   ; None         ; 0.034 ns   ; S3   ; TheOne8:inst8|inst6                   ; CPR2     ;
+; N/A   ; None         ; 0.033 ns   ; S3   ; TheOne8:inst8|inst3                   ; CPR2     ;
+; N/A   ; None         ; 0.030 ns   ; A0   ; TheOne8:inst6|inst7                   ; CPR1     ;
+; N/A   ; None         ; 0.028 ns   ; S3   ; TheOne8:inst8|inst1                   ; CPR2     ;
 +-------+--------------+------------+------+---------------------------------------+----------+
 
 
@@ -361,15 +361,15 @@ applicable agreement for further details.
 +-------+--------------+------------+---------------------------------------+----+------------+
 ; Slack ; Required tco ; Actual tco ; From                                  ; To ; From Clock ;
 +-------+--------------+------------+---------------------------------------+----+------------+
-; N/A   ; None         ; 14.631 ns  ; TheOne8:inst8|inst6                   ; B1 ; CPR2       ;
-; N/A   ; None         ; 14.085 ns  ; TheOne8:inst8|inst                    ; B7 ; CPR2       ;
-; N/A   ; None         ; 14.046 ns  ; TheOne8:inst8|inst2                   ; B5 ; CPR2       ;
-; N/A   ; None         ; 14.041 ns  ; TheOne8:inst8|inst1                   ; B6 ; CPR2       ;
-; N/A   ; None         ; 14.010 ns  ; TheOne8:inst8|inst4                   ; B3 ; CPR2       ;
-; N/A   ; None         ; 13.936 ns  ; TheOne8:inst8|inst5                   ; B2 ; CPR2       ;
-; N/A   ; None         ; 13.647 ns  ; TheOne8:inst8|inst7                   ; B0 ; CPR2       ;
+; N/A   ; None         ; 14.621 ns  ; TheOne8:inst8|inst6                   ; B1 ; CPR2       ;
+; N/A   ; None         ; 14.075 ns  ; TheOne8:inst8|inst                    ; B7 ; CPR2       ;
+; N/A   ; None         ; 14.036 ns  ; TheOne8:inst8|inst2                   ; B5 ; CPR2       ;
+; N/A   ; None         ; 14.031 ns  ; TheOne8:inst8|inst1                   ; B6 ; CPR2       ;
+; N/A   ; None         ; 14.000 ns  ; TheOne8:inst8|inst4                   ; B3 ; CPR2       ;
+; N/A   ; None         ; 13.926 ns  ; TheOne8:inst8|inst5                   ; B2 ; CPR2       ;
+; N/A   ; None         ; 13.637 ns  ; TheOne8:inst8|inst7                   ; B0 ; CPR2       ;
 ; N/A   ; None         ; 13.622 ns  ; TheOne8:inst8|inst6                   ; B1 ; CK         ;
-; N/A   ; None         ; 13.326 ns  ; TheOne8:inst8|inst3                   ; B4 ; CPR2       ;
+; N/A   ; None         ; 13.316 ns  ; TheOne8:inst8|inst3                   ; B4 ; CPR2       ;
 ; N/A   ; None         ; 13.076 ns  ; TheOne8:inst8|inst                    ; B7 ; CK         ;
 ; N/A   ; None         ; 13.037 ns  ; TheOne8:inst8|inst2                   ; B5 ; CK         ;
 ; N/A   ; None         ; 13.032 ns  ; TheOne8:inst8|inst1                   ; B6 ; CK         ;
@@ -403,113 +403,113 @@ applicable agreement for further details.
 +---------------+-------------+-----------+------+---------------------------------------+----------+
 ; Minimum Slack ; Required th ; Actual th ; From ; To                                    ; To Clock ;
 +---------------+-------------+-----------+------+---------------------------------------+----------+
-; N/A           ; None        ; 0.248 ns  ; S3   ; TheOne8:inst8|inst1                   ; CPR2     ;
-; N/A           ; None        ; 0.243 ns  ; S3   ; TheOne8:inst8|inst3                   ; CPR2     ;
-; N/A           ; None        ; 0.242 ns  ; S3   ; TheOne8:inst8|inst6                   ; CPR2     ;
-; N/A           ; None        ; 0.221 ns  ; A0   ; TheOne8:inst6|inst7                   ; CPR1     ;
-; N/A           ; None        ; 0.192 ns  ; A0   ; TheOne8:inst7|inst7                   ; CPR0     ;
-; N/A           ; None        ; 0.191 ns  ; A4   ; TheOne8:inst6|inst3                   ; CPR1     ;
-; N/A           ; None        ; 0.186 ns  ; A1   ; TheOne8:inst6|inst6                   ; CPR1     ;
-; N/A           ; None        ; 0.157 ns  ; A5   ; TheOne8:inst6|inst2                   ; CPR1     ;
-; N/A           ; None        ; 0.147 ns  ; A4   ; TheOne8:inst7|inst3                   ; CPR0     ;
-; N/A           ; None        ; 0.133 ns  ; A1   ; TheOne8:inst7|inst6                   ; CPR0     ;
-; N/A           ; None        ; 0.128 ns  ; A3   ; TheOne8:inst7|inst4                   ; CPR0     ;
-; N/A           ; None        ; 0.119 ns  ; A5   ; TheOne8:inst7|inst2                   ; CPR0     ;
-; N/A           ; None        ; 0.098 ns  ; A3   ; TheOne8:inst6|inst4                   ; CPR1     ;
-; N/A           ; None        ; 0.096 ns  ; CN   ; TheOne8:inst8|inst7                   ; CPR2     ;
-; N/A           ; None        ; 0.033 ns  ; A2   ; TheOne8:inst6|inst5                   ; CPR1     ;
-; N/A           ; None        ; 0.016 ns  ; S3   ; TheOne8:inst8|inst                    ; CPR2     ;
-; N/A           ; None        ; -0.143 ns ; A2   ; TheOne8:inst7|inst5                   ; CPR0     ;
-; N/A           ; None        ; -0.175 ns ; A6   ; TheOne8:inst6|inst1                   ; CPR1     ;
-; N/A           ; None        ; -0.180 ns ; S3   ; TheOne8:inst8|inst5                   ; CPR2     ;
-; N/A           ; None        ; -0.218 ns ; A7   ; TheOne8:inst6|inst                    ; CPR1     ;
-; N/A           ; None        ; -0.265 ns ; A7   ; TheOne8:inst7|inst                    ; CPR0     ;
-; N/A           ; None        ; -0.288 ns ; S3   ; TheOne8:inst8|inst7                   ; CPR2     ;
-; N/A           ; None        ; -0.532 ns ; A6   ; TheOne8:inst7|inst1                   ; CPR0     ;
-; N/A           ; None        ; -0.670 ns ; S3   ; TheOne8:inst8|inst4                   ; CPR2     ;
+; N/A           ; None        ; 0.238 ns  ; S3   ; TheOne8:inst8|inst1                   ; CPR2     ;
+; N/A           ; None        ; 0.236 ns  ; A0   ; TheOne8:inst6|inst7                   ; CPR1     ;
+; N/A           ; None        ; 0.233 ns  ; S3   ; TheOne8:inst8|inst3                   ; CPR2     ;
+; N/A           ; None        ; 0.232 ns  ; S3   ; TheOne8:inst8|inst6                   ; CPR2     ;
+; N/A           ; None        ; 0.219 ns  ; A0   ; TheOne8:inst7|inst7                   ; CPR0     ;
+; N/A           ; None        ; 0.206 ns  ; A4   ; TheOne8:inst6|inst3                   ; CPR1     ;
+; N/A           ; None        ; 0.201 ns  ; A1   ; TheOne8:inst6|inst6                   ; CPR1     ;
+; N/A           ; None        ; 0.174 ns  ; A4   ; TheOne8:inst7|inst3                   ; CPR0     ;
+; N/A           ; None        ; 0.172 ns  ; A5   ; TheOne8:inst6|inst2                   ; CPR1     ;
+; N/A           ; None        ; 0.160 ns  ; A1   ; TheOne8:inst7|inst6                   ; CPR0     ;
+; N/A           ; None        ; 0.155 ns  ; A3   ; TheOne8:inst7|inst4                   ; CPR0     ;
+; N/A           ; None        ; 0.146 ns  ; A5   ; TheOne8:inst7|inst2                   ; CPR0     ;
+; N/A           ; None        ; 0.113 ns  ; A3   ; TheOne8:inst6|inst4                   ; CPR1     ;
+; N/A           ; None        ; 0.086 ns  ; CN   ; TheOne8:inst8|inst7                   ; CPR2     ;
+; N/A           ; None        ; 0.048 ns  ; A2   ; TheOne8:inst6|inst5                   ; CPR1     ;
+; N/A           ; None        ; 0.006 ns  ; S3   ; TheOne8:inst8|inst                    ; CPR2     ;
+; N/A           ; None        ; -0.116 ns ; A2   ; TheOne8:inst7|inst5                   ; CPR0     ;
+; N/A           ; None        ; -0.160 ns ; A6   ; TheOne8:inst6|inst1                   ; CPR1     ;
+; N/A           ; None        ; -0.190 ns ; S3   ; TheOne8:inst8|inst5                   ; CPR2     ;
+; N/A           ; None        ; -0.203 ns ; A7   ; TheOne8:inst6|inst                    ; CPR1     ;
+; N/A           ; None        ; -0.238 ns ; A7   ; TheOne8:inst7|inst                    ; CPR0     ;
+; N/A           ; None        ; -0.298 ns ; S3   ; TheOne8:inst8|inst7                   ; CPR2     ;
+; N/A           ; None        ; -0.505 ns ; A6   ; TheOne8:inst7|inst1                   ; CPR0     ;
+; N/A           ; None        ; -0.680 ns ; S3   ; TheOne8:inst8|inst4                   ; CPR2     ;
 ; N/A           ; None        ; -0.761 ns ; S3   ; TheOne8:inst8|inst1                   ; CK       ;
 ; N/A           ; None        ; -0.766 ns ; A0   ; TheOne8:inst6|inst7                   ; CK       ;
 ; N/A           ; None        ; -0.766 ns ; S3   ; TheOne8:inst8|inst3                   ; CK       ;
 ; N/A           ; None        ; -0.767 ns ; S3   ; TheOne8:inst8|inst6                   ; CK       ;
 ; N/A           ; None        ; -0.769 ns ; A0   ; TheOne8:inst7|inst7                   ; CK       ;
-; N/A           ; None        ; -0.791 ns ; M    ; TheOne8:inst8|inst4                   ; CPR2     ;
 ; N/A           ; None        ; -0.796 ns ; A4   ; TheOne8:inst6|inst3                   ; CK       ;
 ; N/A           ; None        ; -0.801 ns ; A1   ; TheOne8:inst6|inst6                   ; CK       ;
-; N/A           ; None        ; -0.809 ns ; S0   ; TheOne8:inst8|inst1                   ; CPR2     ;
+; N/A           ; None        ; -0.801 ns ; M    ; TheOne8:inst8|inst4                   ; CPR2     ;
 ; N/A           ; None        ; -0.814 ns ; A4   ; TheOne8:inst7|inst3                   ; CK       ;
+; N/A           ; None        ; -0.819 ns ; S0   ; TheOne8:inst8|inst1                   ; CPR2     ;
 ; N/A           ; None        ; -0.828 ns ; A1   ; TheOne8:inst7|inst6                   ; CK       ;
 ; N/A           ; None        ; -0.830 ns ; A5   ; TheOne8:inst6|inst2                   ; CK       ;
 ; N/A           ; None        ; -0.833 ns ; A3   ; TheOne8:inst7|inst4                   ; CK       ;
 ; N/A           ; None        ; -0.842 ns ; A5   ; TheOne8:inst7|inst2                   ; CK       ;
-; N/A           ; None        ; -0.844 ns ; M    ; TheOne8:inst8|inst6                   ; CPR2     ;
-; N/A           ; None        ; -0.859 ns ; M    ; TheOne8:inst8|inst5                   ; CPR2     ;
+; N/A           ; None        ; -0.854 ns ; M    ; TheOne8:inst8|inst6                   ; CPR2     ;
+; N/A           ; None        ; -0.869 ns ; M    ; TheOne8:inst8|inst5                   ; CPR2     ;
 ; N/A           ; None        ; -0.889 ns ; A3   ; TheOne8:inst6|inst4                   ; CK       ;
 ; N/A           ; None        ; -0.913 ns ; CN   ; TheOne8:inst8|inst7                   ; CK       ;
 ; N/A           ; None        ; -0.954 ns ; A2   ; TheOne8:inst6|inst5                   ; CK       ;
 ; N/A           ; None        ; -0.993 ns ; S3   ; TheOne8:inst8|inst                    ; CK       ;
 ; N/A           ; None        ; -1.104 ns ; A2   ; TheOne8:inst7|inst5                   ; CK       ;
-; N/A           ; None        ; -1.120 ns ; S1   ; TheOne8:inst8|inst                    ; CPR2     ;
-; N/A           ; None        ; -1.121 ns ; S1   ; TheOne8:inst8|inst1                   ; CPR2     ;
-; N/A           ; None        ; -1.153 ns ; S0   ; TheOne8:inst8|inst4                   ; CPR2     ;
+; N/A           ; None        ; -1.130 ns ; S1   ; TheOne8:inst8|inst                    ; CPR2     ;
+; N/A           ; None        ; -1.131 ns ; S1   ; TheOne8:inst8|inst1                   ; CPR2     ;
 ; N/A           ; None        ; -1.162 ns ; A6   ; TheOne8:inst6|inst1                   ; CK       ;
-; N/A           ; None        ; -1.172 ns ; S2   ; TheOne8:inst8|inst1                   ; CPR2     ;
-; N/A           ; None        ; -1.176 ns ; S2   ; TheOne8:inst8|inst                    ; CPR2     ;
+; N/A           ; None        ; -1.163 ns ; S0   ; TheOne8:inst8|inst4                   ; CPR2     ;
+; N/A           ; None        ; -1.182 ns ; S2   ; TheOne8:inst8|inst1                   ; CPR2     ;
+; N/A           ; None        ; -1.186 ns ; S2   ; TheOne8:inst8|inst                    ; CPR2     ;
 ; N/A           ; None        ; -1.189 ns ; S3   ; TheOne8:inst8|inst5                   ; CK       ;
-; N/A           ; None        ; -1.199 ns ; S1   ; TheOne8:inst8|inst4                   ; CPR2     ;
 ; N/A           ; None        ; -1.205 ns ; A7   ; TheOne8:inst6|inst                    ; CK       ;
-; N/A           ; None        ; -1.207 ns ; S0   ; TheOne8:inst8|inst6                   ; CPR2     ;
-; N/A           ; None        ; -1.221 ns ; S0   ; TheOne8:inst8|inst5                   ; CPR2     ;
+; N/A           ; None        ; -1.209 ns ; S1   ; TheOne8:inst8|inst4                   ; CPR2     ;
+; N/A           ; None        ; -1.217 ns ; S0   ; TheOne8:inst8|inst6                   ; CPR2     ;
 ; N/A           ; None        ; -1.226 ns ; A7   ; TheOne8:inst7|inst                    ; CK       ;
+; N/A           ; None        ; -1.231 ns ; S0   ; TheOne8:inst8|inst5                   ; CPR2     ;
 ; N/A           ; None        ; -1.297 ns ; S3   ; TheOne8:inst8|inst7                   ; CK       ;
-; N/A           ; None        ; -1.303 ns ; M    ; TheOne8:inst8|inst1                   ; CPR2     ;
-; N/A           ; None        ; -1.388 ns ; S0   ; TheOne8:inst8|inst3                   ; CPR2     ;
+; N/A           ; None        ; -1.313 ns ; M    ; TheOne8:inst8|inst1                   ; CPR2     ;
+; N/A           ; None        ; -1.398 ns ; S0   ; TheOne8:inst8|inst3                   ; CPR2     ;
 ; N/A           ; None        ; -1.493 ns ; A6   ; TheOne8:inst7|inst1                   ; CK       ;
-; N/A           ; None        ; -1.532 ns ; S0   ; TheOne8:inst8|inst                    ; CPR2     ;
-; N/A           ; None        ; -1.535 ns ; S2   ; TheOne8:inst8|inst4                   ; CPR2     ;
-; N/A           ; None        ; -1.540 ns ; S1   ; TheOne8:inst8|inst3                   ; CPR2     ;
-; N/A           ; None        ; -1.630 ns ; S2   ; TheOne8:inst8|inst3                   ; CPR2     ;
-; N/A           ; None        ; -1.647 ns ; S1   ; TheOne8:inst8|inst5                   ; CPR2     ;
+; N/A           ; None        ; -1.542 ns ; S0   ; TheOne8:inst8|inst                    ; CPR2     ;
+; N/A           ; None        ; -1.545 ns ; S2   ; TheOne8:inst8|inst4                   ; CPR2     ;
+; N/A           ; None        ; -1.550 ns ; S1   ; TheOne8:inst8|inst3                   ; CPR2     ;
+; N/A           ; None        ; -1.640 ns ; S2   ; TheOne8:inst8|inst3                   ; CPR2     ;
+; N/A           ; None        ; -1.657 ns ; S1   ; TheOne8:inst8|inst5                   ; CPR2     ;
 ; N/A           ; None        ; -1.679 ns ; S3   ; TheOne8:inst8|inst4                   ; CK       ;
-; N/A           ; None        ; -1.735 ns ; S2   ; TheOne8:inst8|inst5                   ; CPR2     ;
-; N/A           ; None        ; -1.767 ns ; CN   ; TheOne8:inst8|inst5                   ; CPR2     ;
+; N/A           ; None        ; -1.745 ns ; S2   ; TheOne8:inst8|inst5                   ; CPR2     ;
+; N/A           ; None        ; -1.777 ns ; CN   ; TheOne8:inst8|inst5                   ; CPR2     ;
 ; N/A           ; None        ; -1.800 ns ; M    ; TheOne8:inst8|inst4                   ; CK       ;
 ; N/A           ; None        ; -1.818 ns ; S0   ; TheOne8:inst8|inst1                   ; CK       ;
 ; N/A           ; None        ; -1.853 ns ; M    ; TheOne8:inst8|inst6                   ; CK       ;
-; N/A           ; None        ; -1.864 ns ; S3   ; TheOne8:inst8|inst2                   ; CPR2     ;
-; N/A           ; None        ; -1.865 ns ; S0   ; TheOne8:inst8|inst2                   ; CPR2     ;
 ; N/A           ; None        ; -1.868 ns ; M    ; TheOne8:inst8|inst5                   ; CK       ;
-; N/A           ; None        ; -1.869 ns ; M    ; TheOne8:inst8|inst7                   ; CPR2     ;
-; N/A           ; None        ; -1.879 ns ; M    ; TheOne8:inst8|inst3                   ; CPR2     ;
-; N/A           ; None        ; -2.021 ns ; M    ; TheOne8:inst8|inst                    ; CPR2     ;
+; N/A           ; None        ; -1.874 ns ; S3   ; TheOne8:inst8|inst2                   ; CPR2     ;
+; N/A           ; None        ; -1.875 ns ; S0   ; TheOne8:inst8|inst2                   ; CPR2     ;
+; N/A           ; None        ; -1.879 ns ; M    ; TheOne8:inst8|inst7                   ; CPR2     ;
+; N/A           ; None        ; -1.889 ns ; M    ; TheOne8:inst8|inst3                   ; CPR2     ;
+; N/A           ; None        ; -2.031 ns ; M    ; TheOne8:inst8|inst                    ; CPR2     ;
 ; N/A           ; None        ; -2.129 ns ; S1   ; TheOne8:inst8|inst                    ; CK       ;
 ; N/A           ; None        ; -2.130 ns ; S1   ; TheOne8:inst8|inst1                   ; CK       ;
 ; N/A           ; None        ; -2.162 ns ; S0   ; TheOne8:inst8|inst4                   ; CK       ;
 ; N/A           ; None        ; -2.181 ns ; S2   ; TheOne8:inst8|inst1                   ; CK       ;
 ; N/A           ; None        ; -2.185 ns ; S2   ; TheOne8:inst8|inst                    ; CK       ;
-; N/A           ; None        ; -2.205 ns ; S1   ; TheOne8:inst8|inst2                   ; CPR2     ;
 ; N/A           ; None        ; -2.208 ns ; S1   ; TheOne8:inst8|inst4                   ; CK       ;
+; N/A           ; None        ; -2.215 ns ; S1   ; TheOne8:inst8|inst2                   ; CPR2     ;
 ; N/A           ; None        ; -2.216 ns ; S0   ; TheOne8:inst8|inst6                   ; CK       ;
 ; N/A           ; None        ; -2.230 ns ; S0   ; TheOne8:inst8|inst5                   ; CK       ;
-; N/A           ; None        ; -2.232 ns ; S0   ; TheOne8:inst8|inst7                   ; CPR2     ;
+; N/A           ; None        ; -2.242 ns ; S0   ; TheOne8:inst8|inst7                   ; CPR2     ;
 ; N/A           ; None        ; -2.312 ns ; M    ; TheOne8:inst8|inst1                   ; CK       ;
-; N/A           ; None        ; -2.346 ns ; CN   ; TheOne8:inst8|inst4                   ; CPR2     ;
-; N/A           ; None        ; -2.358 ns ; M    ; TheOne8:inst8|inst2                   ; CPR2     ;
-; N/A           ; None        ; -2.385 ns ; CN   ; TheOne8:inst8|inst6                   ; CPR2     ;
+; N/A           ; None        ; -2.356 ns ; CN   ; TheOne8:inst8|inst4                   ; CPR2     ;
+; N/A           ; None        ; -2.368 ns ; M    ; TheOne8:inst8|inst2                   ; CPR2     ;
+; N/A           ; None        ; -2.395 ns ; CN   ; TheOne8:inst8|inst6                   ; CPR2     ;
 ; N/A           ; None        ; -2.397 ns ; S0   ; TheOne8:inst8|inst3                   ; CK       ;
-; N/A           ; None        ; -2.476 ns ; S1   ; TheOne8:inst8|inst7                   ; CPR2     ;
-; N/A           ; None        ; -2.532 ns ; S2   ; TheOne8:inst8|inst2                   ; CPR2     ;
+; N/A           ; None        ; -2.486 ns ; S1   ; TheOne8:inst8|inst7                   ; CPR2     ;
 ; N/A           ; None        ; -2.541 ns ; S0   ; TheOne8:inst8|inst                    ; CK       ;
+; N/A           ; None        ; -2.542 ns ; S2   ; TheOne8:inst8|inst2                   ; CPR2     ;
 ; N/A           ; None        ; -2.544 ns ; S2   ; TheOne8:inst8|inst4                   ; CK       ;
 ; N/A           ; None        ; -2.549 ns ; S1   ; TheOne8:inst8|inst3                   ; CK       ;
-; N/A           ; None        ; -2.567 ns ; S2   ; TheOne8:inst8|inst7                   ; CPR2     ;
+; N/A           ; None        ; -2.577 ns ; S2   ; TheOne8:inst8|inst7                   ; CPR2     ;
 ; N/A           ; None        ; -2.639 ns ; S2   ; TheOne8:inst8|inst3                   ; CK       ;
 ; N/A           ; None        ; -2.656 ns ; S1   ; TheOne8:inst8|inst5                   ; CK       ;
 ; N/A           ; None        ; -2.744 ns ; S2   ; TheOne8:inst8|inst5                   ; CK       ;
 ; N/A           ; None        ; -2.776 ns ; CN   ; TheOne8:inst8|inst5                   ; CK       ;
-; N/A           ; None        ; -2.871 ns ; CN   ; TheOne8:inst8|inst3                   ; CPR2     ;
 ; N/A           ; None        ; -2.873 ns ; S3   ; TheOne8:inst8|inst2                   ; CK       ;
 ; N/A           ; None        ; -2.874 ns ; S0   ; TheOne8:inst8|inst2                   ; CK       ;
 ; N/A           ; None        ; -2.878 ns ; M    ; TheOne8:inst8|inst7                   ; CK       ;
+; N/A           ; None        ; -2.881 ns ; CN   ; TheOne8:inst8|inst3                   ; CPR2     ;
 ; N/A           ; None        ; -2.888 ns ; M    ; TheOne8:inst8|inst3                   ; CK       ;
 ; N/A           ; None        ; -3.030 ns ; M    ; TheOne8:inst8|inst                    ; CK       ;
 ; N/A           ; None        ; -3.214 ns ; S1   ; TheOne8:inst8|inst2                   ; CK       ;
@@ -517,15 +517,15 @@ applicable agreement for further details.
 ; N/A           ; None        ; -3.355 ns ; CN   ; TheOne8:inst8|inst4                   ; CK       ;
 ; N/A           ; None        ; -3.367 ns ; M    ; TheOne8:inst8|inst2                   ; CK       ;
 ; N/A           ; None        ; -3.394 ns ; CN   ; TheOne8:inst8|inst6                   ; CK       ;
-; N/A           ; None        ; -3.424 ns ; S2   ; TheOne8:inst8|inst6                   ; CPR2     ;
+; N/A           ; None        ; -3.434 ns ; S2   ; TheOne8:inst8|inst6                   ; CPR2     ;
 ; N/A           ; None        ; -3.485 ns ; S1   ; TheOne8:inst8|inst7                   ; CK       ;
 ; N/A           ; None        ; -3.541 ns ; S2   ; TheOne8:inst8|inst2                   ; CK       ;
-; N/A           ; None        ; -3.555 ns ; CN   ; TheOne8:inst8|inst1                   ; CPR2     ;
+; N/A           ; None        ; -3.565 ns ; CN   ; TheOne8:inst8|inst1                   ; CPR2     ;
 ; N/A           ; None        ; -3.576 ns ; S2   ; TheOne8:inst8|inst7                   ; CK       ;
-; N/A           ; None        ; -3.636 ns ; S1   ; TheOne8:inst8|inst6                   ; CPR2     ;
-; N/A           ; None        ; -3.828 ns ; CN   ; TheOne8:inst8|inst                    ; CPR2     ;
+; N/A           ; None        ; -3.646 ns ; S1   ; TheOne8:inst8|inst6                   ; CPR2     ;
+; N/A           ; None        ; -3.838 ns ; CN   ; TheOne8:inst8|inst                    ; CPR2     ;
 ; N/A           ; None        ; -3.880 ns ; CN   ; TheOne8:inst8|inst3                   ; CK       ;
-; N/A           ; None        ; -4.103 ns ; CN   ; TheOne8:inst8|inst2                   ; CPR2     ;
+; N/A           ; None        ; -4.113 ns ; CN   ; TheOne8:inst8|inst2                   ; CPR2     ;
 ; N/A           ; None        ; -4.433 ns ; S2   ; TheOne8:inst8|inst6                   ; CK       ;
 ; N/A           ; None        ; -4.564 ns ; CN   ; TheOne8:inst8|inst1                   ; CK       ;
 ; N/A           ; None        ; -4.643 ns ; LD   ; Scounter8:inst5|Scounter2:inst7|inst  ; CK       ;
@@ -548,7 +548,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Tue Apr 02 19:26:15 2019
+    Info: Processing started: Sat Apr 13 08:32:41 2019
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off SmallProgram -c SmallProgram --timing_analysis_only
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "CK" is an undefined clock
@@ -609,14 +609,14 @@ Info: tsu for register "TheOne8:inst8|inst2" (data pin = "S1", clock pin = "CK")
         Info: 4: + IC(0.893 ns) + CELL(0.666 ns) = 6.704 ns; Loc. = LCFF_X18_Y6_N1; Fanout = 1; REG Node = 'TheOne8:inst8|inst2'
         Info: Total cell delay = 2.018 ns ( 30.10 % )
         Info: Total interconnect delay = 4.686 ns ( 69.90 % )
-Info: tco from clock "CPR2" to destination pin "B1" through register "TheOne8:inst8|inst6" is 14.631 ns
-    Info: + Longest clock path from clock "CPR2" to source register is 7.730 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.994 ns) = 0.994 ns; Loc. = PIN_97; Fanout = 1; CLK Node = 'CPR2'
-        Info: 2: + IC(2.544 ns) + CELL(0.370 ns) = 3.908 ns; Loc. = LCCOMB_X22_Y7_N16; Fanout = 1; COMB Node = 'inst13'
-        Info: 3: + IC(2.246 ns) + CELL(0.000 ns) = 6.154 ns; Loc. = CLKCTRL_G2; Fanout = 8; COMB Node = 'inst13~clkctrl'
-        Info: 4: + IC(0.910 ns) + CELL(0.666 ns) = 7.730 ns; Loc. = LCFF_X19_Y1_N9; Fanout = 1; REG Node = 'TheOne8:inst8|inst6'
-        Info: Total cell delay = 2.030 ns ( 26.26 % )
-        Info: Total interconnect delay = 5.700 ns ( 73.74 % )
+Info: tco from clock "CPR2" to destination pin "B1" through register "TheOne8:inst8|inst6" is 14.621 ns
+    Info: + Longest clock path from clock "CPR2" to source register is 7.720 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.984 ns) = 0.984 ns; Loc. = PIN_96; Fanout = 1; CLK Node = 'CPR2'
+        Info: 2: + IC(2.544 ns) + CELL(0.370 ns) = 3.898 ns; Loc. = LCCOMB_X22_Y7_N16; Fanout = 1; COMB Node = 'inst13'
+        Info: 3: + IC(2.246 ns) + CELL(0.000 ns) = 6.144 ns; Loc. = CLKCTRL_G2; Fanout = 8; COMB Node = 'inst13~clkctrl'
+        Info: 4: + IC(0.910 ns) + CELL(0.666 ns) = 7.720 ns; Loc. = LCFF_X19_Y1_N9; Fanout = 1; REG Node = 'TheOne8:inst8|inst6'
+        Info: Total cell delay = 2.020 ns ( 26.17 % )
+        Info: Total interconnect delay = 5.700 ns ( 73.83 % )
     Info: + Micro clock to output delay of source is 0.304 ns
     Info: + Longest register to pin delay is 6.597 ns
         Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X19_Y1_N9; Fanout = 1; REG Node = 'TheOne8:inst8|inst6'
@@ -628,14 +628,14 @@ Info: Longest tpd from source pin "CK" to destination pin "RD" is 6.946 ns
     Info: 2: + IC(2.500 ns) + CELL(3.296 ns) = 6.946 ns; Loc. = PIN_60; Fanout = 0; PIN Node = 'RD'
     Info: Total cell delay = 4.446 ns ( 64.01 % )
     Info: Total interconnect delay = 2.500 ns ( 35.99 % )
-Info: th for register "TheOne8:inst8|inst1" (data pin = "S3", clock pin = "CPR2") is 0.248 ns
-    Info: + Longest clock path from clock "CPR2" to destination register is 7.730 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.994 ns) = 0.994 ns; Loc. = PIN_97; Fanout = 1; CLK Node = 'CPR2'
-        Info: 2: + IC(2.544 ns) + CELL(0.370 ns) = 3.908 ns; Loc. = LCCOMB_X22_Y7_N16; Fanout = 1; COMB Node = 'inst13'
-        Info: 3: + IC(2.246 ns) + CELL(0.000 ns) = 6.154 ns; Loc. = CLKCTRL_G2; Fanout = 8; COMB Node = 'inst13~clkctrl'
-        Info: 4: + IC(0.910 ns) + CELL(0.666 ns) = 7.730 ns; Loc. = LCFF_X19_Y1_N17; Fanout = 1; REG Node = 'TheOne8:inst8|inst1'
-        Info: Total cell delay = 2.030 ns ( 26.26 % )
-        Info: Total interconnect delay = 5.700 ns ( 73.74 % )
+Info: th for register "TheOne8:inst8|inst1" (data pin = "S3", clock pin = "CPR2") is 0.238 ns
+    Info: + Longest clock path from clock "CPR2" to destination register is 7.720 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.984 ns) = 0.984 ns; Loc. = PIN_96; Fanout = 1; CLK Node = 'CPR2'
+        Info: 2: + IC(2.544 ns) + CELL(0.370 ns) = 3.898 ns; Loc. = LCCOMB_X22_Y7_N16; Fanout = 1; COMB Node = 'inst13'
+        Info: 3: + IC(2.246 ns) + CELL(0.000 ns) = 6.144 ns; Loc. = CLKCTRL_G2; Fanout = 8; COMB Node = 'inst13~clkctrl'
+        Info: 4: + IC(0.910 ns) + CELL(0.666 ns) = 7.720 ns; Loc. = LCFF_X19_Y1_N17; Fanout = 1; REG Node = 'TheOne8:inst8|inst1'
+        Info: Total cell delay = 2.020 ns ( 26.17 % )
+        Info: Total interconnect delay = 5.700 ns ( 73.83 % )
     Info: + Micro hold delay of destination is 0.306 ns
     Info: - Shortest pin to register delay is 7.788 ns
         Info: 1: + IC(0.000 ns) + CELL(0.974 ns) = 0.974 ns; Loc. = PIN_88; Fanout = 8; PIN Node = 'S3'
@@ -644,9 +644,9 @@ Info: th for register "TheOne8:inst8|inst1" (data pin = "S3", clock pin = "CPR2"
         Info: Total cell delay = 1.288 ns ( 16.54 % )
         Info: Total interconnect delay = 6.500 ns ( 83.46 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 200 megabytes
-    Info: Processing ended: Tue Apr 02 19:26:16 2019
+    Info: Peak virtual memory: 157 megabytes
+    Info: Processing ended: Sat Apr 13 08:32:42 2019
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 

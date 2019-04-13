@@ -15,7 +15,7 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 14.631 ns
+Actual Time    : 14.621 ns
 From           : TheOne8:inst8|inst6
 To             : B1
 From Clock     : CPR2
@@ -35,7 +35,7 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 0.248 ns
+Actual Time    : 0.238 ns
 From           : S3
 To             : TheOne8:inst8|inst1
 From Clock     : --

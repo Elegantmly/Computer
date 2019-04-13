@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SmallProgram
-Tue Apr 02 19:26:10 2019
+Sat Apr 13 08:32:36 2019
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -39,7 +39,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 02 19:26:10 2019   ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr 13 08:32:36 2019   ;
 ; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name                      ; SmallProgram                            ;
 ; Top-level Entity Name              ; SmallProgram                            ;
@@ -137,14 +137,14 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------------------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                             ;
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------------------+
-; ../Scounter8/Scounter8.bdf       ; yes             ; User Block Diagram/Schematic File  ; D:/quartualsProject/Scounter8/Scounter8.bdf              ;
-; ../Scounter2/Scounter2.bdf       ; yes             ; User Block Diagram/Schematic File  ; D:/quartualsProject/Scounter2/Scounter2.bdf              ;
-; ../Selector1/Selector1.bdf       ; yes             ; User Block Diagram/Schematic File  ; D:/quartualsProject/Selector1/Selector1.bdf              ;
-; ../TheOne8/TheOne8.bdf           ; yes             ; User Block Diagram/Schematic File  ; D:/quartualsProject/TheOne8/TheOne8.bdf                  ;
-; ../ALU/ALU.bdf                   ; yes             ; User Block Diagram/Schematic File  ; D:/quartualsProject/ALU/ALU.bdf                          ;
-; SmallProgram.bdf                 ; yes             ; User Block Diagram/Schematic File  ; D:/quartualsProject/SmallProgram/SmallProgram.bdf        ;
-; 74181.bdf                        ; yes             ; Megafunction                       ; d:/quartuals/quartus/libraries/others/maxplus2/74181.bdf ;
-; 74182.bdf                        ; yes             ; Megafunction                       ; d:/quartuals/quartus/libraries/others/maxplus2/74182.bdf ;
+; ../Scounter8/Scounter8.bdf       ; yes             ; User Block Diagram/Schematic File  ; D:/mulingyu/Scounter8/Scounter8.bdf                      ;
+; ../Scounter2/Scounter2.bdf       ; yes             ; User Block Diagram/Schematic File  ; D:/mulingyu/Scounter2/Scounter2.bdf                      ;
+; ../Selector1/Selector1.bdf       ; yes             ; User Block Diagram/Schematic File  ; D:/mulingyu/Selector1/Selector1.bdf                      ;
+; ../TheOne8/TheOne8.bdf           ; yes             ; User Block Diagram/Schematic File  ; D:/mulingyu/TheOne8/TheOne8.bdf                          ;
+; ../ALU/ALU.bdf                   ; yes             ; User Block Diagram/Schematic File  ; D:/mulingyu/ALU/ALU.bdf                                  ;
+; SmallProgram.bdf                 ; yes             ; User Block Diagram/Schematic File  ; D:/mulingyu/SmallProgram/SmallProgram.bdf                ;
+; 74181.bdf                        ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/others/maxplus2/74181.bdf ;
+; 74182.bdf                        ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/others/maxplus2/74182.bdf ;
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------------------+
 
 
@@ -228,7 +228,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Tue Apr 02 19:26:08 2019
+    Info: Processing started: Sat Apr 13 08:32:34 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SmallProgram -c SmallProgram
 Info: Found 1 design units, including 1 entities, in source file ../Scounter8/Scounter8.bdf
     Info: Found entity 1: Scounter8
@@ -272,8 +272,8 @@ Info: Implemented 102 device resources after synthesis - the final resource coun
     Info: Implemented 18 output pins
     Info: Implemented 64 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 236 megabytes
-    Info: Processing ended: Tue Apr 02 19:26:10 2019
+    Info: Peak virtual memory: 193 megabytes
+    Info: Processing ended: Sat Apr 13 08:32:36 2019
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

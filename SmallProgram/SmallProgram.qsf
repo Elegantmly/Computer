@@ -67,9 +67,9 @@ set_location_assignment PIN_132 -to CK
 set_location_assignment PIN_77 -to CLR
 set_location_assignment PIN_80 -to CN
 set_location_assignment PIN_61 -to CPIR
-set_location_assignment PIN_101 -to CPR0
-set_location_assignment PIN_99 -to CPR1
-set_location_assignment PIN_97 -to CPR2
+set_location_assignment PIN_99 -to CPR0
+set_location_assignment PIN_97 -to CPR1
+set_location_assignment PIN_96 -to CPR2
 set_location_assignment PIN_81 -to LD
 set_location_assignment PIN_82 -to M
 set_location_assignment PIN_180 -to Q0
@@ -87,3 +87,4 @@ set_location_assignment PIN_87 -to S2
 set_location_assignment PIN_88 -to S3
 set_global_assignment -name MISC_FILE "D:/quartualsProject/SmallProgram/SmallProgram.dpf"
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name MISC_FILE "D:/mulingyu/SmallProgram/SmallProgram.dpf"

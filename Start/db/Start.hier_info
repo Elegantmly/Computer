@@ -1,0 +1,11 @@
+|Start
+CLK <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+HALT => inst9.IN0
+CLR => inst12.ACLR
+CLR => inst11.ACLR
+CLR => inst11.PRESET
+CLR => inst12.PRESET
+CK_C => inst14.IN0
+CK => inst11.CLK
+
+

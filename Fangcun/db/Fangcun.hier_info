@@ -23,7 +23,9 @@ A0 <= Exper1:inst.Y0
 CPR0 => inst11.IN1
 CPR1 => inst12.IN1
 EN_read => santaixuantong:inst4.EN_read
+EN_read => inst6.IN0
 EN_write => santaixuantong:inst4.EN_write
+EN_write => inst7.IN0
 CPR2 => inst13.IN1
 R0 <= santaixuantong:inst4.D_0
 R1 <= santaixuantong:inst4.D_1
@@ -43,11 +45,9 @@ A5 <= Exper1:inst.Y5
 A6 <= Exper1:inst.Y6
 A7 <= Exper1:inst.Y7
 CPIR <= CK.DB_MAX_OUTPUT_PORT_TYPE
-rd <= inst14.DB_MAX_OUTPUT_PORT_TYPE
-RAM_read => inst14.IN1
-wr <= inst15.DB_MAX_OUTPUT_PORT_TYPE
-RAM_write => inst15.IN1
 uRD <= CK.DB_MAX_OUTPUT_PORT_TYPE
+rd <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+wr <= inst7.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Fangcun|Scounter8:inst5

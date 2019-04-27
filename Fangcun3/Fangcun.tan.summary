@@ -1,0 +1,96 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 4.604 ns
+From           : B2Y
+To             : TheOne8:inst2|inst4
+From Clock     : --
+To Clock       : CPR1
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 17.660 ns
+From           : TheOne8:inst3|inst1
+To             : R6
+From Clock     : CK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.737 ns
+From           : AY
+To             : A7
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.404 ns
+From           : R7
+To             : TheOne8:inst2|inst
+From Clock     : --
+To Clock       : CK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CPR0'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 259.34 MHz ( period = 3.856 ns )
+From           : Scounter8:inst1|Scounter2:inst7|inst
+To             : Scounter8:inst1|Scounter2:inst5|inst
+From Clock     : CPR0
+To Clock       : CPR0
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 259.34 MHz ( period = 3.856 ns )
+From           : Scounter8:inst1|Scounter2:inst7|inst
+To             : Scounter8:inst1|Scounter2:inst5|inst
+From Clock     : CK
+To Clock       : CK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CK_C'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 259.34 MHz ( period = 3.856 ns )
+From           : Scounter8:inst1|Scounter2:inst7|inst
+To             : Scounter8:inst1|Scounter2:inst5|inst
+From Clock     : CK_C
+To Clock       : CK_C
+Failed Paths   : 0
+
+Type           : Clock Setup: 'HALT'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 259.34 MHz ( period = 3.856 ns )
+From           : Scounter8:inst1|Scounter2:inst7|inst
+To             : Scounter8:inst1|Scounter2:inst5|inst
+From Clock     : HALT
+To Clock       : HALT
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

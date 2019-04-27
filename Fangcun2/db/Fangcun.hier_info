@@ -1,0 +1,693 @@
+|Fangcun
+Q0 <= Scounter8:inst5.Q0
+CK => Scounter8:inst5.CK
+CK => inst10.IN0
+CK => CPIR.DATAIN
+CK => uRD.DATAIN
+CLR => Scounter8:inst5.CLR
+CLR => Scounter8:inst1.CLR
+CLR => TheOne8:inst2.CLR
+CLR => TheOne8:inst3.CLR
+LD => Scounter8:inst5.LD
+LD => Scounter8:inst5.VCC
+LD => Scounter8:inst1.LD
+LD => Scounter8:inst1.VCC
+Q1 <= Scounter8:inst5.Q1
+Q2 <= Scounter8:inst5.Q2
+Q3 <= Scounter8:inst5.Q3
+Q4 <= Scounter8:inst5.Q4
+Q5 <= Scounter8:inst5.Q5
+Q6 <= Scounter8:inst5.Q6
+Q7 <= Scounter8:inst5.Q7
+A0 <= Exper1:inst.Y0
+CPR0 => inst11.IN1
+CPR1 => inst12.IN1
+EN_read => santaixuantong:inst4.EN_read
+EN_read => inst8.IN0
+EN_write => santaixuantong:inst4.EN_write
+EN_write => inst9.IN0
+CPR2 => inst13.IN1
+R0 <= santaixuantong:inst4.D_0
+R1 <= santaixuantong:inst4.D_1
+R2 <= santaixuantong:inst4.D_2
+R3 <= santaixuantong:inst4.D_3
+R4 <= santaixuantong:inst4.D_4
+R5 <= santaixuantong:inst4.D_5
+R6 <= santaixuantong:inst4.D_6
+R7 <= santaixuantong:inst4.D_7
+ROM7 => Exper1:inst6.b7
+ROM6 => Exper1:inst6.b6
+ROM5 => Exper1:inst6.b5
+ROM4 => Exper1:inst6.b4
+ROM3 => Exper1:inst6.b3
+ROM2 => Exper1:inst6.b2
+ROM1 => Exper1:inst6.b1
+ROM0 => Exper1:inst6.b0
+A2Y => Exper1:inst6.AY
+B2Y => Exper1:inst6.BY
+AY => Exper1:inst.AY
+BY => Exper1:inst.BY
+A1 <= Exper1:inst.Y1
+A2 <= Exper1:inst.Y2
+A3 <= Exper1:inst.Y3
+A4 <= Exper1:inst.Y4
+A5 <= Exper1:inst.Y5
+A6 <= Exper1:inst.Y6
+A7 <= Exper1:inst.Y7
+CPIR <= CK.DB_MAX_OUTPUT_PORT_TYPE
+uRD <= CK.DB_MAX_OUTPUT_PORT_TYPE
+rd <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+wr <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fangcun|Scounter8:inst5
+Q0 <= Scounter2:inst7.Q0
+CK => Scounter2:inst7.CK
+CK => Scounter2:inst6.CK
+CK => Scounter2:inst5.CK
+CK => Scounter2:inst4.CK
+CLR => Scounter2:inst7.CLR
+CLR => Scounter2:inst6.CLR
+CLR => Scounter2:inst5.CLR
+CLR => Scounter2:inst4.CLR
+LD => Scounter2:inst7.LD
+LD => Scounter2:inst6.LD
+LD => Scounter2:inst5.LD
+LD => Scounter2:inst4.LD
+VCC => Scounter2:inst7.EN
+D1 => Scounter2:inst7.D1
+D0 => Scounter2:inst7.D0
+Q1 <= Scounter2:inst7.Q1
+Q2 <= Scounter2:inst6.Q0
+D3 => Scounter2:inst6.D1
+D2 => Scounter2:inst6.D0
+Q3 <= Scounter2:inst6.Q1
+Q4 <= Scounter2:inst5.Q0
+D5 => Scounter2:inst5.D1
+D4 => Scounter2:inst5.D0
+Q5 <= Scounter2:inst5.Q1
+Q6 <= Scounter2:inst4.Q0
+D7 => Scounter2:inst4.D1
+D6 => Scounter2:inst4.D0
+Q7 <= Scounter2:inst4.Q1
+
+
+|Fangcun|Scounter8:inst5|Scounter2:inst7
+Q1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+CLR => inst1.ACLR
+CLR => inst1.PRESET
+CLR => inst.PRESET
+CK => inst.CLK
+CK => inst1.CLK
+D1 => Selector1:inst5.A
+LD => inst4.IN0
+LD => Selector1:inst7.BY
+LD => Selector1:inst5.BY
+EN => inst8.IN0
+EN => inst11.IN0
+EN => Selector1:inst6.BY
+D0 => Selector1:inst7.A
+Q0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CN <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fangcun|Scounter8:inst5|Scounter2:inst7|Selector1:inst5
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst5|Scounter2:inst7|Selector1:inst6
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst5|Scounter2:inst7|Selector1:inst7
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst5|Scounter2:inst6
+Q1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+CLR => inst1.ACLR
+CLR => inst1.PRESET
+CLR => inst.PRESET
+CK => inst.CLK
+CK => inst1.CLK
+D1 => Selector1:inst5.A
+LD => inst4.IN0
+LD => Selector1:inst7.BY
+LD => Selector1:inst5.BY
+EN => inst8.IN0
+EN => inst11.IN0
+EN => Selector1:inst6.BY
+D0 => Selector1:inst7.A
+Q0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CN <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fangcun|Scounter8:inst5|Scounter2:inst6|Selector1:inst5
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst5|Scounter2:inst6|Selector1:inst6
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst5|Scounter2:inst6|Selector1:inst7
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst5|Scounter2:inst5
+Q1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+CLR => inst1.ACLR
+CLR => inst1.PRESET
+CLR => inst.PRESET
+CK => inst.CLK
+CK => inst1.CLK
+D1 => Selector1:inst5.A
+LD => inst4.IN0
+LD => Selector1:inst7.BY
+LD => Selector1:inst5.BY
+EN => inst8.IN0
+EN => inst11.IN0
+EN => Selector1:inst6.BY
+D0 => Selector1:inst7.A
+Q0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CN <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fangcun|Scounter8:inst5|Scounter2:inst5|Selector1:inst5
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst5|Scounter2:inst5|Selector1:inst6
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst5|Scounter2:inst5|Selector1:inst7
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst5|Scounter2:inst4
+Q1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+CLR => inst1.ACLR
+CLR => inst1.PRESET
+CLR => inst.PRESET
+CK => inst.CLK
+CK => inst1.CLK
+D1 => Selector1:inst5.A
+LD => inst4.IN0
+LD => Selector1:inst7.BY
+LD => Selector1:inst5.BY
+EN => inst8.IN0
+EN => inst11.IN0
+EN => Selector1:inst6.BY
+D0 => Selector1:inst7.A
+Q0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CN <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fangcun|Scounter8:inst5|Scounter2:inst4|Selector1:inst5
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst5|Scounter2:inst4|Selector1:inst6
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst5|Scounter2:inst4|Selector1:inst7
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Exper1:inst
+Y7 <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+b7 => inst17.IN0
+BY => inst17.IN1
+BY => inst19.IN1
+BY => inst21.IN1
+BY => inst24.IN1
+BY => inst29.IN1
+BY => inst32.IN1
+BY => inst35.IN1
+BY => inst38.IN1
+a7 => inst.IN0
+AY => inst.IN1
+AY => inst23.IN1
+AY => inst25.IN1
+AY => inst26.IN1
+AY => inst28.IN1
+AY => inst31.IN1
+AY => inst34.IN1
+AY => inst37.IN1
+Y6 <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+b6 => inst19.IN0
+a6 => inst23.IN0
+Y5 <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+b5 => inst21.IN0
+a5 => inst25.IN0
+Y4 <= inst27.DB_MAX_OUTPUT_PORT_TYPE
+b4 => inst24.IN0
+a4 => inst26.IN0
+Y3 <= inst30.DB_MAX_OUTPUT_PORT_TYPE
+b3 => inst29.IN0
+a3 => inst28.IN0
+Y2 <= inst33.DB_MAX_OUTPUT_PORT_TYPE
+b2 => inst32.IN0
+a2 => inst31.IN0
+Y1 <= inst36.DB_MAX_OUTPUT_PORT_TYPE
+b1 => inst35.IN0
+a1 => inst34.IN0
+Y0 <= inst39.DB_MAX_OUTPUT_PORT_TYPE
+b0 => inst38.IN0
+a0 => inst37.IN0
+
+
+|Fangcun|Scounter8:inst1
+Q0 <= Scounter2:inst7.Q0
+CK => Scounter2:inst7.CK
+CK => Scounter2:inst6.CK
+CK => Scounter2:inst5.CK
+CK => Scounter2:inst4.CK
+CLR => Scounter2:inst7.CLR
+CLR => Scounter2:inst6.CLR
+CLR => Scounter2:inst5.CLR
+CLR => Scounter2:inst4.CLR
+LD => Scounter2:inst7.LD
+LD => Scounter2:inst6.LD
+LD => Scounter2:inst5.LD
+LD => Scounter2:inst4.LD
+VCC => Scounter2:inst7.EN
+D1 => Scounter2:inst7.D1
+D0 => Scounter2:inst7.D0
+Q1 <= Scounter2:inst7.Q1
+Q2 <= Scounter2:inst6.Q0
+D3 => Scounter2:inst6.D1
+D2 => Scounter2:inst6.D0
+Q3 <= Scounter2:inst6.Q1
+Q4 <= Scounter2:inst5.Q0
+D5 => Scounter2:inst5.D1
+D4 => Scounter2:inst5.D0
+Q5 <= Scounter2:inst5.Q1
+Q6 <= Scounter2:inst4.Q0
+D7 => Scounter2:inst4.D1
+D6 => Scounter2:inst4.D0
+Q7 <= Scounter2:inst4.Q1
+
+
+|Fangcun|Scounter8:inst1|Scounter2:inst7
+Q1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+CLR => inst1.ACLR
+CLR => inst1.PRESET
+CLR => inst.PRESET
+CK => inst.CLK
+CK => inst1.CLK
+D1 => Selector1:inst5.A
+LD => inst4.IN0
+LD => Selector1:inst7.BY
+LD => Selector1:inst5.BY
+EN => inst8.IN0
+EN => inst11.IN0
+EN => Selector1:inst6.BY
+D0 => Selector1:inst7.A
+Q0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CN <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fangcun|Scounter8:inst1|Scounter2:inst7|Selector1:inst5
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst1|Scounter2:inst7|Selector1:inst6
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst1|Scounter2:inst7|Selector1:inst7
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst1|Scounter2:inst6
+Q1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+CLR => inst1.ACLR
+CLR => inst1.PRESET
+CLR => inst.PRESET
+CK => inst.CLK
+CK => inst1.CLK
+D1 => Selector1:inst5.A
+LD => inst4.IN0
+LD => Selector1:inst7.BY
+LD => Selector1:inst5.BY
+EN => inst8.IN0
+EN => inst11.IN0
+EN => Selector1:inst6.BY
+D0 => Selector1:inst7.A
+Q0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CN <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fangcun|Scounter8:inst1|Scounter2:inst6|Selector1:inst5
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst1|Scounter2:inst6|Selector1:inst6
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst1|Scounter2:inst6|Selector1:inst7
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst1|Scounter2:inst5
+Q1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+CLR => inst1.ACLR
+CLR => inst1.PRESET
+CLR => inst.PRESET
+CK => inst.CLK
+CK => inst1.CLK
+D1 => Selector1:inst5.A
+LD => inst4.IN0
+LD => Selector1:inst7.BY
+LD => Selector1:inst5.BY
+EN => inst8.IN0
+EN => inst11.IN0
+EN => Selector1:inst6.BY
+D0 => Selector1:inst7.A
+Q0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CN <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fangcun|Scounter8:inst1|Scounter2:inst5|Selector1:inst5
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst1|Scounter2:inst5|Selector1:inst6
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst1|Scounter2:inst5|Selector1:inst7
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst1|Scounter2:inst4
+Q1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+CLR => inst1.ACLR
+CLR => inst1.PRESET
+CLR => inst.PRESET
+CK => inst.CLK
+CK => inst1.CLK
+D1 => Selector1:inst5.A
+LD => inst4.IN0
+LD => Selector1:inst7.BY
+LD => Selector1:inst5.BY
+EN => inst8.IN0
+EN => inst11.IN0
+EN => Selector1:inst6.BY
+D0 => Selector1:inst7.A
+Q0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CN <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Fangcun|Scounter8:inst1|Scounter2:inst4|Selector1:inst5
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst1|Scounter2:inst4|Selector1:inst6
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|Scounter8:inst1|Scounter2:inst4|Selector1:inst7
+Y <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+BY => inst1.IN1
+A => inst.IN0
+AY => inst.IN1
+
+
+|Fangcun|TheOne8:inst2
+Q7 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+CLR => inst.PRESET
+CLR => inst1.ACLR
+CLR => inst1.PRESET
+CLR => inst2.ACLR
+CLR => inst2.PRESET
+CLR => inst3.ACLR
+CLR => inst3.PRESET
+CLR => inst4.ACLR
+CLR => inst4.PRESET
+CLR => inst5.ACLR
+CLR => inst5.PRESET
+CLR => inst6.ACLR
+CLR => inst6.PRESET
+CLR => inst7.ACLR
+CLR => inst7.PRESET
+CP => inst.CLK
+CP => inst1.CLK
+CP => inst2.CLK
+CP => inst3.CLK
+CP => inst4.CLK
+CP => inst5.CLK
+CP => inst6.CLK
+CP => inst7.CLK
+D7 => inst.DATAIN
+Q6 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+D6 => inst1.DATAIN
+Q5 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+D5 => inst2.DATAIN
+Q4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+D4 => inst3.DATAIN
+Q3 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D3 => inst4.DATAIN
+Q2 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D2 => inst5.DATAIN
+Q1 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst6.DATAIN
+Q0 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+D0 => inst7.DATAIN
+
+
+|Fangcun|Exper1:inst6
+Y7 <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+b7 => inst17.IN0
+BY => inst17.IN1
+BY => inst19.IN1
+BY => inst21.IN1
+BY => inst24.IN1
+BY => inst29.IN1
+BY => inst32.IN1
+BY => inst35.IN1
+BY => inst38.IN1
+a7 => inst.IN0
+AY => inst.IN1
+AY => inst23.IN1
+AY => inst25.IN1
+AY => inst26.IN1
+AY => inst28.IN1
+AY => inst31.IN1
+AY => inst34.IN1
+AY => inst37.IN1
+Y6 <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+b6 => inst19.IN0
+a6 => inst23.IN0
+Y5 <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+b5 => inst21.IN0
+a5 => inst25.IN0
+Y4 <= inst27.DB_MAX_OUTPUT_PORT_TYPE
+b4 => inst24.IN0
+a4 => inst26.IN0
+Y3 <= inst30.DB_MAX_OUTPUT_PORT_TYPE
+b3 => inst29.IN0
+a3 => inst28.IN0
+Y2 <= inst33.DB_MAX_OUTPUT_PORT_TYPE
+b2 => inst32.IN0
+a2 => inst31.IN0
+Y1 <= inst36.DB_MAX_OUTPUT_PORT_TYPE
+b1 => inst35.IN0
+a1 => inst34.IN0
+Y0 <= inst39.DB_MAX_OUTPUT_PORT_TYPE
+b0 => inst38.IN0
+a0 => inst37.IN0
+
+
+|Fangcun|santaixuantong:inst4
+D0 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D_0 <= inst6
+EN_read => inst5.OE
+EN_read => inst7.OE
+EN_read => inst9.OE
+EN_read => inst11.OE
+EN_read => inst13.OE
+EN_read => inst15.OE
+EN_read => inst17.OE
+EN_read => inst19.OE
+D2 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+D_1 <= inst8
+D4 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+D_2 <= inst10
+D6 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+D_3 <= inst12
+D8 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+D_4 <= inst14
+D10 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+D_5 <= inst16
+D12 <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+D_6 <= inst18
+D14 <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+D_7 <= inst20
+D1 => inst6.DATAIN
+EN_write => inst6.OE
+EN_write => inst8.OE
+EN_write => inst10.OE
+EN_write => inst12.OE
+EN_write => inst14.OE
+EN_write => inst16.OE
+EN_write => inst18.OE
+EN_write => inst20.OE
+D3 => inst8.DATAIN
+D5 => inst10.DATAIN
+D7 => inst12.DATAIN
+D9 => inst14.DATAIN
+D11 => inst16.DATAIN
+D13 => inst18.DATAIN
+D15 => inst20.DATAIN
+
+
+|Fangcun|TheOne8:inst3
+Q7 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+CLR => inst.PRESET
+CLR => inst1.ACLR
+CLR => inst1.PRESET
+CLR => inst2.ACLR
+CLR => inst2.PRESET
+CLR => inst3.ACLR
+CLR => inst3.PRESET
+CLR => inst4.ACLR
+CLR => inst4.PRESET
+CLR => inst5.ACLR
+CLR => inst5.PRESET
+CLR => inst6.ACLR
+CLR => inst6.PRESET
+CLR => inst7.ACLR
+CLR => inst7.PRESET
+CP => inst.CLK
+CP => inst1.CLK
+CP => inst2.CLK
+CP => inst3.CLK
+CP => inst4.CLK
+CP => inst5.CLK
+CP => inst6.CLK
+CP => inst7.CLK
+D7 => inst.DATAIN
+Q6 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+D6 => inst1.DATAIN
+Q5 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+D5 => inst2.DATAIN
+Q4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+D4 => inst3.DATAIN
+Q3 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D3 => inst4.DATAIN
+Q2 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+D2 => inst5.DATAIN
+Q1 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst6.DATAIN
+Q0 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+D0 => inst7.DATAIN
+
+

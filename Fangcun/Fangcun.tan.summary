@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 6.242 ns
+Actual Time    : 5.954 ns
 From           : LD
-To             : Scounter8:inst5|Scounter2:inst4|inst1
+To             : Scounter8:inst5|Scounter2:inst4|inst
 From Clock     : --
 To Clock       : CK
 Failed Paths   : 0
@@ -15,17 +15,17 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 17.187 ns
-From           : TheOne8:inst2|inst6
+Actual Time    : 17.531 ns
+From           : Scounter8:inst1|Scounter2:inst7|inst
 To             : A1
-From Clock     : CK
+From Clock     : CPR0
 To Clock       : --
 Failed Paths   : 0
 
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 15.598 ns
+Actual Time    : 15.558 ns
 From           : AY
 To             : A1
 From Clock     : --
@@ -35,17 +35,17 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 1.314 ns
+Actual Time    : 0.341 ns
 From           : R4
 To             : TheOne8:inst2|inst3
 From Clock     : --
-To Clock       : CK
+To Clock       : CPR1
 Failed Paths   : 0
 
 Type           : Clock Setup: 'CPR0'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 295.68 MHz ( period = 3.382 ns )
+Actual Time    : 259.40 MHz ( period = 3.855 ns )
 From           : Scounter8:inst1|Scounter2:inst7|inst
 To             : Scounter8:inst1|Scounter2:inst4|inst1
 From Clock     : CPR0
@@ -55,7 +55,7 @@ Failed Paths   : 0
 Type           : Clock Setup: 'CK'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 295.68 MHz ( period = 3.382 ns )
+Actual Time    : 259.40 MHz ( period = 3.855 ns )
 From           : Scounter8:inst1|Scounter2:inst7|inst
 To             : Scounter8:inst1|Scounter2:inst4|inst1
 From Clock     : CK

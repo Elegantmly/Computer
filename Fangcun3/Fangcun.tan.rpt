@@ -1,0 +1,1186 @@
+Classic Timing Analyzer report for Fangcun
+Sat Apr 20 11:38:36 2019
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'HALT'
+  6. Clock Setup: 'CK_C'
+  7. Clock Setup: 'CK'
+  8. Clock Setup: 'CPR0'
+  9. tsu
+ 10. tco
+ 11. tpd
+ 12. th
+ 13. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                      ;
++------------------------------+-------+---------------+----------------------------------+--------------------------------------+--------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                 ; To                                   ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+--------------------------------------+--------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 4.604 ns                         ; B2Y                                  ; TheOne8:inst2|inst4                  ; --         ; CPR1     ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 17.660 ns                        ; TheOne8:inst3|inst1                  ; R6                                   ; CK         ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 13.737 ns                        ; AY                                   ; A7                                   ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 3.404 ns                         ; R7                                   ; TheOne8:inst2|inst                   ; --         ; CK       ; 0            ;
+; Clock Setup: 'CPR0'          ; N/A   ; None          ; 259.34 MHz ( period = 3.856 ns ) ; Scounter8:inst1|Scounter2:inst7|inst ; Scounter8:inst1|Scounter2:inst5|inst ; CPR0       ; CPR0     ; 0            ;
+; Clock Setup: 'CK'            ; N/A   ; None          ; 259.34 MHz ( period = 3.856 ns ) ; Scounter8:inst1|Scounter2:inst7|inst ; Scounter8:inst1|Scounter2:inst5|inst ; CK         ; CK       ; 0            ;
+; Clock Setup: 'CK_C'          ; N/A   ; None          ; 259.34 MHz ( period = 3.856 ns ) ; Scounter8:inst1|Scounter2:inst7|inst ; Scounter8:inst1|Scounter2:inst5|inst ; CK_C       ; CK_C     ; 0            ;
+; Clock Setup: 'HALT'          ; N/A   ; None          ; 259.34 MHz ( period = 3.856 ns ) ; Scounter8:inst1|Scounter2:inst7|inst ; Scounter8:inst1|Scounter2:inst5|inst ; HALT       ; HALT     ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                      ;                                      ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+--------------------------------------+--------------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C8Q208C8        ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; HALT            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; CK_C            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; CK              ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; CPR1            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; CPR2            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; CPR0            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'HALT'                                                                                                                                                                                                                                ;
++-------+------------------------------------------------+---------------------------------------+---------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                  ; To                                    ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+---------------------------------------+---------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 259.34 MHz ( period = 3.856 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst5|inst  ; HALT       ; HALT     ; None                        ; None                      ; 3.590 ns                ;
+; N/A   ; 259.47 MHz ( period = 3.854 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst5|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 3.588 ns                ;
+; N/A   ; 259.47 MHz ( period = 3.854 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst4|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 3.588 ns                ;
+; N/A   ; 259.47 MHz ( period = 3.854 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst4|inst  ; HALT       ; HALT     ; None                        ; None                      ; 3.588 ns                ;
+; N/A   ; 264.41 MHz ( period = 3.782 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst6|inst  ; HALT       ; HALT     ; None                        ; None                      ; 3.518 ns                ;
+; N/A   ; 266.95 MHz ( period = 3.746 ns )               ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst5|inst  ; HALT       ; HALT     ; None                        ; None                      ; 3.484 ns                ;
+; N/A   ; 267.09 MHz ( period = 3.744 ns )               ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst5|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 3.482 ns                ;
+; N/A   ; 267.09 MHz ( period = 3.744 ns )               ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst4|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 3.482 ns                ;
+; N/A   ; 267.09 MHz ( period = 3.744 ns )               ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst4|inst  ; HALT       ; HALT     ; None                        ; None                      ; 3.482 ns                ;
+; N/A   ; 297.35 MHz ( period = 3.363 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst5|inst  ; HALT       ; HALT     ; None                        ; None                      ; 3.101 ns                ;
+; N/A   ; 297.53 MHz ( period = 3.361 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst5|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 3.099 ns                ;
+; N/A   ; 297.53 MHz ( period = 3.361 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst4|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 3.099 ns                ;
+; N/A   ; 297.53 MHz ( period = 3.361 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst4|inst  ; HALT       ; HALT     ; None                        ; None                      ; 3.099 ns                ;
+; N/A   ; 350.88 MHz ( period = 2.850 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst6|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 2.582 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst5|inst  ; HALT       ; HALT     ; None                        ; None                      ; 2.420 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst5|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 2.418 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst4|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 2.418 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst4|inst  ; HALT       ; HALT     ; None                        ; None                      ; 2.418 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst6|inst  ; HALT       ; HALT     ; None                        ; None                      ; 2.327 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst5|inst1 ; Scounter8:inst1|Scounter2:inst4|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 2.304 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst4|inst1 ; Scounter8:inst1|Scounter2:inst4|inst  ; HALT       ; HALT     ; None                        ; None                      ; 2.298 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst5|inst  ; Scounter8:inst1|Scounter2:inst4|inst  ; HALT       ; HALT     ; None                        ; None                      ; 2.236 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst4|inst1 ; Scounter8:inst5|Scounter2:inst4|inst  ; HALT       ; HALT     ; None                        ; None                      ; 2.234 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst7|inst  ; HALT       ; HALT     ; None                        ; None                      ; 2.210 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst5|inst1 ; Scounter8:inst1|Scounter2:inst4|inst  ; HALT       ; HALT     ; None                        ; None                      ; 2.004 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst5|inst  ; Scounter8:inst1|Scounter2:inst4|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 1.988 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst5|inst1 ; Scounter8:inst5|Scounter2:inst4|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 1.936 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst5|inst1 ; Scounter8:inst5|Scounter2:inst4|inst  ; HALT       ; HALT     ; None                        ; None                      ; 1.936 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst5|inst  ; HALT       ; HALT     ; None                        ; None                      ; 1.845 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst4|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 1.841 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst4|inst  ; HALT       ; HALT     ; None                        ; None                      ; 1.841 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst5|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 1.839 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst6|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 1.827 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst5|inst  ; HALT       ; HALT     ; None                        ; None                      ; 1.778 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst4|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 1.774 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst4|inst  ; HALT       ; HALT     ; None                        ; None                      ; 1.774 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst5|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 1.772 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst5|inst  ; Scounter8:inst5|Scounter2:inst4|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 1.762 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst5|inst  ; Scounter8:inst5|Scounter2:inst4|inst  ; HALT       ; HALT     ; None                        ; None                      ; 1.762 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst5|inst  ; HALT       ; HALT     ; None                        ; None                      ; 1.570 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst4|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 1.566 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst4|inst  ; HALT       ; HALT     ; None                        ; None                      ; 1.566 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst5|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 1.564 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst6|inst  ; HALT       ; HALT     ; None                        ; None                      ; 1.517 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst6|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 1.485 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst6|inst  ; HALT       ; HALT     ; None                        ; None                      ; 1.483 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst6|inst  ; Scounter8:inst5|Scounter2:inst5|inst  ; HALT       ; HALT     ; None                        ; None                      ; 1.386 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst6|inst  ; Scounter8:inst5|Scounter2:inst4|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 1.382 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst6|inst  ; Scounter8:inst5|Scounter2:inst4|inst  ; HALT       ; HALT     ; None                        ; None                      ; 1.382 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst6|inst  ; Scounter8:inst5|Scounter2:inst5|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 1.380 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst6|inst  ; HALT       ; HALT     ; None                        ; None                      ; 1.338 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst5|inst1 ; Scounter8:inst1|Scounter2:inst5|inst  ; HALT       ; HALT     ; None                        ; None                      ; 1.258 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst7|inst  ; HALT       ; HALT     ; None                        ; None                      ; 1.256 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst6|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 1.250 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst6|inst  ; HALT       ; HALT     ; None                        ; None                      ; 1.241 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst5|inst1 ; Scounter8:inst5|Scounter2:inst5|inst  ; HALT       ; HALT     ; None                        ; None                      ; 1.191 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst7|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst7|inst  ; HALT       ; HALT     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst6|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst6|inst  ; Scounter8:inst5|Scounter2:inst6|inst  ; HALT       ; HALT     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst5|inst1 ; Scounter8:inst5|Scounter2:inst5|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst5|inst  ; Scounter8:inst5|Scounter2:inst5|inst  ; HALT       ; HALT     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst4|inst1 ; Scounter8:inst5|Scounter2:inst4|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst5|Scounter2:inst4|inst  ; Scounter8:inst5|Scounter2:inst4|inst  ; HALT       ; HALT     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst7|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst7|inst  ; HALT       ; HALT     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst6|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst6|inst  ; HALT       ; HALT     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst5|inst1 ; Scounter8:inst1|Scounter2:inst5|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst5|inst  ; Scounter8:inst1|Scounter2:inst5|inst  ; HALT       ; HALT     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst4|inst1 ; Scounter8:inst1|Scounter2:inst4|inst1 ; HALT       ; HALT     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst4|inst  ; Scounter8:inst1|Scounter2:inst4|inst  ; HALT       ; HALT     ; None                        ; None                      ; 0.501 ns                ;
++-------+------------------------------------------------+---------------------------------------+---------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CK_C'                                                                                                                                                                                                                                ;
++-------+------------------------------------------------+---------------------------------------+---------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                  ; To                                    ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+---------------------------------------+---------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 259.34 MHz ( period = 3.856 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst5|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 3.590 ns                ;
+; N/A   ; 259.47 MHz ( period = 3.854 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst5|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 3.588 ns                ;
+; N/A   ; 259.47 MHz ( period = 3.854 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst4|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 3.588 ns                ;
+; N/A   ; 259.47 MHz ( period = 3.854 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst4|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 3.588 ns                ;
+; N/A   ; 264.41 MHz ( period = 3.782 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst6|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 3.518 ns                ;
+; N/A   ; 266.95 MHz ( period = 3.746 ns )               ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst5|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 3.484 ns                ;
+; N/A   ; 267.09 MHz ( period = 3.744 ns )               ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst5|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 3.482 ns                ;
+; N/A   ; 267.09 MHz ( period = 3.744 ns )               ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst4|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 3.482 ns                ;
+; N/A   ; 267.09 MHz ( period = 3.744 ns )               ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst4|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 3.482 ns                ;
+; N/A   ; 297.35 MHz ( period = 3.363 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst5|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 3.101 ns                ;
+; N/A   ; 297.53 MHz ( period = 3.361 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst5|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 3.099 ns                ;
+; N/A   ; 297.53 MHz ( period = 3.361 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst4|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 3.099 ns                ;
+; N/A   ; 297.53 MHz ( period = 3.361 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst4|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 3.099 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst6|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 2.582 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst5|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 2.420 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst5|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 2.418 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst4|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 2.418 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst4|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 2.418 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst6|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 2.327 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst5|inst1 ; Scounter8:inst1|Scounter2:inst4|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 2.304 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst4|inst1 ; Scounter8:inst1|Scounter2:inst4|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 2.298 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst5|inst  ; Scounter8:inst1|Scounter2:inst4|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 2.236 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst4|inst1 ; Scounter8:inst5|Scounter2:inst4|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 2.234 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst7|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 2.210 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst5|inst1 ; Scounter8:inst1|Scounter2:inst4|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 2.004 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst5|inst  ; Scounter8:inst1|Scounter2:inst4|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 1.988 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst5|inst1 ; Scounter8:inst5|Scounter2:inst4|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 1.936 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst5|inst1 ; Scounter8:inst5|Scounter2:inst4|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 1.936 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst5|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 1.845 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst4|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 1.841 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst4|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 1.841 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst5|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 1.839 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst6|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 1.827 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst5|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 1.778 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst4|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 1.774 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst4|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 1.774 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst5|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 1.772 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst5|inst  ; Scounter8:inst5|Scounter2:inst4|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 1.762 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst5|inst  ; Scounter8:inst5|Scounter2:inst4|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 1.762 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst5|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 1.570 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst4|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 1.566 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst4|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 1.566 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst5|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 1.564 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst6|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 1.517 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst6|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 1.485 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst6|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 1.483 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst  ; Scounter8:inst5|Scounter2:inst5|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 1.386 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst  ; Scounter8:inst5|Scounter2:inst4|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 1.382 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst  ; Scounter8:inst5|Scounter2:inst4|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 1.382 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst  ; Scounter8:inst5|Scounter2:inst5|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 1.380 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst6|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 1.338 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst5|inst1 ; Scounter8:inst1|Scounter2:inst5|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 1.258 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst7|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 1.256 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst6|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 1.250 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst6|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 1.241 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst5|inst1 ; Scounter8:inst5|Scounter2:inst5|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 1.191 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst7|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Start:inst8|inst12                    ; Start:inst8|inst12                    ; CK_C       ; CK_C     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst7|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst6|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst  ; Scounter8:inst5|Scounter2:inst6|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst5|inst1 ; Scounter8:inst5|Scounter2:inst5|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst5|inst  ; Scounter8:inst5|Scounter2:inst5|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst4|inst1 ; Scounter8:inst5|Scounter2:inst4|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst4|inst  ; Scounter8:inst5|Scounter2:inst4|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst7|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst7|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst6|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst6|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst5|inst1 ; Scounter8:inst1|Scounter2:inst5|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst5|inst  ; Scounter8:inst1|Scounter2:inst5|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst4|inst1 ; Scounter8:inst1|Scounter2:inst4|inst1 ; CK_C       ; CK_C     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst4|inst  ; Scounter8:inst1|Scounter2:inst4|inst  ; CK_C       ; CK_C     ; None                        ; None                      ; 0.501 ns                ;
++-------+------------------------------------------------+---------------------------------------+---------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CK'                                                                                                                                                                                                                                  ;
++-------+------------------------------------------------+---------------------------------------+---------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                  ; To                                    ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+---------------------------------------+---------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 259.34 MHz ( period = 3.856 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst5|inst  ; CK         ; CK       ; None                        ; None                      ; 3.590 ns                ;
+; N/A   ; 259.47 MHz ( period = 3.854 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst5|inst1 ; CK         ; CK       ; None                        ; None                      ; 3.588 ns                ;
+; N/A   ; 259.47 MHz ( period = 3.854 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst4|inst1 ; CK         ; CK       ; None                        ; None                      ; 3.588 ns                ;
+; N/A   ; 259.47 MHz ( period = 3.854 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst4|inst  ; CK         ; CK       ; None                        ; None                      ; 3.588 ns                ;
+; N/A   ; 264.41 MHz ( period = 3.782 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst6|inst  ; CK         ; CK       ; None                        ; None                      ; 3.518 ns                ;
+; N/A   ; 266.95 MHz ( period = 3.746 ns )               ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst5|inst  ; CK         ; CK       ; None                        ; None                      ; 3.484 ns                ;
+; N/A   ; 267.09 MHz ( period = 3.744 ns )               ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst5|inst1 ; CK         ; CK       ; None                        ; None                      ; 3.482 ns                ;
+; N/A   ; 267.09 MHz ( period = 3.744 ns )               ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst4|inst1 ; CK         ; CK       ; None                        ; None                      ; 3.482 ns                ;
+; N/A   ; 267.09 MHz ( period = 3.744 ns )               ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst4|inst  ; CK         ; CK       ; None                        ; None                      ; 3.482 ns                ;
+; N/A   ; 297.35 MHz ( period = 3.363 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst5|inst  ; CK         ; CK       ; None                        ; None                      ; 3.101 ns                ;
+; N/A   ; 297.53 MHz ( period = 3.361 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst5|inst1 ; CK         ; CK       ; None                        ; None                      ; 3.099 ns                ;
+; N/A   ; 297.53 MHz ( period = 3.361 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst4|inst1 ; CK         ; CK       ; None                        ; None                      ; 3.099 ns                ;
+; N/A   ; 297.53 MHz ( period = 3.361 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst4|inst  ; CK         ; CK       ; None                        ; None                      ; 3.099 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst6|inst1 ; CK         ; CK       ; None                        ; None                      ; 2.582 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst5|inst  ; CK         ; CK       ; None                        ; None                      ; 2.420 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst5|inst1 ; CK         ; CK       ; None                        ; None                      ; 2.418 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst4|inst1 ; CK         ; CK       ; None                        ; None                      ; 2.418 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst4|inst  ; CK         ; CK       ; None                        ; None                      ; 2.418 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst6|inst  ; CK         ; CK       ; None                        ; None                      ; 2.327 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst5|inst1 ; Scounter8:inst1|Scounter2:inst4|inst1 ; CK         ; CK       ; None                        ; None                      ; 2.304 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst4|inst1 ; Scounter8:inst1|Scounter2:inst4|inst  ; CK         ; CK       ; None                        ; None                      ; 2.298 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst5|inst  ; Scounter8:inst1|Scounter2:inst4|inst  ; CK         ; CK       ; None                        ; None                      ; 2.236 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst4|inst1 ; Scounter8:inst5|Scounter2:inst4|inst  ; CK         ; CK       ; None                        ; None                      ; 2.234 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst7|inst  ; CK         ; CK       ; None                        ; None                      ; 2.210 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst5|inst1 ; Scounter8:inst1|Scounter2:inst4|inst  ; CK         ; CK       ; None                        ; None                      ; 2.004 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst5|inst  ; Scounter8:inst1|Scounter2:inst4|inst1 ; CK         ; CK       ; None                        ; None                      ; 1.988 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst5|inst1 ; Scounter8:inst5|Scounter2:inst4|inst1 ; CK         ; CK       ; None                        ; None                      ; 1.936 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst5|inst1 ; Scounter8:inst5|Scounter2:inst4|inst  ; CK         ; CK       ; None                        ; None                      ; 1.936 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst5|inst  ; CK         ; CK       ; None                        ; None                      ; 1.845 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst4|inst1 ; CK         ; CK       ; None                        ; None                      ; 1.841 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst4|inst  ; CK         ; CK       ; None                        ; None                      ; 1.841 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst5|inst1 ; CK         ; CK       ; None                        ; None                      ; 1.839 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst6|inst1 ; CK         ; CK       ; None                        ; None                      ; 1.827 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst5|inst  ; CK         ; CK       ; None                        ; None                      ; 1.778 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst4|inst1 ; CK         ; CK       ; None                        ; None                      ; 1.774 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst4|inst  ; CK         ; CK       ; None                        ; None                      ; 1.774 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst5|inst1 ; CK         ; CK       ; None                        ; None                      ; 1.772 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst5|inst  ; Scounter8:inst5|Scounter2:inst4|inst1 ; CK         ; CK       ; None                        ; None                      ; 1.762 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst5|inst  ; Scounter8:inst5|Scounter2:inst4|inst  ; CK         ; CK       ; None                        ; None                      ; 1.762 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst5|inst  ; CK         ; CK       ; None                        ; None                      ; 1.570 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst4|inst1 ; CK         ; CK       ; None                        ; None                      ; 1.566 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst4|inst  ; CK         ; CK       ; None                        ; None                      ; 1.566 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst5|inst1 ; CK         ; CK       ; None                        ; None                      ; 1.564 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst6|inst  ; CK         ; CK       ; None                        ; None                      ; 1.517 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst6|inst1 ; CK         ; CK       ; None                        ; None                      ; 1.485 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst6|inst  ; CK         ; CK       ; None                        ; None                      ; 1.483 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst  ; Scounter8:inst5|Scounter2:inst5|inst  ; CK         ; CK       ; None                        ; None                      ; 1.386 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst  ; Scounter8:inst5|Scounter2:inst4|inst1 ; CK         ; CK       ; None                        ; None                      ; 1.382 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst  ; Scounter8:inst5|Scounter2:inst4|inst  ; CK         ; CK       ; None                        ; None                      ; 1.382 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst  ; Scounter8:inst5|Scounter2:inst5|inst1 ; CK         ; CK       ; None                        ; None                      ; 1.380 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst6|inst  ; CK         ; CK       ; None                        ; None                      ; 1.338 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst5|inst1 ; Scounter8:inst1|Scounter2:inst5|inst  ; CK         ; CK       ; None                        ; None                      ; 1.258 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst7|inst  ; CK         ; CK       ; None                        ; None                      ; 1.256 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst6|inst1 ; CK         ; CK       ; None                        ; None                      ; 1.250 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst6|inst  ; CK         ; CK       ; None                        ; None                      ; 1.241 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst5|inst1 ; Scounter8:inst5|Scounter2:inst5|inst  ; CK         ; CK       ; None                        ; None                      ; 1.191 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst1 ; Scounter8:inst5|Scounter2:inst7|inst1 ; CK         ; CK       ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Start:inst8|inst12                    ; Start:inst8|inst12                    ; CK         ; CK       ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst7|inst  ; Scounter8:inst5|Scounter2:inst7|inst  ; CK         ; CK       ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst1 ; Scounter8:inst5|Scounter2:inst6|inst1 ; CK         ; CK       ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst6|inst  ; Scounter8:inst5|Scounter2:inst6|inst  ; CK         ; CK       ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst5|inst1 ; Scounter8:inst5|Scounter2:inst5|inst1 ; CK         ; CK       ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst5|inst  ; Scounter8:inst5|Scounter2:inst5|inst  ; CK         ; CK       ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst4|inst1 ; Scounter8:inst5|Scounter2:inst4|inst1 ; CK         ; CK       ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst5|Scounter2:inst4|inst  ; Scounter8:inst5|Scounter2:inst4|inst  ; CK         ; CK       ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst7|inst1 ; CK         ; CK       ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst7|inst  ; CK         ; CK       ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst6|inst1 ; CK         ; CK       ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst6|inst  ; CK         ; CK       ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst5|inst1 ; Scounter8:inst1|Scounter2:inst5|inst1 ; CK         ; CK       ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst5|inst  ; Scounter8:inst1|Scounter2:inst5|inst  ; CK         ; CK       ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst4|inst1 ; Scounter8:inst1|Scounter2:inst4|inst1 ; CK         ; CK       ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 340.02 MHz ( period = 2.941 ns ) ; Scounter8:inst1|Scounter2:inst4|inst  ; Scounter8:inst1|Scounter2:inst4|inst  ; CK         ; CK       ; None                        ; None                      ; 0.501 ns                ;
++-------+------------------------------------------------+---------------------------------------+---------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CPR0'                                                                                                                                                                                                                                ;
++-------+------------------------------------------------+---------------------------------------+---------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                  ; To                                    ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+---------------------------------------+---------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 259.34 MHz ( period = 3.856 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst5|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 3.590 ns                ;
+; N/A   ; 259.47 MHz ( period = 3.854 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst5|inst1 ; CPR0       ; CPR0     ; None                        ; None                      ; 3.588 ns                ;
+; N/A   ; 259.47 MHz ( period = 3.854 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst4|inst1 ; CPR0       ; CPR0     ; None                        ; None                      ; 3.588 ns                ;
+; N/A   ; 259.47 MHz ( period = 3.854 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst4|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 3.588 ns                ;
+; N/A   ; 264.41 MHz ( period = 3.782 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst6|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 3.518 ns                ;
+; N/A   ; 266.95 MHz ( period = 3.746 ns )               ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst5|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 3.484 ns                ;
+; N/A   ; 267.09 MHz ( period = 3.744 ns )               ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst5|inst1 ; CPR0       ; CPR0     ; None                        ; None                      ; 3.482 ns                ;
+; N/A   ; 267.09 MHz ( period = 3.744 ns )               ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst4|inst1 ; CPR0       ; CPR0     ; None                        ; None                      ; 3.482 ns                ;
+; N/A   ; 267.09 MHz ( period = 3.744 ns )               ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst4|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 3.482 ns                ;
+; N/A   ; 297.35 MHz ( period = 3.363 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst5|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 3.101 ns                ;
+; N/A   ; 297.53 MHz ( period = 3.361 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst5|inst1 ; CPR0       ; CPR0     ; None                        ; None                      ; 3.099 ns                ;
+; N/A   ; 297.53 MHz ( period = 3.361 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst4|inst1 ; CPR0       ; CPR0     ; None                        ; None                      ; 3.099 ns                ;
+; N/A   ; 297.53 MHz ( period = 3.361 ns )               ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst4|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 3.099 ns                ;
+; N/A   ; 350.88 MHz ( period = 2.850 ns )               ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst6|inst1 ; CPR0       ; CPR0     ; None                        ; None                      ; 2.582 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst5|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 2.420 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst5|inst1 ; CPR0       ; CPR0     ; None                        ; None                      ; 2.418 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst4|inst1 ; CPR0       ; CPR0     ; None                        ; None                      ; 2.418 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst4|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 2.418 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst6|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 2.327 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst5|inst1 ; Scounter8:inst1|Scounter2:inst4|inst1 ; CPR0       ; CPR0     ; None                        ; None                      ; 2.304 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst4|inst1 ; Scounter8:inst1|Scounter2:inst4|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 2.298 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst5|inst  ; Scounter8:inst1|Scounter2:inst4|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 2.236 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst7|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 2.210 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst5|inst1 ; Scounter8:inst1|Scounter2:inst4|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 2.004 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst5|inst  ; Scounter8:inst1|Scounter2:inst4|inst1 ; CPR0       ; CPR0     ; None                        ; None                      ; 1.988 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst6|inst1 ; CPR0       ; CPR0     ; None                        ; None                      ; 1.485 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst5|inst1 ; Scounter8:inst1|Scounter2:inst5|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 1.258 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst6|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 1.241 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst7|inst1 ; Scounter8:inst1|Scounter2:inst7|inst1 ; CPR0       ; CPR0     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst7|inst  ; Scounter8:inst1|Scounter2:inst7|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst6|inst1 ; Scounter8:inst1|Scounter2:inst6|inst1 ; CPR0       ; CPR0     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst6|inst  ; Scounter8:inst1|Scounter2:inst6|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst5|inst1 ; Scounter8:inst1|Scounter2:inst5|inst1 ; CPR0       ; CPR0     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst5|inst  ; Scounter8:inst1|Scounter2:inst5|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst4|inst1 ; Scounter8:inst1|Scounter2:inst4|inst1 ; CPR0       ; CPR0     ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; Scounter8:inst1|Scounter2:inst4|inst  ; Scounter8:inst1|Scounter2:inst4|inst  ; CPR0       ; CPR0     ; None                        ; None                      ; 0.501 ns                ;
++-------+------------------------------------------------+---------------------------------------+---------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                                                     ;
++-----------------------------------------+-----------------------------------------------------+------------+---------+---------------------------------------+----------+
+; Slack                                   ; Required tsu                                        ; Actual tsu ; From    ; To                                    ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+---------+---------------------------------------+----------+
+; N/A                                     ; None                                                ; 4.604 ns   ; B2Y     ; TheOne8:inst2|inst4                   ; CPR1     ;
+; N/A                                     ; None                                                ; 4.587 ns   ; B2Y     ; TheOne8:inst2|inst4                   ; HALT     ;
+; N/A                                     ; None                                                ; 4.365 ns   ; B2Y     ; TheOne8:inst2|inst5                   ; CPR1     ;
+; N/A                                     ; None                                                ; 4.348 ns   ; B2Y     ; TheOne8:inst2|inst5                   ; HALT     ;
+; N/A                                     ; None                                                ; 4.337 ns   ; ROM6    ; TheOne8:inst3|inst1                   ; CPR2     ;
+; N/A                                     ; None                                                ; 4.330 ns   ; B2Y     ; TheOne8:inst3|inst1                   ; CPR2     ;
+; N/A                                     ; None                                                ; 4.299 ns   ; B2Y     ; TheOne8:inst3|inst                    ; CPR2     ;
+; N/A                                     ; None                                                ; 4.256 ns   ; B2Y     ; TheOne8:inst3|inst2                   ; CPR2     ;
+; N/A                                     ; None                                                ; 4.121 ns   ; B2Y     ; TheOne8:inst3|inst3                   ; CPR2     ;
+; N/A                                     ; None                                                ; 4.089 ns   ; ROM6    ; TheOne8:inst3|inst1                   ; HALT     ;
+; N/A                                     ; None                                                ; 4.082 ns   ; B2Y     ; TheOne8:inst3|inst1                   ; HALT     ;
+; N/A                                     ; None                                                ; 4.051 ns   ; B2Y     ; TheOne8:inst3|inst                    ; HALT     ;
+; N/A                                     ; None                                                ; 4.008 ns   ; B2Y     ; TheOne8:inst3|inst2                   ; HALT     ;
+; N/A                                     ; None                                                ; 3.873 ns   ; B2Y     ; TheOne8:inst3|inst3                   ; HALT     ;
+; N/A                                     ; None                                                ; 3.827 ns   ; ROM3    ; TheOne8:inst2|inst4                   ; CPR1     ;
+; N/A                                     ; None                                                ; 3.810 ns   ; ROM3    ; TheOne8:inst2|inst4                   ; HALT     ;
+; N/A                                     ; None                                                ; 3.716 ns   ; B2Y     ; TheOne8:inst3|inst6                   ; CPR2     ;
+; N/A                                     ; None                                                ; 3.688 ns   ; ROM2    ; TheOne8:inst2|inst5                   ; CPR1     ;
+; N/A                                     ; None                                                ; 3.671 ns   ; ROM2    ; TheOne8:inst2|inst5                   ; HALT     ;
+; N/A                                     ; None                                                ; 3.614 ns   ; ROM4    ; TheOne8:inst3|inst3                   ; CPR2     ;
+; N/A                                     ; None                                                ; 3.468 ns   ; B2Y     ; TheOne8:inst3|inst6                   ; HALT     ;
+; N/A                                     ; None                                                ; 3.381 ns   ; ROM5    ; TheOne8:inst3|inst2                   ; CPR2     ;
+; N/A                                     ; None                                                ; 3.366 ns   ; ROM4    ; TheOne8:inst3|inst3                   ; HALT     ;
+; N/A                                     ; None                                                ; 3.290 ns   ; ROM7    ; TheOne8:inst3|inst                    ; CPR2     ;
+; N/A                                     ; None                                                ; 3.248 ns   ; B2Y     ; TheOne8:inst3|inst5                   ; CPR2     ;
+; N/A                                     ; None                                                ; 3.238 ns   ; A2Y     ; TheOne8:inst3|inst7                   ; CPR2     ;
+; N/A                                     ; None                                                ; 3.153 ns   ; B2Y     ; TheOne8:inst3|inst4                   ; CPR2     ;
+; N/A                                     ; None                                                ; 3.133 ns   ; ROM5    ; TheOne8:inst3|inst2                   ; HALT     ;
+; N/A                                     ; None                                                ; 3.097 ns   ; B2Y     ; TheOne8:inst3|inst7                   ; CPR2     ;
+; N/A                                     ; None                                                ; 3.042 ns   ; ROM7    ; TheOne8:inst3|inst                    ; HALT     ;
+; N/A                                     ; None                                                ; 3.000 ns   ; B2Y     ; TheOne8:inst3|inst5                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.990 ns   ; A2Y     ; TheOne8:inst3|inst7                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.969 ns   ; A2Y     ; TheOne8:inst3|inst6                   ; CPR2     ;
+; N/A                                     ; None                                                ; 2.945 ns   ; B2Y     ; TheOne8:inst2|inst4                   ; CK_C     ;
+; N/A                                     ; None                                                ; 2.942 ns   ; R5      ; TheOne8:inst3|inst2                   ; CPR2     ;
+; N/A                                     ; None                                                ; 2.905 ns   ; B2Y     ; TheOne8:inst3|inst4                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.894 ns   ; ROM1    ; TheOne8:inst3|inst6                   ; CPR2     ;
+; N/A                                     ; None                                                ; 2.849 ns   ; B2Y     ; TheOne8:inst3|inst7                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.815 ns   ; EN_read ; TheOne8:inst2|inst4                   ; CPR1     ;
+; N/A                                     ; None                                                ; 2.798 ns   ; EN_read ; TheOne8:inst2|inst4                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.779 ns   ; A2Y     ; TheOne8:inst3|inst3                   ; CPR2     ;
+; N/A                                     ; None                                                ; 2.722 ns   ; EN_read ; TheOne8:inst3|inst1                   ; CPR2     ;
+; N/A                                     ; None                                                ; 2.721 ns   ; A2Y     ; TheOne8:inst3|inst6                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.719 ns   ; A2Y     ; TheOne8:inst3|inst                    ; CPR2     ;
+; N/A                                     ; None                                                ; 2.706 ns   ; B2Y     ; TheOne8:inst2|inst5                   ; CK_C     ;
+; N/A                                     ; None                                                ; 2.694 ns   ; R5      ; TheOne8:inst3|inst2                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.648 ns   ; A2Y     ; TheOne8:inst3|inst1                   ; CPR2     ;
+; N/A                                     ; None                                                ; 2.646 ns   ; ROM1    ; TheOne8:inst3|inst6                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.643 ns   ; R3      ; TheOne8:inst2|inst4                   ; CPR1     ;
+; N/A                                     ; None                                                ; 2.626 ns   ; R3      ; TheOne8:inst2|inst4                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.571 ns   ; ROM2    ; TheOne8:inst3|inst5                   ; CPR2     ;
+; N/A                                     ; None                                                ; 2.557 ns   ; R6      ; TheOne8:inst3|inst1                   ; CPR2     ;
+; N/A                                     ; None                                                ; 2.553 ns   ; EN_read ; TheOne8:inst3|inst3                   ; CPR2     ;
+; N/A                                     ; None                                                ; 2.544 ns   ; EN_read ; TheOne8:inst3|inst                    ; CPR2     ;
+; N/A                                     ; None                                                ; 2.535 ns   ; EN_read ; TheOne8:inst3|inst2                   ; CPR2     ;
+; N/A                                     ; None                                                ; 2.531 ns   ; A2Y     ; TheOne8:inst3|inst3                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.519 ns   ; A2Y     ; TheOne8:inst2|inst4                   ; CPR1     ;
+; N/A                                     ; None                                                ; 2.502 ns   ; A2Y     ; TheOne8:inst2|inst4                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.483 ns   ; EN_read ; TheOne8:inst2|inst5                   ; CPR1     ;
+; N/A                                     ; None                                                ; 2.474 ns   ; EN_read ; TheOne8:inst3|inst1                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.471 ns   ; A2Y     ; TheOne8:inst3|inst                    ; HALT     ;
+; N/A                                     ; None                                                ; 2.466 ns   ; EN_read ; TheOne8:inst2|inst5                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.464 ns   ; A2Y     ; TheOne8:inst3|inst2                   ; CPR2     ;
+; N/A                                     ; None                                                ; 2.457 ns   ; R4      ; TheOne8:inst3|inst3                   ; CPR2     ;
+; N/A                                     ; None                                                ; 2.447 ns   ; ROM6    ; TheOne8:inst3|inst1                   ; CK_C     ;
+; N/A                                     ; None                                                ; 2.440 ns   ; B2Y     ; TheOne8:inst3|inst1                   ; CK_C     ;
+; N/A                                     ; None                                                ; 2.409 ns   ; B2Y     ; TheOne8:inst3|inst                    ; CK_C     ;
+; N/A                                     ; None                                                ; 2.407 ns   ; B2Y     ; TheOne8:inst2|inst                    ; CPR1     ;
+; N/A                                     ; None                                                ; 2.403 ns   ; R1      ; TheOne8:inst3|inst6                   ; CPR2     ;
+; N/A                                     ; None                                                ; 2.400 ns   ; A2Y     ; TheOne8:inst3|inst1                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.390 ns   ; B2Y     ; TheOne8:inst2|inst                    ; HALT     ;
+; N/A                                     ; None                                                ; 2.376 ns   ; ROM3    ; TheOne8:inst3|inst4                   ; CPR2     ;
+; N/A                                     ; None                                                ; 2.368 ns   ; B2Y     ; TheOne8:inst2|inst2                   ; CPR1     ;
+; N/A                                     ; None                                                ; 2.366 ns   ; B2Y     ; TheOne8:inst3|inst2                   ; CK_C     ;
+; N/A                                     ; None                                                ; 2.351 ns   ; B2Y     ; TheOne8:inst2|inst2                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.323 ns   ; ROM2    ; TheOne8:inst3|inst5                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.309 ns   ; R6      ; TheOne8:inst3|inst1                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.305 ns   ; EN_read ; TheOne8:inst3|inst3                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.296 ns   ; EN_read ; TheOne8:inst3|inst                    ; HALT     ;
+; N/A                                     ; None                                                ; 2.292 ns   ; ROM0    ; TheOne8:inst3|inst7                   ; CPR2     ;
+; N/A                                     ; None                                                ; 2.287 ns   ; EN_read ; TheOne8:inst3|inst2                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.264 ns   ; ROM6    ; TheOne8:inst2|inst1                   ; CPR1     ;
+; N/A                                     ; None                                                ; 2.257 ns   ; B2Y     ; TheOne8:inst2|inst1                   ; CPR1     ;
+; N/A                                     ; None                                                ; 2.247 ns   ; ROM6    ; TheOne8:inst2|inst1                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.240 ns   ; B2Y     ; TheOne8:inst2|inst1                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.236 ns   ; R0      ; TheOne8:inst3|inst7                   ; CPR2     ;
+; N/A                                     ; None                                                ; 2.231 ns   ; B2Y     ; TheOne8:inst3|inst3                   ; CK_C     ;
+; N/A                                     ; None                                                ; 2.221 ns   ; B2Y     ; TheOne8:inst2|inst3                   ; CPR1     ;
+; N/A                                     ; None                                                ; 2.218 ns   ; EN_read ; TheOne8:inst3|inst6                   ; CPR2     ;
+; N/A                                     ; None                                                ; 2.216 ns   ; A2Y     ; TheOne8:inst3|inst2                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.209 ns   ; R4      ; TheOne8:inst3|inst3                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.204 ns   ; B2Y     ; TheOne8:inst2|inst3                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.203 ns   ; LD      ; Scounter8:inst5|Scounter2:inst5|inst1 ; HALT     ;
+; N/A                                     ; None                                                ; 2.188 ns   ; A2Y     ; TheOne8:inst2|inst5                   ; CPR1     ;
+; N/A                                     ; None                                                ; 2.183 ns   ; LD      ; Scounter8:inst5|Scounter2:inst6|inst  ; HALT     ;
+; N/A                                     ; None                                                ; 2.182 ns   ; LD      ; Scounter8:inst5|Scounter2:inst4|inst1 ; HALT     ;
+; N/A                                     ; None                                                ; 2.181 ns   ; LD      ; Scounter8:inst5|Scounter2:inst5|inst  ; HALT     ;
+; N/A                                     ; None                                                ; 2.181 ns   ; LD      ; Scounter8:inst5|Scounter2:inst4|inst  ; HALT     ;
+; N/A                                     ; None                                                ; 2.171 ns   ; A2Y     ; TheOne8:inst2|inst5                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.168 ns   ; ROM3    ; TheOne8:inst2|inst4                   ; CK_C     ;
+; N/A                                     ; None                                                ; 2.155 ns   ; R1      ; TheOne8:inst3|inst6                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.143 ns   ; R7      ; TheOne8:inst3|inst                    ; CPR2     ;
+; N/A                                     ; None                                                ; 2.128 ns   ; ROM3    ; TheOne8:inst3|inst4                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.044 ns   ; ROM0    ; TheOne8:inst3|inst7                   ; HALT     ;
+; N/A                                     ; None                                                ; 2.029 ns   ; ROM2    ; TheOne8:inst2|inst5                   ; CK_C     ;
+; N/A                                     ; None                                                ; 2.008 ns   ; EN_read ; TheOne8:inst3|inst7                   ; CPR2     ;
+; N/A                                     ; None                                                ; 1.988 ns   ; R0      ; TheOne8:inst3|inst7                   ; HALT     ;
+; N/A                                     ; None                                                ; 1.970 ns   ; EN_read ; TheOne8:inst3|inst6                   ; HALT     ;
+; N/A                                     ; None                                                ; 1.929 ns   ; R2      ; TheOne8:inst2|inst5                   ; CPR1     ;
+; N/A                                     ; None                                                ; 1.912 ns   ; R2      ; TheOne8:inst2|inst5                   ; HALT     ;
+; N/A                                     ; None                                                ; 1.895 ns   ; R7      ; TheOne8:inst3|inst                    ; HALT     ;
+; N/A                                     ; None                                                ; 1.863 ns   ; B2Y     ; TheOne8:inst2|inst6                   ; CPR1     ;
+; N/A                                     ; None                                                ; 1.846 ns   ; B2Y     ; TheOne8:inst2|inst6                   ; HALT     ;
+; N/A                                     ; None                                                ; 1.826 ns   ; B2Y     ; TheOne8:inst3|inst6                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.780 ns   ; LD      ; Scounter8:inst5|Scounter2:inst7|inst  ; HALT     ;
+; N/A                                     ; None                                                ; 1.774 ns   ; LD      ; Scounter8:inst5|Scounter2:inst7|inst1 ; HALT     ;
+; N/A                                     ; None                                                ; 1.769 ns   ; LD      ; Scounter8:inst5|Scounter2:inst6|inst1 ; HALT     ;
+; N/A                                     ; None                                                ; 1.760 ns   ; EN_read ; TheOne8:inst3|inst7                   ; HALT     ;
+; N/A                                     ; None                                                ; 1.724 ns   ; ROM4    ; TheOne8:inst3|inst3                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.714 ns   ; ROM4    ; TheOne8:inst2|inst3                   ; CPR1     ;
+; N/A                                     ; None                                                ; 1.700 ns   ; LD      ; Scounter8:inst1|Scounter2:inst6|inst  ; CPR0     ;
+; N/A                                     ; None                                                ; 1.697 ns   ; ROM4    ; TheOne8:inst2|inst3                   ; HALT     ;
+; N/A                                     ; None                                                ; 1.657 ns   ; LD      ; Scounter8:inst1|Scounter2:inst6|inst  ; HALT     ;
+; N/A                                     ; None                                                ; 1.622 ns   ; LD      ; Scounter8:inst1|Scounter2:inst5|inst1 ; CPR0     ;
+; N/A                                     ; None                                                ; 1.622 ns   ; LD      ; Scounter8:inst1|Scounter2:inst4|inst  ; CPR0     ;
+; N/A                                     ; None                                                ; 1.621 ns   ; LD      ; Scounter8:inst1|Scounter2:inst4|inst1 ; CPR0     ;
+; N/A                                     ; None                                                ; 1.617 ns   ; LD      ; Scounter8:inst1|Scounter2:inst5|inst  ; CPR0     ;
+; N/A                                     ; None                                                ; 1.594 ns   ; LD      ; Scounter8:inst1|Scounter2:inst7|inst  ; CPR0     ;
+; N/A                                     ; None                                                ; 1.590 ns   ; A2Y     ; TheOne8:inst2|inst7                   ; CPR1     ;
+; N/A                                     ; None                                                ; 1.579 ns   ; LD      ; Scounter8:inst1|Scounter2:inst5|inst1 ; HALT     ;
+; N/A                                     ; None                                                ; 1.579 ns   ; LD      ; Scounter8:inst1|Scounter2:inst4|inst  ; HALT     ;
+; N/A                                     ; None                                                ; 1.578 ns   ; LD      ; Scounter8:inst1|Scounter2:inst4|inst1 ; HALT     ;
+; N/A                                     ; None                                                ; 1.574 ns   ; LD      ; Scounter8:inst1|Scounter2:inst5|inst  ; HALT     ;
+; N/A                                     ; None                                                ; 1.573 ns   ; A2Y     ; TheOne8:inst2|inst7                   ; HALT     ;
+; N/A                                     ; None                                                ; 1.551 ns   ; LD      ; Scounter8:inst1|Scounter2:inst7|inst  ; HALT     ;
+; N/A                                     ; None                                                ; 1.493 ns   ; ROM5    ; TheOne8:inst2|inst2                   ; CPR1     ;
+; N/A                                     ; None                                                ; 1.491 ns   ; ROM5    ; TheOne8:inst3|inst2                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.476 ns   ; ROM5    ; TheOne8:inst2|inst2                   ; HALT     ;
+; N/A                                     ; None                                                ; 1.449 ns   ; B2Y     ; TheOne8:inst2|inst7                   ; CPR1     ;
+; N/A                                     ; None                                                ; 1.432 ns   ; B2Y     ; TheOne8:inst2|inst7                   ; HALT     ;
+; N/A                                     ; None                                                ; 1.400 ns   ; ROM7    ; TheOne8:inst3|inst                    ; CK_C     ;
+; N/A                                     ; None                                                ; 1.398 ns   ; ROM7    ; TheOne8:inst2|inst                    ; CPR1     ;
+; N/A                                     ; None                                                ; 1.381 ns   ; ROM7    ; TheOne8:inst2|inst                    ; HALT     ;
+; N/A                                     ; None                                                ; 1.366 ns   ; EN_read ; TheOne8:inst3|inst5                   ; CPR2     ;
+; N/A                                     ; None                                                ; 1.364 ns   ; EN_read ; TheOne8:inst3|inst4                   ; CPR2     ;
+; N/A                                     ; None                                                ; 1.358 ns   ; B2Y     ; TheOne8:inst3|inst5                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.348 ns   ; A2Y     ; TheOne8:inst3|inst7                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.272 ns   ; LD      ; Scounter8:inst1|Scounter2:inst6|inst1 ; CPR0     ;
+; N/A                                     ; None                                                ; 1.265 ns   ; LD      ; Scounter8:inst1|Scounter2:inst7|inst1 ; CPR0     ;
+; N/A                                     ; None                                                ; 1.263 ns   ; B2Y     ; TheOne8:inst3|inst4                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.229 ns   ; LD      ; Scounter8:inst1|Scounter2:inst6|inst1 ; HALT     ;
+; N/A                                     ; None                                                ; 1.222 ns   ; LD      ; Scounter8:inst1|Scounter2:inst7|inst1 ; HALT     ;
+; N/A                                     ; None                                                ; 1.215 ns   ; B2Y     ; TheOne8:inst2|inst4                   ; CK       ;
+; N/A                                     ; None                                                ; 1.207 ns   ; B2Y     ; TheOne8:inst3|inst7                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.192 ns   ; R3      ; TheOne8:inst3|inst4                   ; CPR2     ;
+; N/A                                     ; None                                                ; 1.156 ns   ; EN_read ; TheOne8:inst2|inst4                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.118 ns   ; EN_read ; TheOne8:inst3|inst5                   ; HALT     ;
+; N/A                                     ; None                                                ; 1.116 ns   ; EN_read ; TheOne8:inst3|inst4                   ; HALT     ;
+; N/A                                     ; None                                                ; 1.116 ns   ; A2Y     ; TheOne8:inst2|inst6                   ; CPR1     ;
+; N/A                                     ; None                                                ; 1.099 ns   ; A2Y     ; TheOne8:inst2|inst6                   ; HALT     ;
+; N/A                                     ; None                                                ; 1.079 ns   ; A2Y     ; TheOne8:inst3|inst6                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.071 ns   ; A2Y     ; TheOne8:inst3|inst5                   ; CPR2     ;
+; N/A                                     ; None                                                ; 1.068 ns   ; A2Y     ; TheOne8:inst3|inst4                   ; CPR2     ;
+; N/A                                     ; None                                                ; 1.054 ns   ; R5      ; TheOne8:inst2|inst2                   ; CPR1     ;
+; N/A                                     ; None                                                ; 1.052 ns   ; R5      ; TheOne8:inst3|inst2                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.041 ns   ; ROM1    ; TheOne8:inst2|inst6                   ; CPR1     ;
+; N/A                                     ; None                                                ; 1.037 ns   ; R5      ; TheOne8:inst2|inst2                   ; HALT     ;
+; N/A                                     ; None                                                ; 1.024 ns   ; ROM1    ; TheOne8:inst2|inst6                   ; HALT     ;
+; N/A                                     ; None                                                ; 1.004 ns   ; ROM1    ; TheOne8:inst3|inst6                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.984 ns   ; R3      ; TheOne8:inst2|inst4                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.976 ns   ; B2Y     ; TheOne8:inst2|inst5                   ; CK       ;
+; N/A                                     ; None                                                ; 0.944 ns   ; R3      ; TheOne8:inst3|inst4                   ; HALT     ;
+; N/A                                     ; None                                                ; 0.889 ns   ; A2Y     ; TheOne8:inst3|inst3                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.879 ns   ; A2Y     ; TheOne8:inst2|inst3                   ; CPR1     ;
+; N/A                                     ; None                                                ; 0.862 ns   ; A2Y     ; TheOne8:inst2|inst3                   ; HALT     ;
+; N/A                                     ; None                                                ; 0.860 ns   ; A2Y     ; TheOne8:inst2|inst4                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.832 ns   ; EN_read ; TheOne8:inst3|inst1                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.829 ns   ; A2Y     ; TheOne8:inst3|inst                    ; CK_C     ;
+; N/A                                     ; None                                                ; 0.827 ns   ; A2Y     ; TheOne8:inst2|inst                    ; CPR1     ;
+; N/A                                     ; None                                                ; 0.824 ns   ; EN_read ; TheOne8:inst2|inst5                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.823 ns   ; A2Y     ; TheOne8:inst3|inst5                   ; HALT     ;
+; N/A                                     ; None                                                ; 0.820 ns   ; A2Y     ; TheOne8:inst3|inst4                   ; HALT     ;
+; N/A                                     ; None                                                ; 0.812 ns   ; R2      ; TheOne8:inst3|inst5                   ; CPR2     ;
+; N/A                                     ; None                                                ; 0.810 ns   ; A2Y     ; TheOne8:inst2|inst                    ; HALT     ;
+; N/A                                     ; None                                                ; 0.758 ns   ; A2Y     ; TheOne8:inst3|inst1                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.748 ns   ; B2Y     ; TheOne8:inst2|inst                    ; CK_C     ;
+; N/A                                     ; None                                                ; 0.717 ns   ; ROM6    ; TheOne8:inst3|inst1                   ; CK       ;
+; N/A                                     ; None                                                ; 0.710 ns   ; B2Y     ; TheOne8:inst3|inst1                   ; CK       ;
+; N/A                                     ; None                                                ; 0.709 ns   ; B2Y     ; TheOne8:inst2|inst2                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.681 ns   ; ROM2    ; TheOne8:inst3|inst5                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.679 ns   ; B2Y     ; TheOne8:inst3|inst                    ; CK       ;
+; N/A                                     ; None                                                ; 0.667 ns   ; R6      ; TheOne8:inst3|inst1                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.663 ns   ; EN_read ; TheOne8:inst3|inst3                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.654 ns   ; EN_read ; TheOne8:inst3|inst                    ; CK_C     ;
+; N/A                                     ; None                                                ; 0.653 ns   ; EN_read ; TheOne8:inst2|inst3                   ; CPR1     ;
+; N/A                                     ; None                                                ; 0.652 ns   ; EN_read ; TheOne8:inst2|inst                    ; CPR1     ;
+; N/A                                     ; None                                                ; 0.649 ns   ; EN_read ; TheOne8:inst2|inst1                   ; CPR1     ;
+; N/A                                     ; None                                                ; 0.647 ns   ; EN_read ; TheOne8:inst2|inst2                   ; CPR1     ;
+; N/A                                     ; None                                                ; 0.645 ns   ; EN_read ; TheOne8:inst3|inst2                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.644 ns   ; ROM0    ; TheOne8:inst2|inst7                   ; CPR1     ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;         ;                                       ;          ;
++-----------------------------------------+-----------------------------------------------------+------------+---------+---------------------------------------+----------+
+
+
++-----------------------------------------------------------------------------------------------+
+; tco                                                                                           ;
++-------+--------------+------------+---------------------------------------+------+------------+
+; Slack ; Required tco ; Actual tco ; From                                  ; To   ; From Clock ;
++-------+--------------+------------+---------------------------------------+------+------------+
+; N/A   ; None         ; 17.660 ns  ; TheOne8:inst3|inst1                   ; R6   ; CK         ;
+; N/A   ; None         ; 17.598 ns  ; Scounter8:inst1|Scounter2:inst6|inst  ; A3   ; CK         ;
+; N/A   ; None         ; 17.597 ns  ; Scounter8:inst1|Scounter2:inst6|inst1 ; A2   ; CK         ;
+; N/A   ; None         ; 17.483 ns  ; TheOne8:inst3|inst3                   ; R4   ; CK         ;
+; N/A   ; None         ; 17.452 ns  ; TheOne8:inst3|inst2                   ; R5   ; CK         ;
+; N/A   ; None         ; 17.384 ns  ; TheOne8:inst2|inst                    ; A7   ; CK         ;
+; N/A   ; None         ; 17.256 ns  ; TheOne8:inst3|inst5                   ; R2   ; CK         ;
+; N/A   ; None         ; 17.203 ns  ; Scounter8:inst1|Scounter2:inst7|inst1 ; A0   ; CK         ;
+; N/A   ; None         ; 16.924 ns  ; TheOne8:inst3|inst6                   ; R1   ; CK         ;
+; N/A   ; None         ; 16.919 ns  ; TheOne8:inst3|inst7                   ; R0   ; CK         ;
+; N/A   ; None         ; 16.908 ns  ; TheOne8:inst2|inst1                   ; A6   ; CK         ;
+; N/A   ; None         ; 16.908 ns  ; TheOne8:inst2|inst3                   ; A4   ; CK         ;
+; N/A   ; None         ; 16.871 ns  ; TheOne8:inst2|inst6                   ; A1   ; CK         ;
+; N/A   ; None         ; 16.825 ns  ; TheOne8:inst3|inst                    ; R7   ; CK         ;
+; N/A   ; None         ; 16.821 ns  ; TheOne8:inst2|inst7                   ; A0   ; CK         ;
+; N/A   ; None         ; 16.811 ns  ; TheOne8:inst3|inst4                   ; R3   ; CK         ;
+; N/A   ; None         ; 16.698 ns  ; TheOne8:inst2|inst2                   ; A5   ; CK         ;
+; N/A   ; None         ; 16.604 ns  ; TheOne8:inst2|inst5                   ; A2   ; CK         ;
+; N/A   ; None         ; 16.603 ns  ; TheOne8:inst2|inst4                   ; A3   ; CK         ;
+; N/A   ; None         ; 16.540 ns  ; Scounter8:inst1|Scounter2:inst4|inst  ; A7   ; CK         ;
+; N/A   ; None         ; 16.240 ns  ; Scounter8:inst1|Scounter2:inst7|inst  ; A1   ; CK         ;
+; N/A   ; None         ; 15.930 ns  ; TheOne8:inst3|inst1                   ; R6   ; CK_C       ;
+; N/A   ; None         ; 15.872 ns  ; Scounter8:inst1|Scounter2:inst5|inst  ; A5   ; CK         ;
+; N/A   ; None         ; 15.868 ns  ; Scounter8:inst1|Scounter2:inst6|inst  ; A3   ; CK_C       ;
+; N/A   ; None         ; 15.867 ns  ; Scounter8:inst1|Scounter2:inst6|inst1 ; A2   ; CK_C       ;
+; N/A   ; None         ; 15.753 ns  ; TheOne8:inst3|inst3                   ; R4   ; CK_C       ;
+; N/A   ; None         ; 15.722 ns  ; TheOne8:inst3|inst2                   ; R5   ; CK_C       ;
+; N/A   ; None         ; 15.654 ns  ; TheOne8:inst2|inst                    ; A7   ; CK_C       ;
+; N/A   ; None         ; 15.615 ns  ; Scounter8:inst1|Scounter2:inst4|inst1 ; A6   ; CK         ;
+; N/A   ; None         ; 15.610 ns  ; Scounter8:inst1|Scounter2:inst5|inst1 ; A4   ; CK         ;
+; N/A   ; None         ; 15.526 ns  ; TheOne8:inst3|inst5                   ; R2   ; CK_C       ;
+; N/A   ; None         ; 15.473 ns  ; Scounter8:inst1|Scounter2:inst7|inst1 ; A0   ; CK_C       ;
+; N/A   ; None         ; 15.194 ns  ; TheOne8:inst3|inst6                   ; R1   ; CK_C       ;
+; N/A   ; None         ; 15.189 ns  ; TheOne8:inst3|inst7                   ; R0   ; CK_C       ;
+; N/A   ; None         ; 15.178 ns  ; TheOne8:inst2|inst1                   ; A6   ; CK_C       ;
+; N/A   ; None         ; 15.178 ns  ; TheOne8:inst2|inst3                   ; A4   ; CK_C       ;
+; N/A   ; None         ; 15.141 ns  ; TheOne8:inst2|inst6                   ; A1   ; CK_C       ;
+; N/A   ; None         ; 15.095 ns  ; TheOne8:inst3|inst                    ; R7   ; CK_C       ;
+; N/A   ; None         ; 15.091 ns  ; TheOne8:inst2|inst7                   ; A0   ; CK_C       ;
+; N/A   ; None         ; 15.087 ns  ; Scounter8:inst5|Scounter2:inst4|inst  ; Q7   ; CK         ;
+; N/A   ; None         ; 15.081 ns  ; TheOne8:inst3|inst4                   ; R3   ; CK_C       ;
+; N/A   ; None         ; 15.024 ns  ; Scounter8:inst5|Scounter2:inst4|inst1 ; Q6   ; CK         ;
+; N/A   ; None         ; 14.970 ns  ; Scounter8:inst5|Scounter2:inst5|inst  ; Q5   ; CK         ;
+; N/A   ; None         ; 14.969 ns  ; Scounter8:inst5|Scounter2:inst5|inst1 ; Q4   ; CK         ;
+; N/A   ; None         ; 14.968 ns  ; TheOne8:inst2|inst2                   ; A5   ; CK_C       ;
+; N/A   ; None         ; 14.957 ns  ; Scounter8:inst5|Scounter2:inst6|inst  ; Q3   ; CK         ;
+; N/A   ; None         ; 14.874 ns  ; TheOne8:inst2|inst5                   ; A2   ; CK_C       ;
+; N/A   ; None         ; 14.873 ns  ; TheOne8:inst2|inst4                   ; A3   ; CK_C       ;
+; N/A   ; None         ; 14.810 ns  ; Scounter8:inst1|Scounter2:inst4|inst  ; A7   ; CK_C       ;
+; N/A   ; None         ; 14.793 ns  ; Scounter8:inst5|Scounter2:inst6|inst1 ; Q2   ; CK         ;
+; N/A   ; None         ; 14.608 ns  ; Scounter8:inst5|Scounter2:inst7|inst  ; Q1   ; CK         ;
+; N/A   ; None         ; 14.596 ns  ; Scounter8:inst5|Scounter2:inst7|inst1 ; Q0   ; CK         ;
+; N/A   ; None         ; 14.510 ns  ; Scounter8:inst1|Scounter2:inst7|inst  ; A1   ; CK_C       ;
+; N/A   ; None         ; 14.288 ns  ; TheOne8:inst3|inst1                   ; R6   ; HALT       ;
+; N/A   ; None         ; 14.244 ns  ; Start:inst8|inst12                    ; uRD  ; CK         ;
+; N/A   ; None         ; 14.244 ns  ; Start:inst8|inst12                    ; CPIR ; CK         ;
+; N/A   ; None         ; 14.226 ns  ; Scounter8:inst1|Scounter2:inst6|inst  ; A3   ; HALT       ;
+; N/A   ; None         ; 14.225 ns  ; Scounter8:inst1|Scounter2:inst6|inst1 ; A2   ; HALT       ;
+; N/A   ; None         ; 14.183 ns  ; Scounter8:inst1|Scounter2:inst6|inst  ; A3   ; CPR0       ;
+; N/A   ; None         ; 14.182 ns  ; Scounter8:inst1|Scounter2:inst6|inst1 ; A2   ; CPR0       ;
+; N/A   ; None         ; 14.142 ns  ; Scounter8:inst1|Scounter2:inst5|inst  ; A5   ; CK_C       ;
+; N/A   ; None         ; 14.111 ns  ; TheOne8:inst3|inst3                   ; R4   ; HALT       ;
+; N/A   ; None         ; 14.080 ns  ; TheOne8:inst3|inst2                   ; R5   ; HALT       ;
+; N/A   ; None         ; 14.040 ns  ; TheOne8:inst3|inst1                   ; R6   ; CPR2       ;
+; N/A   ; None         ; 14.012 ns  ; TheOne8:inst2|inst                    ; A7   ; HALT       ;
+; N/A   ; None         ; 13.995 ns  ; TheOne8:inst2|inst                    ; A7   ; CPR1       ;
+; N/A   ; None         ; 13.885 ns  ; Scounter8:inst1|Scounter2:inst4|inst1 ; A6   ; CK_C       ;
+; N/A   ; None         ; 13.884 ns  ; TheOne8:inst3|inst5                   ; R2   ; HALT       ;
+; N/A   ; None         ; 13.880 ns  ; Scounter8:inst1|Scounter2:inst5|inst1 ; A4   ; CK_C       ;
+; N/A   ; None         ; 13.863 ns  ; TheOne8:inst3|inst3                   ; R4   ; CPR2       ;
+; N/A   ; None         ; 13.832 ns  ; TheOne8:inst3|inst2                   ; R5   ; CPR2       ;
+; N/A   ; None         ; 13.831 ns  ; Scounter8:inst1|Scounter2:inst7|inst1 ; A0   ; HALT       ;
+; N/A   ; None         ; 13.788 ns  ; Scounter8:inst1|Scounter2:inst7|inst1 ; A0   ; CPR0       ;
+; N/A   ; None         ; 13.636 ns  ; TheOne8:inst3|inst5                   ; R2   ; CPR2       ;
+; N/A   ; None         ; 13.552 ns  ; TheOne8:inst3|inst6                   ; R1   ; HALT       ;
+; N/A   ; None         ; 13.547 ns  ; TheOne8:inst3|inst7                   ; R0   ; HALT       ;
+; N/A   ; None         ; 13.536 ns  ; TheOne8:inst2|inst1                   ; A6   ; HALT       ;
+; N/A   ; None         ; 13.536 ns  ; TheOne8:inst2|inst3                   ; A4   ; HALT       ;
+; N/A   ; None         ; 13.519 ns  ; TheOne8:inst2|inst1                   ; A6   ; CPR1       ;
+; N/A   ; None         ; 13.519 ns  ; TheOne8:inst2|inst3                   ; A4   ; CPR1       ;
+; N/A   ; None         ; 13.499 ns  ; TheOne8:inst2|inst6                   ; A1   ; HALT       ;
+; N/A   ; None         ; 13.482 ns  ; TheOne8:inst2|inst6                   ; A1   ; CPR1       ;
+; N/A   ; None         ; 13.453 ns  ; TheOne8:inst3|inst                    ; R7   ; HALT       ;
+; N/A   ; None         ; 13.449 ns  ; TheOne8:inst2|inst7                   ; A0   ; HALT       ;
+; N/A   ; None         ; 13.439 ns  ; TheOne8:inst3|inst4                   ; R3   ; HALT       ;
+; N/A   ; None         ; 13.432 ns  ; TheOne8:inst2|inst7                   ; A0   ; CPR1       ;
+; N/A   ; None         ; 13.357 ns  ; Scounter8:inst5|Scounter2:inst4|inst  ; Q7   ; CK_C       ;
+; N/A   ; None         ; 13.326 ns  ; TheOne8:inst2|inst2                   ; A5   ; HALT       ;
+; N/A   ; None         ; 13.309 ns  ; TheOne8:inst2|inst2                   ; A5   ; CPR1       ;
+; N/A   ; None         ; 13.304 ns  ; TheOne8:inst3|inst6                   ; R1   ; CPR2       ;
+; N/A   ; None         ; 13.299 ns  ; TheOne8:inst3|inst7                   ; R0   ; CPR2       ;
+; N/A   ; None         ; 13.294 ns  ; Scounter8:inst5|Scounter2:inst4|inst1 ; Q6   ; CK_C       ;
+; N/A   ; None         ; 13.240 ns  ; Scounter8:inst5|Scounter2:inst5|inst  ; Q5   ; CK_C       ;
+; N/A   ; None         ; 13.239 ns  ; Scounter8:inst5|Scounter2:inst5|inst1 ; Q4   ; CK_C       ;
+; N/A   ; None         ; 13.232 ns  ; TheOne8:inst2|inst5                   ; A2   ; HALT       ;
+; N/A   ; None         ; 13.231 ns  ; TheOne8:inst2|inst4                   ; A3   ; HALT       ;
+; N/A   ; None         ; 13.227 ns  ; Scounter8:inst5|Scounter2:inst6|inst  ; Q3   ; CK_C       ;
+; N/A   ; None         ; 13.215 ns  ; TheOne8:inst2|inst5                   ; A2   ; CPR1       ;
+; N/A   ; None         ; 13.214 ns  ; TheOne8:inst2|inst4                   ; A3   ; CPR1       ;
+; N/A   ; None         ; 13.205 ns  ; TheOne8:inst3|inst                    ; R7   ; CPR2       ;
+; N/A   ; None         ; 13.191 ns  ; TheOne8:inst3|inst4                   ; R3   ; CPR2       ;
+; N/A   ; None         ; 13.168 ns  ; Scounter8:inst1|Scounter2:inst4|inst  ; A7   ; HALT       ;
+; N/A   ; None         ; 13.125 ns  ; Scounter8:inst1|Scounter2:inst4|inst  ; A7   ; CPR0       ;
+; N/A   ; None         ; 13.063 ns  ; Scounter8:inst5|Scounter2:inst6|inst1 ; Q2   ; CK_C       ;
+; N/A   ; None         ; 12.878 ns  ; Scounter8:inst5|Scounter2:inst7|inst  ; Q1   ; CK_C       ;
+; N/A   ; None         ; 12.868 ns  ; Scounter8:inst1|Scounter2:inst7|inst  ; A1   ; HALT       ;
+; N/A   ; None         ; 12.866 ns  ; Scounter8:inst5|Scounter2:inst7|inst1 ; Q0   ; CK_C       ;
+; N/A   ; None         ; 12.825 ns  ; Scounter8:inst1|Scounter2:inst7|inst  ; A1   ; CPR0       ;
+; N/A   ; None         ; 12.514 ns  ; Start:inst8|inst12                    ; uRD  ; CK_C       ;
+; N/A   ; None         ; 12.514 ns  ; Start:inst8|inst12                    ; CPIR ; CK_C       ;
+; N/A   ; None         ; 12.500 ns  ; Scounter8:inst1|Scounter2:inst5|inst  ; A5   ; HALT       ;
+; N/A   ; None         ; 12.457 ns  ; Scounter8:inst1|Scounter2:inst5|inst  ; A5   ; CPR0       ;
+; N/A   ; None         ; 12.243 ns  ; Scounter8:inst1|Scounter2:inst4|inst1 ; A6   ; HALT       ;
+; N/A   ; None         ; 12.238 ns  ; Scounter8:inst1|Scounter2:inst5|inst1 ; A4   ; HALT       ;
+; N/A   ; None         ; 12.200 ns  ; Scounter8:inst1|Scounter2:inst4|inst1 ; A6   ; CPR0       ;
+; N/A   ; None         ; 12.195 ns  ; Scounter8:inst1|Scounter2:inst5|inst1 ; A4   ; CPR0       ;
+; N/A   ; None         ; 11.715 ns  ; Scounter8:inst5|Scounter2:inst4|inst  ; Q7   ; HALT       ;
+; N/A   ; None         ; 11.652 ns  ; Scounter8:inst5|Scounter2:inst4|inst1 ; Q6   ; HALT       ;
+; N/A   ; None         ; 11.598 ns  ; Scounter8:inst5|Scounter2:inst5|inst  ; Q5   ; HALT       ;
+; N/A   ; None         ; 11.597 ns  ; Scounter8:inst5|Scounter2:inst5|inst1 ; Q4   ; HALT       ;
+; N/A   ; None         ; 11.585 ns  ; Scounter8:inst5|Scounter2:inst6|inst  ; Q3   ; HALT       ;
+; N/A   ; None         ; 11.421 ns  ; Scounter8:inst5|Scounter2:inst6|inst1 ; Q2   ; HALT       ;
+; N/A   ; None         ; 11.236 ns  ; Scounter8:inst5|Scounter2:inst7|inst  ; Q1   ; HALT       ;
+; N/A   ; None         ; 11.224 ns  ; Scounter8:inst5|Scounter2:inst7|inst1 ; Q0   ; HALT       ;
++-------+--------------+------------+---------------------------------------+------+------------+
+
+
++---------------------------------------------------------------+
+; tpd                                                           ;
++-------+-------------------+-----------------+----------+------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From     ; To   ;
++-------+-------------------+-----------------+----------+------+
+; N/A   ; None              ; 13.737 ns       ; AY       ; A7   ;
+; N/A   ; None              ; 13.057 ns       ; AY       ; A1   ;
+; N/A   ; None              ; 13.044 ns       ; AY       ; A5   ;
+; N/A   ; None              ; 13.029 ns       ; AY       ; A6   ;
+; N/A   ; None              ; 13.022 ns       ; AY       ; A4   ;
+; N/A   ; None              ; 13.003 ns       ; AY       ; A0   ;
+; N/A   ; None              ; 12.994 ns       ; BY       ; A2   ;
+; N/A   ; None              ; 12.992 ns       ; BY       ; A3   ;
+; N/A   ; None              ; 12.874 ns       ; BY       ; A7   ;
+; N/A   ; None              ; 12.719 ns       ; BY       ; A1   ;
+; N/A   ; None              ; 12.667 ns       ; BY       ; A0   ;
+; N/A   ; None              ; 12.552 ns       ; AY       ; A2   ;
+; N/A   ; None              ; 12.551 ns       ; AY       ; A3   ;
+; N/A   ; None              ; 12.311 ns       ; EN_write ; wr   ;
+; N/A   ; None              ; 12.181 ns       ; BY       ; A5   ;
+; N/A   ; None              ; 12.158 ns       ; BY       ; A6   ;
+; N/A   ; None              ; 12.158 ns       ; BY       ; A4   ;
+; N/A   ; None              ; 11.550 ns       ; EN_write ; R7   ;
+; N/A   ; None              ; 11.550 ns       ; EN_write ; R6   ;
+; N/A   ; None              ; 11.550 ns       ; EN_write ; R5   ;
+; N/A   ; None              ; 11.427 ns       ; EN_read  ; rd   ;
+; N/A   ; None              ; 11.195 ns       ; EN_write ; R4   ;
+; N/A   ; None              ; 11.194 ns       ; EN_write ; R1   ;
+; N/A   ; None              ; 11.194 ns       ; EN_write ; R0   ;
+; N/A   ; None              ; 11.185 ns       ; EN_write ; R3   ;
+; N/A   ; None              ; 11.174 ns       ; EN_write ; R2   ;
+; N/A   ; None              ; 10.872 ns       ; HALT     ; uRD  ;
+; N/A   ; None              ; 10.872 ns       ; HALT     ; CPIR ;
++-------+-------------------+-----------------+----------+------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                                     ;
++-----------------------------------------+-----------------------------------------------------+-----------+---------+---------------------------------------+----------+
+; Minimum Slack                           ; Required th                                         ; Actual th ; From    ; To                                    ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+-----------+---------+---------------------------------------+----------+
+; N/A                                     ; None                                                ; 3.404 ns  ; R7      ; TheOne8:inst2|inst                    ; CK       ;
+; N/A                                     ; None                                                ; 3.295 ns  ; EN_read ; TheOne8:inst2|inst7                   ; CK       ;
+; N/A                                     ; None                                                ; 3.290 ns  ; EN_read ; TheOne8:inst2|inst6                   ; CK       ;
+; N/A                                     ; None                                                ; 3.171 ns  ; R6      ; TheOne8:inst2|inst1                   ; CK       ;
+; N/A                                     ; None                                                ; 3.105 ns  ; R1      ; TheOne8:inst2|inst6                   ; CK       ;
+; N/A                                     ; None                                                ; 3.098 ns  ; R4      ; TheOne8:inst2|inst3                   ; CK       ;
+; N/A                                     ; None                                                ; 3.080 ns  ; A2Y     ; TheOne8:inst2|inst1                   ; CK       ;
+; N/A                                     ; None                                                ; 3.079 ns  ; A2Y     ; TheOne8:inst2|inst2                   ; CK       ;
+; N/A                                     ; None                                                ; 3.074 ns  ; R2      ; TheOne8:inst3|inst5                   ; CK       ;
+; N/A                                     ; None                                                ; 3.067 ns  ; R0      ; TheOne8:inst2|inst7                   ; CK       ;
+; N/A                                     ; None                                                ; 3.011 ns  ; ROM0    ; TheOne8:inst2|inst7                   ; CK       ;
+; N/A                                     ; None                                                ; 3.008 ns  ; EN_read ; TheOne8:inst2|inst2                   ; CK       ;
+; N/A                                     ; None                                                ; 3.006 ns  ; EN_read ; TheOne8:inst2|inst1                   ; CK       ;
+; N/A                                     ; None                                                ; 3.003 ns  ; EN_read ; TheOne8:inst2|inst                    ; CK       ;
+; N/A                                     ; None                                                ; 3.002 ns  ; EN_read ; TheOne8:inst2|inst3                   ; CK       ;
+; N/A                                     ; None                                                ; 2.828 ns  ; A2Y     ; TheOne8:inst2|inst                    ; CK       ;
+; N/A                                     ; None                                                ; 2.818 ns  ; A2Y     ; TheOne8:inst3|inst4                   ; CK       ;
+; N/A                                     ; None                                                ; 2.815 ns  ; A2Y     ; TheOne8:inst3|inst5                   ; CK       ;
+; N/A                                     ; None                                                ; 2.776 ns  ; A2Y     ; TheOne8:inst2|inst3                   ; CK       ;
+; N/A                                     ; None                                                ; 2.694 ns  ; R3      ; TheOne8:inst3|inst4                   ; CK       ;
+; N/A                                     ; None                                                ; 2.614 ns  ; ROM1    ; TheOne8:inst2|inst6                   ; CK       ;
+; N/A                                     ; None                                                ; 2.601 ns  ; R5      ; TheOne8:inst2|inst2                   ; CK       ;
+; N/A                                     ; None                                                ; 2.539 ns  ; A2Y     ; TheOne8:inst2|inst6                   ; CK       ;
+; N/A                                     ; None                                                ; 2.522 ns  ; EN_read ; TheOne8:inst3|inst4                   ; CK       ;
+; N/A                                     ; None                                                ; 2.520 ns  ; EN_read ; TheOne8:inst3|inst5                   ; CK       ;
+; N/A                                     ; None                                                ; 2.416 ns  ; LD      ; Scounter8:inst1|Scounter2:inst7|inst1 ; CK       ;
+; N/A                                     ; None                                                ; 2.409 ns  ; LD      ; Scounter8:inst1|Scounter2:inst6|inst1 ; CK       ;
+; N/A                                     ; None                                                ; 2.257 ns  ; ROM7    ; TheOne8:inst2|inst                    ; CK       ;
+; N/A                                     ; None                                                ; 2.206 ns  ; B2Y     ; TheOne8:inst2|inst7                   ; CK       ;
+; N/A                                     ; None                                                ; 2.162 ns  ; ROM5    ; TheOne8:inst2|inst2                   ; CK       ;
+; N/A                                     ; None                                                ; 2.087 ns  ; LD      ; Scounter8:inst1|Scounter2:inst7|inst  ; CK       ;
+; N/A                                     ; None                                                ; 2.065 ns  ; A2Y     ; TheOne8:inst2|inst7                   ; CK       ;
+; N/A                                     ; None                                                ; 2.064 ns  ; LD      ; Scounter8:inst1|Scounter2:inst5|inst  ; CK       ;
+; N/A                                     ; None                                                ; 2.060 ns  ; LD      ; Scounter8:inst1|Scounter2:inst4|inst1 ; CK       ;
+; N/A                                     ; None                                                ; 2.059 ns  ; LD      ; Scounter8:inst1|Scounter2:inst5|inst1 ; CK       ;
+; N/A                                     ; None                                                ; 2.059 ns  ; LD      ; Scounter8:inst1|Scounter2:inst4|inst  ; CK       ;
+; N/A                                     ; None                                                ; 1.981 ns  ; LD      ; Scounter8:inst1|Scounter2:inst6|inst  ; CK       ;
+; N/A                                     ; None                                                ; 1.941 ns  ; ROM4    ; TheOne8:inst2|inst3                   ; CK       ;
+; N/A                                     ; None                                                ; 1.878 ns  ; EN_read ; TheOne8:inst3|inst7                   ; CK       ;
+; N/A                                     ; None                                                ; 1.869 ns  ; LD      ; Scounter8:inst5|Scounter2:inst6|inst1 ; CK       ;
+; N/A                                     ; None                                                ; 1.864 ns  ; LD      ; Scounter8:inst5|Scounter2:inst7|inst1 ; CK       ;
+; N/A                                     ; None                                                ; 1.858 ns  ; LD      ; Scounter8:inst5|Scounter2:inst7|inst  ; CK       ;
+; N/A                                     ; None                                                ; 1.792 ns  ; B2Y     ; TheOne8:inst2|inst6                   ; CK       ;
+; N/A                                     ; None                                                ; 1.743 ns  ; R7      ; TheOne8:inst3|inst                    ; CK       ;
+; N/A                                     ; None                                                ; 1.726 ns  ; R2      ; TheOne8:inst2|inst5                   ; CK       ;
+; N/A                                     ; None                                                ; 1.674 ns  ; R7      ; TheOne8:inst2|inst                    ; CK_C     ;
+; N/A                                     ; None                                                ; 1.668 ns  ; EN_read ; TheOne8:inst3|inst6                   ; CK       ;
+; N/A                                     ; None                                                ; 1.650 ns  ; R0      ; TheOne8:inst3|inst7                   ; CK       ;
+; N/A                                     ; None                                                ; 1.594 ns  ; ROM0    ; TheOne8:inst3|inst7                   ; CK       ;
+; N/A                                     ; None                                                ; 1.565 ns  ; EN_read ; TheOne8:inst2|inst7                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.560 ns  ; EN_read ; TheOne8:inst2|inst6                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.510 ns  ; ROM3    ; TheOne8:inst3|inst4                   ; CK       ;
+; N/A                                     ; None                                                ; 1.483 ns  ; R1      ; TheOne8:inst3|inst6                   ; CK       ;
+; N/A                                     ; None                                                ; 1.467 ns  ; A2Y     ; TheOne8:inst2|inst5                   ; CK       ;
+; N/A                                     ; None                                                ; 1.457 ns  ; LD      ; Scounter8:inst5|Scounter2:inst5|inst  ; CK       ;
+; N/A                                     ; None                                                ; 1.457 ns  ; LD      ; Scounter8:inst5|Scounter2:inst4|inst  ; CK       ;
+; N/A                                     ; None                                                ; 1.456 ns  ; LD      ; Scounter8:inst5|Scounter2:inst4|inst1 ; CK       ;
+; N/A                                     ; None                                                ; 1.455 ns  ; LD      ; Scounter8:inst5|Scounter2:inst6|inst  ; CK       ;
+; N/A                                     ; None                                                ; 1.441 ns  ; R6      ; TheOne8:inst2|inst1                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.435 ns  ; LD      ; Scounter8:inst5|Scounter2:inst5|inst1 ; CK       ;
+; N/A                                     ; None                                                ; 1.434 ns  ; B2Y     ; TheOne8:inst2|inst3                   ; CK       ;
+; N/A                                     ; None                                                ; 1.429 ns  ; R4      ; TheOne8:inst3|inst3                   ; CK       ;
+; N/A                                     ; None                                                ; 1.422 ns  ; A2Y     ; TheOne8:inst3|inst2                   ; CK       ;
+; N/A                                     ; None                                                ; 1.398 ns  ; B2Y     ; TheOne8:inst2|inst1                   ; CK       ;
+; N/A                                     ; None                                                ; 1.391 ns  ; ROM6    ; TheOne8:inst2|inst1                   ; CK       ;
+; N/A                                     ; None                                                ; 1.375 ns  ; R1      ; TheOne8:inst2|inst6                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.368 ns  ; R4      ; TheOne8:inst2|inst3                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.351 ns  ; EN_read ; TheOne8:inst3|inst2                   ; CK       ;
+; N/A                                     ; None                                                ; 1.350 ns  ; A2Y     ; TheOne8:inst2|inst1                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.349 ns  ; A2Y     ; TheOne8:inst2|inst2                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.344 ns  ; R2      ; TheOne8:inst3|inst5                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.342 ns  ; EN_read ; TheOne8:inst3|inst                    ; CK       ;
+; N/A                                     ; None                                                ; 1.337 ns  ; R0      ; TheOne8:inst2|inst7                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.333 ns  ; EN_read ; TheOne8:inst3|inst3                   ; CK       ;
+; N/A                                     ; None                                                ; 1.329 ns  ; R6      ; TheOne8:inst3|inst1                   ; CK       ;
+; N/A                                     ; None                                                ; 1.315 ns  ; ROM2    ; TheOne8:inst3|inst5                   ; CK       ;
+; N/A                                     ; None                                                ; 1.287 ns  ; B2Y     ; TheOne8:inst2|inst2                   ; CK       ;
+; N/A                                     ; None                                                ; 1.281 ns  ; ROM0    ; TheOne8:inst2|inst7                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.278 ns  ; EN_read ; TheOne8:inst2|inst2                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.276 ns  ; EN_read ; TheOne8:inst2|inst1                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.273 ns  ; EN_read ; TheOne8:inst2|inst                    ; CK_C     ;
+; N/A                                     ; None                                                ; 1.272 ns  ; EN_read ; TheOne8:inst2|inst3                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.248 ns  ; B2Y     ; TheOne8:inst2|inst                    ; CK       ;
+; N/A                                     ; None                                                ; 1.238 ns  ; A2Y     ; TheOne8:inst3|inst1                   ; CK       ;
+; N/A                                     ; None                                                ; 1.172 ns  ; EN_read ; TheOne8:inst2|inst5                   ; CK       ;
+; N/A                                     ; None                                                ; 1.167 ns  ; A2Y     ; TheOne8:inst3|inst                    ; CK       ;
+; N/A                                     ; None                                                ; 1.164 ns  ; EN_read ; TheOne8:inst3|inst1                   ; CK       ;
+; N/A                                     ; None                                                ; 1.136 ns  ; A2Y     ; TheOne8:inst2|inst4                   ; CK       ;
+; N/A                                     ; None                                                ; 1.107 ns  ; A2Y     ; TheOne8:inst3|inst3                   ; CK       ;
+; N/A                                     ; None                                                ; 1.098 ns  ; A2Y     ; TheOne8:inst2|inst                    ; CK_C     ;
+; N/A                                     ; None                                                ; 1.088 ns  ; A2Y     ; TheOne8:inst3|inst4                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.085 ns  ; A2Y     ; TheOne8:inst3|inst5                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.046 ns  ; A2Y     ; TheOne8:inst2|inst3                   ; CK_C     ;
+; N/A                                     ; None                                                ; 1.012 ns  ; R3      ; TheOne8:inst2|inst4                   ; CK       ;
+; N/A                                     ; None                                                ; 0.992 ns  ; ROM1    ; TheOne8:inst3|inst6                   ; CK       ;
+; N/A                                     ; None                                                ; 0.964 ns  ; R3      ; TheOne8:inst3|inst4                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.944 ns  ; R5      ; TheOne8:inst3|inst2                   ; CK       ;
+; N/A                                     ; None                                                ; 0.917 ns  ; A2Y     ; TheOne8:inst3|inst6                   ; CK       ;
+; N/A                                     ; None                                                ; 0.884 ns  ; ROM1    ; TheOne8:inst2|inst6                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.871 ns  ; R5      ; TheOne8:inst2|inst2                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.840 ns  ; EN_read ; TheOne8:inst2|inst4                   ; CK       ;
+; N/A                                     ; None                                                ; 0.809 ns  ; A2Y     ; TheOne8:inst2|inst6                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.792 ns  ; EN_read ; TheOne8:inst3|inst4                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.790 ns  ; EN_read ; TheOne8:inst3|inst5                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.789 ns  ; B2Y     ; TheOne8:inst3|inst7                   ; CK       ;
+; N/A                                     ; None                                                ; 0.733 ns  ; B2Y     ; TheOne8:inst3|inst4                   ; CK       ;
+; N/A                                     ; None                                                ; 0.686 ns  ; LD      ; Scounter8:inst1|Scounter2:inst7|inst1 ; CK_C     ;
+; N/A                                     ; None                                                ; 0.679 ns  ; LD      ; Scounter8:inst1|Scounter2:inst6|inst1 ; CK_C     ;
+; N/A                                     ; None                                                ; 0.648 ns  ; A2Y     ; TheOne8:inst3|inst7                   ; CK       ;
+; N/A                                     ; None                                                ; 0.638 ns  ; B2Y     ; TheOne8:inst3|inst5                   ; CK       ;
+; N/A                                     ; None                                                ; 0.596 ns  ; ROM7    ; TheOne8:inst3|inst                    ; CK       ;
+; N/A                                     ; None                                                ; 0.527 ns  ; ROM7    ; TheOne8:inst2|inst                    ; CK_C     ;
+; N/A                                     ; None                                                ; 0.505 ns  ; ROM5    ; TheOne8:inst3|inst2                   ; CK       ;
+; N/A                                     ; None                                                ; 0.476 ns  ; B2Y     ; TheOne8:inst2|inst7                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.432 ns  ; ROM5    ; TheOne8:inst2|inst2                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.357 ns  ; LD      ; Scounter8:inst1|Scounter2:inst7|inst  ; CK_C     ;
+; N/A                                     ; None                                                ; 0.335 ns  ; A2Y     ; TheOne8:inst2|inst7                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.334 ns  ; LD      ; Scounter8:inst1|Scounter2:inst5|inst  ; CK_C     ;
+; N/A                                     ; None                                                ; 0.330 ns  ; LD      ; Scounter8:inst1|Scounter2:inst4|inst1 ; CK_C     ;
+; N/A                                     ; None                                                ; 0.329 ns  ; LD      ; Scounter8:inst1|Scounter2:inst5|inst1 ; CK_C     ;
+; N/A                                     ; None                                                ; 0.329 ns  ; LD      ; Scounter8:inst1|Scounter2:inst4|inst  ; CK_C     ;
+; N/A                                     ; None                                                ; 0.272 ns  ; ROM4    ; TheOne8:inst3|inst3                   ; CK       ;
+; N/A                                     ; None                                                ; 0.251 ns  ; LD      ; Scounter8:inst1|Scounter2:inst6|inst  ; CK_C     ;
+; N/A                                     ; None                                                ; 0.211 ns  ; ROM4    ; TheOne8:inst2|inst3                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.170 ns  ; B2Y     ; TheOne8:inst3|inst6                   ; CK       ;
+; N/A                                     ; None                                                ; 0.148 ns  ; EN_read ; TheOne8:inst3|inst7                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.139 ns  ; LD      ; Scounter8:inst5|Scounter2:inst6|inst1 ; CK_C     ;
+; N/A                                     ; None                                                ; 0.134 ns  ; LD      ; Scounter8:inst5|Scounter2:inst7|inst1 ; CK_C     ;
+; N/A                                     ; None                                                ; 0.128 ns  ; LD      ; Scounter8:inst5|Scounter2:inst7|inst  ; CK_C     ;
+; N/A                                     ; None                                                ; 0.062 ns  ; B2Y     ; TheOne8:inst2|inst6                   ; CK_C     ;
+; N/A                                     ; None                                                ; 0.032 ns  ; R7      ; TheOne8:inst2|inst                    ; HALT     ;
+; N/A                                     ; None                                                ; 0.015 ns  ; R7      ; TheOne8:inst2|inst                    ; CPR1     ;
+; N/A                                     ; None                                                ; 0.013 ns  ; R7      ; TheOne8:inst3|inst                    ; CK_C     ;
+; N/A                                     ; None                                                ; -0.004 ns ; R2      ; TheOne8:inst2|inst5                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.033 ns ; ROM2    ; TheOne8:inst2|inst5                   ; CK       ;
+; N/A                                     ; None                                                ; -0.062 ns ; EN_read ; TheOne8:inst3|inst6                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.077 ns ; EN_read ; TheOne8:inst2|inst7                   ; HALT     ;
+; N/A                                     ; None                                                ; -0.080 ns ; R0      ; TheOne8:inst3|inst7                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.082 ns ; EN_read ; TheOne8:inst2|inst6                   ; HALT     ;
+; N/A                                     ; None                                                ; -0.094 ns ; EN_read ; TheOne8:inst2|inst7                   ; CPR1     ;
+; N/A                                     ; None                                                ; -0.099 ns ; EN_read ; TheOne8:inst2|inst6                   ; CPR1     ;
+; N/A                                     ; None                                                ; -0.136 ns ; ROM0    ; TheOne8:inst3|inst7                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.172 ns ; ROM3    ; TheOne8:inst2|inst4                   ; CK       ;
+; N/A                                     ; None                                                ; -0.201 ns ; R6      ; TheOne8:inst2|inst1                   ; HALT     ;
+; N/A                                     ; None                                                ; -0.218 ns ; R6      ; TheOne8:inst2|inst1                   ; CPR1     ;
+; N/A                                     ; None                                                ; -0.220 ns ; ROM3    ; TheOne8:inst3|inst4                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.235 ns ; B2Y     ; TheOne8:inst3|inst3                   ; CK       ;
+; N/A                                     ; None                                                ; -0.247 ns ; R1      ; TheOne8:inst3|inst6                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.263 ns ; A2Y     ; TheOne8:inst2|inst5                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.267 ns ; R1      ; TheOne8:inst2|inst6                   ; HALT     ;
+; N/A                                     ; None                                                ; -0.273 ns ; LD      ; Scounter8:inst5|Scounter2:inst5|inst  ; CK_C     ;
+; N/A                                     ; None                                                ; -0.273 ns ; LD      ; Scounter8:inst5|Scounter2:inst4|inst  ; CK_C     ;
+; N/A                                     ; None                                                ; -0.274 ns ; R4      ; TheOne8:inst2|inst3                   ; HALT     ;
+; N/A                                     ; None                                                ; -0.274 ns ; LD      ; Scounter8:inst5|Scounter2:inst4|inst1 ; CK_C     ;
+; N/A                                     ; None                                                ; -0.275 ns ; LD      ; Scounter8:inst5|Scounter2:inst6|inst  ; CK_C     ;
+; N/A                                     ; None                                                ; -0.284 ns ; R1      ; TheOne8:inst2|inst6                   ; CPR1     ;
+; N/A                                     ; None                                                ; -0.291 ns ; R4      ; TheOne8:inst2|inst3                   ; CPR1     ;
+; N/A                                     ; None                                                ; -0.292 ns ; A2Y     ; TheOne8:inst2|inst1                   ; HALT     ;
+; N/A                                     ; None                                                ; -0.293 ns ; A2Y     ; TheOne8:inst2|inst2                   ; HALT     ;
+; N/A                                     ; None                                                ; -0.295 ns ; LD      ; Scounter8:inst5|Scounter2:inst5|inst1 ; CK_C     ;
+; N/A                                     ; None                                                ; -0.296 ns ; B2Y     ; TheOne8:inst2|inst3                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.298 ns ; R2      ; TheOne8:inst3|inst5                   ; HALT     ;
+; N/A                                     ; None                                                ; -0.301 ns ; R4      ; TheOne8:inst3|inst3                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.305 ns ; R0      ; TheOne8:inst2|inst7                   ; HALT     ;
+; N/A                                     ; None                                                ; -0.308 ns ; A2Y     ; TheOne8:inst3|inst2                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.309 ns ; A2Y     ; TheOne8:inst2|inst1                   ; CPR1     ;
+; N/A                                     ; None                                                ; -0.310 ns ; A2Y     ; TheOne8:inst2|inst2                   ; CPR1     ;
+; N/A                                     ; None                                                ; -0.322 ns ; R0      ; TheOne8:inst2|inst7                   ; CPR1     ;
+; N/A                                     ; None                                                ; -0.332 ns ; B2Y     ; TheOne8:inst2|inst1                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.339 ns ; ROM6    ; TheOne8:inst2|inst1                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.361 ns ; ROM0    ; TheOne8:inst2|inst7                   ; HALT     ;
+; N/A                                     ; None                                                ; -0.364 ns ; EN_read ; TheOne8:inst2|inst2                   ; HALT     ;
+; N/A                                     ; None                                                ; -0.366 ns ; EN_read ; TheOne8:inst2|inst1                   ; HALT     ;
+; N/A                                     ; None                                                ; -0.369 ns ; EN_read ; TheOne8:inst2|inst                    ; HALT     ;
+; N/A                                     ; None                                                ; -0.370 ns ; B2Y     ; TheOne8:inst3|inst2                   ; CK       ;
+; N/A                                     ; None                                                ; -0.370 ns ; EN_read ; TheOne8:inst2|inst3                   ; HALT     ;
+; N/A                                     ; None                                                ; -0.378 ns ; ROM0    ; TheOne8:inst2|inst7                   ; CPR1     ;
+; N/A                                     ; None                                                ; -0.379 ns ; EN_read ; TheOne8:inst3|inst2                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.381 ns ; EN_read ; TheOne8:inst2|inst2                   ; CPR1     ;
+; N/A                                     ; None                                                ; -0.383 ns ; EN_read ; TheOne8:inst2|inst1                   ; CPR1     ;
+; N/A                                     ; None                                                ; -0.386 ns ; EN_read ; TheOne8:inst2|inst                    ; CPR1     ;
+; N/A                                     ; None                                                ; -0.387 ns ; EN_read ; TheOne8:inst2|inst3                   ; CPR1     ;
+; N/A                                     ; None                                                ; -0.388 ns ; EN_read ; TheOne8:inst3|inst                    ; CK_C     ;
+; N/A                                     ; None                                                ; -0.397 ns ; EN_read ; TheOne8:inst3|inst3                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.401 ns ; R6      ; TheOne8:inst3|inst1                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.413 ns ; B2Y     ; TheOne8:inst3|inst                    ; CK       ;
+; N/A                                     ; None                                                ; -0.415 ns ; ROM2    ; TheOne8:inst3|inst5                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.443 ns ; B2Y     ; TheOne8:inst2|inst2                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.444 ns ; B2Y     ; TheOne8:inst3|inst1                   ; CK       ;
+; N/A                                     ; None                                                ; -0.451 ns ; ROM6    ; TheOne8:inst3|inst1                   ; CK       ;
+; N/A                                     ; None                                                ; -0.482 ns ; B2Y     ; TheOne8:inst2|inst                    ; CK_C     ;
+; N/A                                     ; None                                                ; -0.492 ns ; A2Y     ; TheOne8:inst3|inst1                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.544 ns ; A2Y     ; TheOne8:inst2|inst                    ; HALT     ;
+; N/A                                     ; None                                                ; -0.546 ns ; R2      ; TheOne8:inst3|inst5                   ; CPR2     ;
+; N/A                                     ; None                                                ; -0.554 ns ; A2Y     ; TheOne8:inst3|inst4                   ; HALT     ;
+; N/A                                     ; None                                                ; -0.557 ns ; A2Y     ; TheOne8:inst3|inst5                   ; HALT     ;
+; N/A                                     ; None                                                ; -0.558 ns ; EN_read ; TheOne8:inst2|inst5                   ; CK_C     ;
+; N/A                                     ; None                                                ; -0.561 ns ; A2Y     ; TheOne8:inst2|inst                    ; CPR1     ;
+; N/A                                     ; None                                                ; -0.563 ns ; A2Y     ; TheOne8:inst3|inst                    ; CK_C     ;
+; N/A                                     ; None                                                ; -0.566 ns ; EN_read ; TheOne8:inst3|inst1                   ; CK_C     ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;           ;         ;                                       ;          ;
++-----------------------------------------+-----------------------------------------------------+-----------+---------+---------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
+    Info: Processing started: Sat Apr 20 11:38:36 2019
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Fangcun -c Fangcun --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "HALT" is an undefined clock
+    Info: Assuming node "CK_C" is an undefined clock
+    Info: Assuming node "CK" is an undefined clock
+    Info: Assuming node "CPR1" is an undefined clock
+    Info: Assuming node "CPR2" is an undefined clock
+    Info: Assuming node "CPR0" is an undefined clock
+Warning: Found 7 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected gated clock "inst11" as buffer
+    Info: Detected gated clock "inst13" as buffer
+    Info: Detected gated clock "inst12" as buffer
+    Info: Detected ripple clock "Start:inst8|inst11" as buffer
+    Info: Detected gated clock "Start:inst8|inst14" as buffer
+    Info: Detected ripple clock "Start:inst8|inst12" as buffer
+    Info: Detected gated clock "Start:inst8|inst10" as buffer
+Info: Clock "HALT" has Internal fmax of 259.34 MHz between source register "Scounter8:inst1|Scounter2:inst7|inst" and destination register "Scounter8:inst1|Scounter2:inst5|inst" (period= 3.856 ns)
+    Info: + Longest register to register delay is 3.590 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X26_Y17_N29; Fanout = 5; REG Node = 'Scounter8:inst1|Scounter2:inst7|inst'
+        Info: 2: + IC(1.458 ns) + CELL(0.370 ns) = 1.828 ns; Loc. = LCCOMB_X21_Y18_N22; Fanout = 4; COMB Node = 'Scounter8:inst1|inst10~21'
+        Info: 3: + IC(1.448 ns) + CELL(0.206 ns) = 3.482 ns; Loc. = LCCOMB_X25_Y16_N14; Fanout = 1; COMB Node = 'Scounter8:inst1|Scounter2:inst5|Selector1:inst5|inst2~96'
+        Info: 4: + IC(0.000 ns) + CELL(0.108 ns) = 3.590 ns; Loc. = LCFF_X25_Y16_N15; Fanout = 4; REG Node = 'Scounter8:inst1|Scounter2:inst5|inst'
+        Info: Total cell delay = 0.684 ns ( 19.05 % )
+        Info: Total interconnect delay = 2.906 ns ( 80.95 % )
+    Info: - Smallest clock skew is -0.002 ns
+        Info: + Shortest clock path from clock "HALT" to destination register is 6.931 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.004 ns) = 1.004 ns; Loc. = PIN_102; Fanout = 1; CLK Node = 'HALT'
+            Info: 2: + IC(1.920 ns) + CELL(0.370 ns) = 3.294 ns; Loc. = LCCOMB_X31_Y9_N18; Fanout = 6; COMB Node = 'Start:inst8|inst10'
+            Info: 3: + IC(0.380 ns) + CELL(0.202 ns) = 3.876 ns; Loc. = LCCOMB_X31_Y9_N22; Fanout = 1; COMB Node = 'inst11'
+            Info: 4: + IC(1.470 ns) + CELL(0.000 ns) = 5.346 ns; Loc. = CLKCTRL_G6; Fanout = 8; COMB Node = 'inst11~clkctrl'
+            Info: 5: + IC(0.919 ns) + CELL(0.666 ns) = 6.931 ns; Loc. = LCFF_X25_Y16_N15; Fanout = 4; REG Node = 'Scounter8:inst1|Scounter2:inst5|inst'
+            Info: Total cell delay = 2.242 ns ( 32.35 % )
+            Info: Total interconnect delay = 4.689 ns ( 67.65 % )
+        Info: - Longest clock path from clock "HALT" to source register is 6.933 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.004 ns) = 1.004 ns; Loc. = PIN_102; Fanout = 1; CLK Node = 'HALT'
+            Info: 2: + IC(1.920 ns) + CELL(0.370 ns) = 3.294 ns; Loc. = LCCOMB_X31_Y9_N18; Fanout = 6; COMB Node = 'Start:inst8|inst10'
+            Info: 3: + IC(0.380 ns) + CELL(0.202 ns) = 3.876 ns; Loc. = LCCOMB_X31_Y9_N22; Fanout = 1; COMB Node = 'inst11'
+            Info: 4: + IC(1.470 ns) + CELL(0.000 ns) = 5.346 ns; Loc. = CLKCTRL_G6; Fanout = 8; COMB Node = 'inst11~clkctrl'
+            Info: 5: + IC(0.921 ns) + CELL(0.666 ns) = 6.933 ns; Loc. = LCFF_X26_Y17_N29; Fanout = 5; REG Node = 'Scounter8:inst1|Scounter2:inst7|inst'
+            Info: Total cell delay = 2.242 ns ( 32.34 % )
+            Info: Total interconnect delay = 4.691 ns ( 67.66 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Micro setup delay of destination is -0.040 ns
+Info: Clock "CK_C" has Internal fmax of 259.34 MHz between source register "Scounter8:inst1|Scounter2:inst7|inst" and destination register "Scounter8:inst1|Scounter2:inst5|inst" (period= 3.856 ns)
+    Info: + Longest register to register delay is 3.590 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X26_Y17_N29; Fanout = 5; REG Node = 'Scounter8:inst1|Scounter2:inst7|inst'
+        Info: 2: + IC(1.458 ns) + CELL(0.370 ns) = 1.828 ns; Loc. = LCCOMB_X21_Y18_N22; Fanout = 4; COMB Node = 'Scounter8:inst1|inst10~21'
+        Info: 3: + IC(1.448 ns) + CELL(0.206 ns) = 3.482 ns; Loc. = LCCOMB_X25_Y16_N14; Fanout = 1; COMB Node = 'Scounter8:inst1|Scounter2:inst5|Selector1:inst5|inst2~96'
+        Info: 4: + IC(0.000 ns) + CELL(0.108 ns) = 3.590 ns; Loc. = LCFF_X25_Y16_N15; Fanout = 4; REG Node = 'Scounter8:inst1|Scounter2:inst5|inst'
+        Info: Total cell delay = 0.684 ns ( 19.05 % )
+        Info: Total interconnect delay = 2.906 ns ( 80.95 % )
+    Info: - Smallest clock skew is -0.002 ns
+        Info: + Shortest clock path from clock "CK_C" to destination register is 8.573 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.150 ns) = 1.150 ns; Loc. = PIN_131; Fanout = 1; CLK Node = 'CK_C'
+            Info: 2: + IC(1.325 ns) + CELL(0.206 ns) = 2.681 ns; Loc. = LCCOMB_X31_Y9_N10; Fanout = 1; COMB Node = 'Start:inst8|inst14'
+            Info: 3: + IC(0.315 ns) + CELL(0.970 ns) = 3.966 ns; Loc. = LCFF_X31_Y9_N9; Fanout = 2; REG Node = 'Start:inst8|inst12'
+            Info: 4: + IC(0.431 ns) + CELL(0.539 ns) = 4.936 ns; Loc. = LCCOMB_X31_Y9_N18; Fanout = 6; COMB Node = 'Start:inst8|inst10'
+            Info: 5: + IC(0.380 ns) + CELL(0.202 ns) = 5.518 ns; Loc. = LCCOMB_X31_Y9_N22; Fanout = 1; COMB Node = 'inst11'
+            Info: 6: + IC(1.470 ns) + CELL(0.000 ns) = 6.988 ns; Loc. = CLKCTRL_G6; Fanout = 8; COMB Node = 'inst11~clkctrl'
+            Info: 7: + IC(0.919 ns) + CELL(0.666 ns) = 8.573 ns; Loc. = LCFF_X25_Y16_N15; Fanout = 4; REG Node = 'Scounter8:inst1|Scounter2:inst5|inst'
+            Info: Total cell delay = 3.733 ns ( 43.54 % )
+            Info: Total interconnect delay = 4.840 ns ( 56.46 % )
+        Info: - Longest clock path from clock "CK_C" to source register is 8.575 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.150 ns) = 1.150 ns; Loc. = PIN_131; Fanout = 1; CLK Node = 'CK_C'
+            Info: 2: + IC(1.325 ns) + CELL(0.206 ns) = 2.681 ns; Loc. = LCCOMB_X31_Y9_N10; Fanout = 1; COMB Node = 'Start:inst8|inst14'
+            Info: 3: + IC(0.315 ns) + CELL(0.970 ns) = 3.966 ns; Loc. = LCFF_X31_Y9_N9; Fanout = 2; REG Node = 'Start:inst8|inst12'
+            Info: 4: + IC(0.431 ns) + CELL(0.539 ns) = 4.936 ns; Loc. = LCCOMB_X31_Y9_N18; Fanout = 6; COMB Node = 'Start:inst8|inst10'
+            Info: 5: + IC(0.380 ns) + CELL(0.202 ns) = 5.518 ns; Loc. = LCCOMB_X31_Y9_N22; Fanout = 1; COMB Node = 'inst11'
+            Info: 6: + IC(1.470 ns) + CELL(0.000 ns) = 6.988 ns; Loc. = CLKCTRL_G6; Fanout = 8; COMB Node = 'inst11~clkctrl'
+            Info: 7: + IC(0.921 ns) + CELL(0.666 ns) = 8.575 ns; Loc. = LCFF_X26_Y17_N29; Fanout = 5; REG Node = 'Scounter8:inst1|Scounter2:inst7|inst'
+            Info: Total cell delay = 3.733 ns ( 43.53 % )
+            Info: Total interconnect delay = 4.842 ns ( 56.47 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Micro setup delay of destination is -0.040 ns
+Info: Clock "CK" has Internal fmax of 259.34 MHz between source register "Scounter8:inst1|Scounter2:inst7|inst" and destination register "Scounter8:inst1|Scounter2:inst5|inst" (period= 3.856 ns)
+    Info: + Longest register to register delay is 3.590 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X26_Y17_N29; Fanout = 5; REG Node = 'Scounter8:inst1|Scounter2:inst7|inst'
+        Info: 2: + IC(1.458 ns) + CELL(0.370 ns) = 1.828 ns; Loc. = LCCOMB_X21_Y18_N22; Fanout = 4; COMB Node = 'Scounter8:inst1|inst10~21'
+        Info: 3: + IC(1.448 ns) + CELL(0.206 ns) = 3.482 ns; Loc. = LCCOMB_X25_Y16_N14; Fanout = 1; COMB Node = 'Scounter8:inst1|Scounter2:inst5|Selector1:inst5|inst2~96'
+        Info: 4: + IC(0.000 ns) + CELL(0.108 ns) = 3.590 ns; Loc. = LCFF_X25_Y16_N15; Fanout = 4; REG Node = 'Scounter8:inst1|Scounter2:inst5|inst'
+        Info: Total cell delay = 0.684 ns ( 19.05 % )
+        Info: Total interconnect delay = 2.906 ns ( 80.95 % )
+    Info: - Smallest clock skew is -0.002 ns
+        Info: + Shortest clock path from clock "CK" to destination register is 10.303 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.150 ns) = 1.150 ns; Loc. = PIN_132; Fanout = 1; CLK Node = 'CK'
+            Info: 2: + IC(1.273 ns) + CELL(0.970 ns) = 3.393 ns; Loc. = LCFF_X31_Y9_N1; Fanout = 1; REG Node = 'Start:inst8|inst11'
+            Info: 3: + IC(0.429 ns) + CELL(0.589 ns) = 4.411 ns; Loc. = LCCOMB_X31_Y9_N10; Fanout = 1; COMB Node = 'Start:inst8|inst14'
+            Info: 4: + IC(0.315 ns) + CELL(0.970 ns) = 5.696 ns; Loc. = LCFF_X31_Y9_N9; Fanout = 2; REG Node = 'Start:inst8|inst12'
+            Info: 5: + IC(0.431 ns) + CELL(0.539 ns) = 6.666 ns; Loc. = LCCOMB_X31_Y9_N18; Fanout = 6; COMB Node = 'Start:inst8|inst10'
+            Info: 6: + IC(0.380 ns) + CELL(0.202 ns) = 7.248 ns; Loc. = LCCOMB_X31_Y9_N22; Fanout = 1; COMB Node = 'inst11'
+            Info: 7: + IC(1.470 ns) + CELL(0.000 ns) = 8.718 ns; Loc. = CLKCTRL_G6; Fanout = 8; COMB Node = 'inst11~clkctrl'
+            Info: 8: + IC(0.919 ns) + CELL(0.666 ns) = 10.303 ns; Loc. = LCFF_X25_Y16_N15; Fanout = 4; REG Node = 'Scounter8:inst1|Scounter2:inst5|inst'
+            Info: Total cell delay = 5.086 ns ( 49.36 % )
+            Info: Total interconnect delay = 5.217 ns ( 50.64 % )
+        Info: - Longest clock path from clock "CK" to source register is 10.305 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.150 ns) = 1.150 ns; Loc. = PIN_132; Fanout = 1; CLK Node = 'CK'
+            Info: 2: + IC(1.273 ns) + CELL(0.970 ns) = 3.393 ns; Loc. = LCFF_X31_Y9_N1; Fanout = 1; REG Node = 'Start:inst8|inst11'
+            Info: 3: + IC(0.429 ns) + CELL(0.589 ns) = 4.411 ns; Loc. = LCCOMB_X31_Y9_N10; Fanout = 1; COMB Node = 'Start:inst8|inst14'
+            Info: 4: + IC(0.315 ns) + CELL(0.970 ns) = 5.696 ns; Loc. = LCFF_X31_Y9_N9; Fanout = 2; REG Node = 'Start:inst8|inst12'
+            Info: 5: + IC(0.431 ns) + CELL(0.539 ns) = 6.666 ns; Loc. = LCCOMB_X31_Y9_N18; Fanout = 6; COMB Node = 'Start:inst8|inst10'
+            Info: 6: + IC(0.380 ns) + CELL(0.202 ns) = 7.248 ns; Loc. = LCCOMB_X31_Y9_N22; Fanout = 1; COMB Node = 'inst11'
+            Info: 7: + IC(1.470 ns) + CELL(0.000 ns) = 8.718 ns; Loc. = CLKCTRL_G6; Fanout = 8; COMB Node = 'inst11~clkctrl'
+            Info: 8: + IC(0.921 ns) + CELL(0.666 ns) = 10.305 ns; Loc. = LCFF_X26_Y17_N29; Fanout = 5; REG Node = 'Scounter8:inst1|Scounter2:inst7|inst'
+            Info: Total cell delay = 5.086 ns ( 49.35 % )
+            Info: Total interconnect delay = 5.219 ns ( 50.65 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Micro setup delay of destination is -0.040 ns
+Info: No valid register-to-register data paths exist for clock "CPR1"
+Info: No valid register-to-register data paths exist for clock "CPR2"
+Info: Clock "CPR0" has Internal fmax of 259.34 MHz between source register "Scounter8:inst1|Scounter2:inst7|inst" and destination register "Scounter8:inst1|Scounter2:inst5|inst" (period= 3.856 ns)
+    Info: + Longest register to register delay is 3.590 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X26_Y17_N29; Fanout = 5; REG Node = 'Scounter8:inst1|Scounter2:inst7|inst'
+        Info: 2: + IC(1.458 ns) + CELL(0.370 ns) = 1.828 ns; Loc. = LCCOMB_X21_Y18_N22; Fanout = 4; COMB Node = 'Scounter8:inst1|inst10~21'
+        Info: 3: + IC(1.448 ns) + CELL(0.206 ns) = 3.482 ns; Loc. = LCCOMB_X25_Y16_N14; Fanout = 1; COMB Node = 'Scounter8:inst1|Scounter2:inst5|Selector1:inst5|inst2~96'
+        Info: 4: + IC(0.000 ns) + CELL(0.108 ns) = 3.590 ns; Loc. = LCFF_X25_Y16_N15; Fanout = 4; REG Node = 'Scounter8:inst1|Scounter2:inst5|inst'
+        Info: Total cell delay = 0.684 ns ( 19.05 % )
+        Info: Total interconnect delay = 2.906 ns ( 80.95 % )
+    Info: - Smallest clock skew is -0.002 ns
+        Info: + Shortest clock path from clock "CPR0" to destination register is 6.888 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.984 ns) = 0.984 ns; Loc. = PIN_89; Fanout = 1; CLK Node = 'CPR0'
+            Info: 2: + IC(2.225 ns) + CELL(0.624 ns) = 3.833 ns; Loc. = LCCOMB_X31_Y9_N22; Fanout = 1; COMB Node = 'inst11'
+            Info: 3: + IC(1.470 ns) + CELL(0.000 ns) = 5.303 ns; Loc. = CLKCTRL_G6; Fanout = 8; COMB Node = 'inst11~clkctrl'
+            Info: 4: + IC(0.919 ns) + CELL(0.666 ns) = 6.888 ns; Loc. = LCFF_X25_Y16_N15; Fanout = 4; REG Node = 'Scounter8:inst1|Scounter2:inst5|inst'
+            Info: Total cell delay = 2.274 ns ( 33.01 % )
+            Info: Total interconnect delay = 4.614 ns ( 66.99 % )
+        Info: - Longest clock path from clock "CPR0" to source register is 6.890 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.984 ns) = 0.984 ns; Loc. = PIN_89; Fanout = 1; CLK Node = 'CPR0'
+            Info: 2: + IC(2.225 ns) + CELL(0.624 ns) = 3.833 ns; Loc. = LCCOMB_X31_Y9_N22; Fanout = 1; COMB Node = 'inst11'
+            Info: 3: + IC(1.470 ns) + CELL(0.000 ns) = 5.303 ns; Loc. = CLKCTRL_G6; Fanout = 8; COMB Node = 'inst11~clkctrl'
+            Info: 4: + IC(0.921 ns) + CELL(0.666 ns) = 6.890 ns; Loc. = LCFF_X26_Y17_N29; Fanout = 5; REG Node = 'Scounter8:inst1|Scounter2:inst7|inst'
+            Info: Total cell delay = 2.274 ns ( 33.00 % )
+            Info: Total interconnect delay = 4.616 ns ( 67.00 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Micro setup delay of destination is -0.040 ns
+Info: tsu for register "TheOne8:inst2|inst4" (data pin = "B2Y", clock pin = "CPR1") is 4.604 ns
+    Info: + Longest pin to register delay is 12.640 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.984 ns) = 0.984 ns; Loc. = PIN_101; Fanout = 8; PIN Node = 'B2Y'
+        Info: 2: + IC(7.233 ns) + CELL(0.589 ns) = 8.806 ns; Loc. = LCCOMB_X26_Y17_N6; Fanout = 1; COMB Node = 'Exper1:inst9|inst29'
+        Info: 3: + IC(1.363 ns) + CELL(0.624 ns) = 10.793 ns; Loc. = LCCOMB_X23_Y18_N10; Fanout = 2; COMB Node = 'Exper1:inst9|inst30~15'
+        Info: 4: + IC(1.387 ns) + CELL(0.460 ns) = 12.640 ns; Loc. = LCFF_X26_Y17_N21; Fanout = 1; REG Node = 'TheOne8:inst2|inst4'
+        Info: Total cell delay = 2.657 ns ( 21.02 % )
+        Info: Total interconnect delay = 9.983 ns ( 78.98 % )
+    Info: + Micro setup delay of destination is -0.040 ns
+    Info: - Shortest clock path from clock "CPR1" to destination register is 7.996 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.984 ns) = 0.984 ns; Loc. = PIN_90; Fanout = 1; CLK Node = 'CPR1'
+        Info: 2: + IC(2.254 ns) + CELL(0.624 ns) = 3.862 ns; Loc. = LCCOMB_X31_Y9_N12; Fanout = 1; COMB Node = 'inst12'
+        Info: 3: + IC(2.547 ns) + CELL(0.000 ns) = 6.409 ns; Loc. = CLKCTRL_G0; Fanout = 8; COMB Node = 'inst12~clkctrl'
+        Info: 4: + IC(0.921 ns) + CELL(0.666 ns) = 7.996 ns; Loc. = LCFF_X26_Y17_N21; Fanout = 1; REG Node = 'TheOne8:inst2|inst4'
+        Info: Total cell delay = 2.274 ns ( 28.44 % )
+        Info: Total interconnect delay = 5.722 ns ( 71.56 % )
+Info: tco from clock "CK" to destination pin "R6" through register "TheOne8:inst3|inst1" is 17.660 ns
+    Info: + Longest clock path from clock "CK" to source register is 11.328 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.150 ns) = 1.150 ns; Loc. = PIN_132; Fanout = 1; CLK Node = 'CK'
+        Info: 2: + IC(1.273 ns) + CELL(0.970 ns) = 3.393 ns; Loc. = LCFF_X31_Y9_N1; Fanout = 1; REG Node = 'Start:inst8|inst11'
+        Info: 3: + IC(0.429 ns) + CELL(0.589 ns) = 4.411 ns; Loc. = LCCOMB_X31_Y9_N10; Fanout = 1; COMB Node = 'Start:inst8|inst14'
+        Info: 4: + IC(0.315 ns) + CELL(0.970 ns) = 5.696 ns; Loc. = LCFF_X31_Y9_N9; Fanout = 2; REG Node = 'Start:inst8|inst12'
+        Info: 5: + IC(0.431 ns) + CELL(0.539 ns) = 6.666 ns; Loc. = LCCOMB_X31_Y9_N18; Fanout = 6; COMB Node = 'Start:inst8|inst10'
+        Info: 6: + IC(0.381 ns) + CELL(0.202 ns) = 7.249 ns; Loc. = LCCOMB_X31_Y9_N28; Fanout = 1; COMB Node = 'inst13'
+        Info: 7: + IC(2.493 ns) + CELL(0.000 ns) = 9.742 ns; Loc. = CLKCTRL_G2; Fanout = 8; COMB Node = 'inst13~clkctrl'
+        Info: 8: + IC(0.920 ns) + CELL(0.666 ns) = 11.328 ns; Loc. = LCFF_X23_Y18_N13; Fanout = 1; REG Node = 'TheOne8:inst3|inst1'
+        Info: Total cell delay = 5.086 ns ( 44.90 % )
+        Info: Total interconnect delay = 6.242 ns ( 55.10 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Longest register to pin delay is 6.028 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X23_Y18_N13; Fanout = 1; REG Node = 'TheOne8:inst3|inst1'
+        Info: 2: + IC(2.742 ns) + CELL(3.286 ns) = 6.028 ns; Loc. = PIN_200; Fanout = 0; PIN Node = 'R6'
+        Info: Total cell delay = 3.286 ns ( 54.51 % )
+        Info: Total interconnect delay = 2.742 ns ( 45.49 % )
+Info: Longest tpd from source pin "AY" to destination pin "A7" is 13.737 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.964 ns) = 0.964 ns; Loc. = PIN_94; Fanout = 8; PIN Node = 'AY'
+    Info: 2: + IC(7.249 ns) + CELL(0.650 ns) = 8.863 ns; Loc. = LCCOMB_X25_Y16_N22; Fanout = 1; COMB Node = 'Exper1:inst|inst18'
+    Info: 3: + IC(1.608 ns) + CELL(3.266 ns) = 13.737 ns; Loc. = PIN_179; Fanout = 0; PIN Node = 'A7'
+    Info: Total cell delay = 4.880 ns ( 35.52 % )
+    Info: Total interconnect delay = 8.857 ns ( 64.48 % )
+Info: th for register "TheOne8:inst2|inst" (data pin = "R7", clock pin = "CK") is 3.404 ns
+    Info: + Longest clock path from clock "CK" to destination register is 11.383 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.150 ns) = 1.150 ns; Loc. = PIN_132; Fanout = 1; CLK Node = 'CK'
+        Info: 2: + IC(1.273 ns) + CELL(0.970 ns) = 3.393 ns; Loc. = LCFF_X31_Y9_N1; Fanout = 1; REG Node = 'Start:inst8|inst11'
+        Info: 3: + IC(0.429 ns) + CELL(0.589 ns) = 4.411 ns; Loc. = LCCOMB_X31_Y9_N10; Fanout = 1; COMB Node = 'Start:inst8|inst14'
+        Info: 4: + IC(0.315 ns) + CELL(0.970 ns) = 5.696 ns; Loc. = LCFF_X31_Y9_N9; Fanout = 2; REG Node = 'Start:inst8|inst12'
+        Info: 5: + IC(0.431 ns) + CELL(0.539 ns) = 6.666 ns; Loc. = LCCOMB_X31_Y9_N18; Fanout = 6; COMB Node = 'Start:inst8|inst10'
+        Info: 6: + IC(0.383 ns) + CELL(0.202 ns) = 7.251 ns; Loc. = LCCOMB_X31_Y9_N12; Fanout = 1; COMB Node = 'inst12'
+        Info: 7: + IC(2.547 ns) + CELL(0.000 ns) = 9.798 ns; Loc. = CLKCTRL_G0; Fanout = 8; COMB Node = 'inst12~clkctrl'
+        Info: 8: + IC(0.919 ns) + CELL(0.666 ns) = 11.383 ns; Loc. = LCFF_X25_Y16_N5; Fanout = 1; REG Node = 'TheOne8:inst2|inst'
+        Info: Total cell delay = 5.086 ns ( 44.68 % )
+        Info: Total interconnect delay = 6.297 ns ( 55.32 % )
+    Info: + Micro hold delay of destination is 0.306 ns
+    Info: - Shortest pin to register delay is 8.285 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = PIN_201; Fanout = 1; PIN Node = 'R7'
+        Info: 2: + IC(0.000 ns) + CELL(0.994 ns) = 0.994 ns; Loc. = IOC_X3_Y19_N2; Fanout = 1; COMB Node = 'R7~0'
+        Info: 3: + IC(6.813 ns) + CELL(0.370 ns) = 8.177 ns; Loc. = LCCOMB_X25_Y16_N4; Fanout = 2; COMB Node = 'Exper1:inst9|inst18~15'
+        Info: 4: + IC(0.000 ns) + CELL(0.108 ns) = 8.285 ns; Loc. = LCFF_X25_Y16_N5; Fanout = 1; REG Node = 'TheOne8:inst2|inst'
+        Info: Total cell delay = 1.472 ns ( 17.77 % )
+        Info: Total interconnect delay = 6.813 ns ( 82.23 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 200 megabytes
+    Info: Processing ended: Sat Apr 20 11:38:36 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
